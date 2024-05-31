@@ -1,0 +1,37 @@
+### Obter todas as fontes com paginação e ordenação
+GET http://localhost:8080/sources
+Content-Type: application/json
+
+###
+
+### Obter uma fonte específica por ID
+GET http://localhost:8080/sources/1
+Content-Type: application/json
+
+###
+
+### Criar uma nova fonte
+POST http://localhost:8080/sources
+Content-Type: application/json
+
+{
+  "name": "Minha Fonte",
+  "url": "https://minhafonte.com"
+}
+
+###
+
+### Atualizar uma fonte existente
+PUT http://localhost:8080/sources/1
+Content-Type: application/json
+
+{
+  "name": "Minha Fonte Atualizada",
+  "url": "https://minhafonteatualizada.com"
+}
+
+###
+
+### Deletar uma fonte
+DELETE http://localhost:8080/sources/1
+Content-Type: application/json

@@ -1,0 +1,49 @@
+### Obter todos os artigos com paginação e ordenação
+GET http://localhost:8080/articles
+Content-Type: application/json
+
+###
+
+### Obter um artigo específico por ID
+GET http://localhost:8080/articles/2
+Content-Type: application/json
+
+###
+
+### Criar um novo artigo
+POST http://localhost:8080/articles
+Content-Type: application/json
+
+{
+  "title": "Meu artigo",
+  "description": "Descrição do artigo",
+  "link": "https://meuartigo.com",
+  "pub_date": "2024-06-01T12:00:00Z",
+  "source_id": 1
+}
+
+###
+
+### Atualizar um artigo existente
+PUT http://localhost:8080/articles/3
+Content-Type: application/json
+
+{
+  "title": "Meu artigo atualizado",
+  "description": "Descrição atualizada do artigo",
+  "link": "https://meuartigoatualizado.com",
+  "pub_date": "2024-06-01T12:00:00Z",
+  "source_id": 1
+}
+
+###
+
+### Deletar um artigo
+DELETE http://localhost:8080/articles/2
+Content-Type: application/json
+
+###
+
+### Obter artigos com base no source id
+GET http://localhost:8080/articles/source/1
+Content-Type: application/json
