@@ -25,21 +25,17 @@ func NewArticleHandler(db *sql.DB) *articles.ArticleHandler {
 
 func NewSourceHandler(db *sql.DB) *sources.SourceHandler {
 	sourceRepository := sources.NewSourceRepository(db)
-	sourceService := sources.NewSourceService(sourceRepository)
+	articleRepository := articles.NewArticleRepository(db)
+	articleService := articles.NewArticleService(articleRepository)
+	fetcherFetcher := fetcher.NewFetcher(articleService)
+	sourceService := sources.NewSourceService(sourceRepository, fetcherFetcher)
 	sourceHandler := sources.NewSourceHandler(sourceService)
 	return sourceHandler
 }
 
-func NewFetcher(db *sql.DB) *fetcher.Fetcher {
-	sourceRepository := sources.NewSourceRepository(db)
-	sourceService := sources.NewSourceService(sourceRepository)
-	articleRepository := articles.NewArticleRepository(db)
-	articleService := articles.NewArticleService(articleRepository)
-	fetcherFetcher := fetcher.NewFetcher(sourceService, articleService)
-	return fetcherFetcher
-}
-
 // wire.go:
+
+var setFetcherDependecy = wire.NewSet(fetcher.NewFetcher, wire.Bind(new(fetcher.FetcherInterface), new(*fetcher.Fetcher)))
 
 var setSourceHandlerDependecy = wire.NewSet(sources.NewSourceHandler, wire.Bind(new(sources.SourceHandlerInterface), new(*sources.SourceHandler)))
 

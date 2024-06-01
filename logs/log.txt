@@ -1,615 +1,600 @@
-FATAL: 2024/05/31 20:03:23.359968 fetcher.go:42: Failed to create source: Error 1054 (42S22): Unknown column 'saved_at' in 'field list'
-INFO : 2024/05/31 20:11:35.050728 fetcher.go:45: Source created
-INFO : 2024/05/31 20:14:55.625601 fetcher.go:45: Source created
-INFO : 2024/05/31 20:16:01.347321 fetcher.go:45: Source created
-INFO : 2024/05/31 20:18:30.912297 fetcher.go:45: Source created
-FATAL: 2024/05/31 20:18:30.915171 fetcher.go:59: Failed to create article: Error 1136 (21S01): Column count doesn't match value count at row 1
-INFO : 2024/05/31 20:18:47.243904 fetcher.go:45: Source created
-INFO : 2024/05/31 20:19:57.401534 fetcher.go:45: Source created
-FATAL: 2024/05/31 20:19:57.402573 fetcher.go:66: Failed to create article: Error 1136 (21S01): Column count doesn't match value count at row 1
-INFO : 2024/05/31 20:22:30.117569 fetcher.go:45: Source created
-INFO : 2024/05/31 20:22:30.124540 fetcher.go:69: Article created: As imagens da galáxia mais distante da Terra obtidas pela Nasa
-INFO : 2024/05/31 20:22:30.129759 fetcher.go:69: Article created: Por que aplaudimos?
-INFO : 2024/05/31 20:22:30.136370 fetcher.go:69: Article created: Infância de neandertais parece ter sido bem mais difícil do que a de humanos modernos
-INFO : 2024/05/31 20:22:30.141044 fetcher.go:69: Article created: Telescópio James Webb bate próprio recorde ao encontrar galáxia mais distante conhecida
-INFO : 2024/05/31 20:22:30.145795 fetcher.go:69: Article created: Escaneando o Universo, telescópio Euclid capta galáxias e berçário estelar
-INFO : 2024/05/31 20:22:30.150499 fetcher.go:69: Article created: Bactérias fabricavam 'bússola' com ferro há quase 2 bilhões de anos para se orientar no ambiente
-INFO : 2024/05/31 20:22:30.155421 fetcher.go:69: Article created: Com vetos, Lula sanciona projeto que regula pesquisa em humanos
-INFO : 2024/05/31 20:22:30.159419 fetcher.go:69: Article created: Telescópio Euclid descobre novos planetas sem estrelas
-INFO : 2024/05/31 20:22:30.164694 fetcher.go:69: Article created: Cientistas japoneses constroem o primeiro satélite de madeira do mundo
-INFO : 2024/05/31 20:22:30.169689 fetcher.go:69: Article created: O lado ainda fechado da ciência aberta
-INFO : 2024/05/31 20:22:30.174713 fetcher.go:69: Article created: Marcas em crânio egípcio de 4.000 anos sugerem tentativa de tratar câncer
-INFO : 2024/05/31 20:22:30.179804 fetcher.go:69: Article created: A descoberta dos sólidos platônicos
-INFO : 2024/05/31 20:22:30.184719 fetcher.go:69: Article created: Rios de lava em Vênus revelam um planeta mais vulcanicamente ativo
-INFO : 2024/05/31 20:22:30.189327 fetcher.go:69: Article created: A quem interessa a militarização das escolas?
-INFO : 2024/05/31 20:22:30.194421 fetcher.go:69: Article created: Mudança climática fez dinossauros desenvolverem sangue quente
-INFO : 2024/05/31 20:22:30.200982 fetcher.go:69: Article created: 'Capacidade de jogar, não a de pensar, é fator crucial do desenvolvimento', diz matemático de Oxford
-INFO : 2024/05/31 20:22:30.206420 fetcher.go:69: Article created: O antigo costume perdido de produzir máscaras de pessoas mortas
-INFO : 2024/05/31 20:22:30.218676 fetcher.go:69: Article created: A pena de pássaro 'sagrado' extinto vendida por R$ 147 mil em leilão
-INFO : 2024/05/31 20:22:30.228523 fetcher.go:69: Article created: Luz ultravioleta revela pele preservada em fóssil de dinossauro desenterrado na China
-INFO : 2024/05/31 20:22:30.233634 fetcher.go:69: Article created: As plantas são inteligentes? Se sim, o que isso significa para a sua salada?
-INFO : 2024/05/31 20:22:30.239279 fetcher.go:69: Article created: Com problema na propulsão, Nasa e Boeing decidem lançar cápsula em 1º de junho
-INFO : 2024/05/31 20:22:30.244492 fetcher.go:69: Article created: Cobras sangram pela boca e se fingem de mortas para escapar de presa
-INFO : 2024/05/31 20:22:30.251060 fetcher.go:69: Article created: O mistério sobre por que cérebros humanos estão encolhendo
-INFO : 2024/05/31 20:22:30.256078 fetcher.go:69: Article created: O que aconteceria com o Universo se a matéria escura sumisse?
-INFO : 2024/05/31 20:22:30.261272 fetcher.go:69: Article created: Estridência de negacionistas climáticos é sinal de que estamos vencendo, diz cientista sueco
-INFO : 2024/05/31 20:22:30.268640 fetcher.go:69: Article created: Substância psicodélica faz ratos de laboratório sonharem acordados, diz estudo
-INFO : 2024/05/31 20:22:30.273790 fetcher.go:69: Article created: Einstein visitou Brasil a contragosto e chamou cientista de 'macaco', mostram diários
-INFO : 2024/05/31 20:22:30.279276 fetcher.go:69: Article created: Boeing e Nasa dizem ter superado problemas técnicos para o voo tripulado da Starliner
-INFO : 2024/05/31 20:22:30.285835 fetcher.go:69: Article created: Cientista Carlos Nobre entra para grupo Planetary Guardians, criado pelo bilionário Richard Branson
-INFO : 2024/05/31 20:22:30.291007 fetcher.go:69: Article created: O mistério das canoas abandonadas perto de Roma há 7.000 anos
-INFO : 2024/05/31 20:22:30.296112 fetcher.go:69: Article created: Pedido de patente terá de indicar uso de conhecimento de povos indígenas
-INFO : 2024/05/31 20:22:30.301352 fetcher.go:69: Article created: Aves sem asas, moas tinham bom olfato e visão ultravioleta
-INFO : 2024/05/31 20:22:30.306545 fetcher.go:69: Article created: Contra biopirataria, avança acordo por patentes com dados sobre povos indígenas
-INFO : 2024/05/31 20:22:30.311334 fetcher.go:69: Article created: Corvos conseguem 'contar em voz alta' de forma parecida à de crianças pequenas
-INFO : 2024/05/31 20:22:30.316634 fetcher.go:69: Article created: Pesquisadora da USP recebe prêmio da L'Oréal-Unesco por contribuição para a biologia
-INFO : 2024/05/31 20:22:30.321819 fetcher.go:69: Article created: Como minhocas marinhas ajudam a entender a diversidade da costa brasileira
-INFO : 2024/05/31 20:22:30.326708 fetcher.go:69: Article created: Descoberta sobre campo magnético do Sol pode ajudar a prever tempestades que causam auroras
-INFO : 2024/05/31 20:22:30.331670 fetcher.go:69: Article created: Especialistas contam como tornar uma sociedade mais resiliente através de crises
-INFO : 2024/05/31 20:22:30.336609 fetcher.go:69: Article created: Lançamento de cápsula da Boeing volta a ser adiado devido a vazamento
-INFO : 2024/05/31 20:22:30.346671 fetcher.go:69: Article created: Macacos caem mortos de árvores no México em meio a onda de calor; veja vídeo
-INFO : 2024/05/31 20:22:30.351743 fetcher.go:69: Article created: Painel mostra a mudança no perfil dos estudantes das universidades públicas
-INFO : 2024/05/31 20:22:30.357062 fetcher.go:69: Article created: Clonagem de parente de estrela-do-mar é flagrada em fóssil
-INFO : 2024/05/31 20:22:30.362231 fetcher.go:69: Article created: Voluntários farão coleta mundial de água de lagos para estudo da biodiversidade
-INFO : 2024/05/31 20:22:30.367123 fetcher.go:69: Article created: O advento da matemática chinesa
-INFO : 2024/05/31 20:22:30.373928 fetcher.go:69: Article created: Como a linguagem dos neandertais era diferente da dos humanos modernos
-INFO : 2024/05/31 20:22:30.379108 fetcher.go:69: Article created: Barata-de-cozinha começou saga de dominação global há 2.100 anos
-INFO : 2024/05/31 20:22:30.384834 fetcher.go:69: Article created: Por que nunca esquecemos o primeiro beijo? Entenda como funciona a memória autobiográfica
-INFO : 2024/05/31 20:22:30.390216 fetcher.go:69: Article created: Biólogo pisa 40,5 mil vezes em jararacas ou perto delas para estudar quando e por que elas dão picadas
-INFO : 2024/05/31 20:22:30.397152 fetcher.go:69: Article created: Conferência quer ajudar a desenhar plano para a ciência brasileira
-INFO : 2024/05/31 20:22:30.401918 fetcher.go:69: Article created: Fragmento de cometa ilumina céu da Espanha e de Portugal; veja vídeo
-INFO : 2024/05/31 20:22:30.407083 fetcher.go:69: Article created: Ambientalistas recriam viagem de Charles Darwin às Ilhas Galápagos
-INFO : 2024/05/31 20:22:30.412488 fetcher.go:69: Article created: Com capitão de 90 anos a bordo, Blue Origin faz seu sétimo voo de turismo espacial
-INFO : 2024/05/31 20:22:30.422677 fetcher.go:69: Article created: Já em órbita lunar, missão chinesa terá minirrover-surpresa
-INFO : 2024/05/31 20:22:30.427387 fetcher.go:69: Article created: Tragédias anunciadas. Até quando?
-INFO : 2024/05/31 20:22:30.434122 fetcher.go:69: Article created: Por que as pessoas fazem música?
-INFO : 2024/05/31 20:22:30.439394 fetcher.go:69: Article created: Intolerância religiosa acaba levando à negação da ciência, indica estudo internacional
-INFO : 2024/05/31 20:22:30.444182 fetcher.go:69: Article created: Lula, Dilma e Mangabeira abortaram adaptação à mudança climática
-INFO : 2024/05/31 20:22:30.449617 fetcher.go:69: Article created: Secas, terremotos, conflitos e migrações marcaram colapso no fim da Idade do Bronze
-INFO : 2024/05/31 20:22:30.454849 fetcher.go:69: Article created: Preocupados com as mudanças climáticas, astrônomos se voltam ao estudo da Terra
-INFO : 2024/05/31 20:22:30.459695 fetcher.go:69: Article created: A pesquisadora que defende que temos 12 sentidos, e não apenas 5
-INFO : 2024/05/31 20:22:30.463838 fetcher.go:69: Article created: Cientistas calculam a energia necessária para gestar um bebê
-INFO : 2024/05/31 20:22:30.469053 fetcher.go:69: Article created: Com ferramentas, lontras-marinhas obtêm mais presas e reduzem danos nos dentes
-INFO : 2024/05/31 20:22:30.475425 fetcher.go:69: Article created: Queda na locomoção e falhas no sistema imune: estudo mostra como agrotóxicos afetam abelhas nativas
-INFO : 2024/05/31 20:22:30.480901 fetcher.go:69: Article created: Pirâmides do Egito margeavam braço do rio Nilo quando surgiram
-INFO : 2024/05/31 20:22:30.486044 fetcher.go:69: Article created: Como povos indígenas e comunidades tradicionais estão salvando ecossistemas
-INFO : 2024/05/31 20:22:30.490770 fetcher.go:69: Article created: Encontradas pela primeira vez moléculas orgânicas complexas no gelo de estrelas nascentes
-INFO : 2024/05/31 20:22:30.496743 fetcher.go:69: Article created: Blue Origin marca para domingo novo voo para levar turistas ao espaço
-INFO : 2024/05/31 20:22:30.501841 fetcher.go:69: Article created: Estudos põem em xeque principal hipótese alternativa à matéria escura
-INFO : 2024/05/31 20:22:30.507789 fetcher.go:69: Article created: Estudo revela evidências de violência em uma época de crise no antigo Peru
-INFO : 2024/05/31 20:22:30.512349 fetcher.go:69: Article created: Liu Hui foi o pioneiro da matemática chinesa
-INFO : 2024/05/31 20:22:30.519983 fetcher.go:69: Article created: Cinábrio, o cobiçado mineral que antigas civilizações usavam em rituais sem saber que podia se tornar tóxico
-INFO : 2024/05/31 20:22:30.525132 fetcher.go:69: Article created: Primeira viagem tripulada da Starliner é adiada novamente
-INFO : 2024/05/31 20:22:30.532785 fetcher.go:69: Article created: Lições da antropologia podem ajudar a prevenir pandemias
-INFO : 2024/05/31 20:22:30.538475 fetcher.go:69: Article created: Cientistas investigam causa dos altos patamares de energia das superexplosões estelares
-INFO : 2024/05/31 20:22:30.544702 fetcher.go:69: Article created: Em defesa da FAPESP e da Ciência e Tecnologia
-INFO : 2024/05/31 20:22:30.550133 fetcher.go:69: Article created: Como os buracos negros se tornam 'buracos brancos', segundo o físico Carlo Rovelli
-INFO : 2024/05/31 20:22:30.555550 fetcher.go:69: Article created: Por que os algoritmos são chamados de algoritmos?
-INFO : 2024/05/31 20:22:30.560907 fetcher.go:69: Article created: Auroras causadas por tempestade solar extrema chegam ao fim
-INFO : 2024/05/31 20:22:30.566244 fetcher.go:69: Article created: SpaceX planeja para junho novo teste do Starship, maior foguete já construído
-INFO : 2024/05/31 20:22:30.570912 fetcher.go:69: Article created: Pesquisadores brasileiros investigam o crescimento de plantas fora da Terra
-INFO : 2024/05/31 20:22:30.575993 fetcher.go:69: Article created: Webb detecta evidências de atmosfera em exoplaneta rochoso
-INFO : 2024/05/31 20:22:30.582918 fetcher.go:69: Article created: A Idade da Pedra era na verdade a Idade da Madeira?
-INFO : 2024/05/31 20:22:30.588217 fetcher.go:69: Article created: O que é a lei das consequências imprevistas (e por que ela é tão importante agora)
-INFO : 2024/05/31 20:22:30.593515 fetcher.go:69: Article created: Imagens da aurora boreal após tempestade solar viralizam; veja
-INFO : 2024/05/31 20:22:30.598121 fetcher.go:69: Article created: Primeira tempestade solar extrema em 20 anos causa auroras boreais espetaculares
-INFO : 2024/05/31 20:22:30.603160 fetcher.go:69: Article created: Com produtividade questionada, mães cientistas relatam preconceito na carreira acadêmica
-INFO : 2024/05/31 20:22:30.610681 fetcher.go:69: Article created: Crise climática produz cenários extremos, alterando probabilidade e frequência de grandes desastres
-INFO : 2024/05/31 20:22:30.618434 fetcher.go:69: Article created: Empresários e entidades apontam preocupação com possível perda de verba da Fapesp
-INFO : 2024/05/31 20:22:30.623115 fetcher.go:69: Article created: Elefantes mexem as orelhas, urinam e se tocam ao se cumprimentar
-INFO : 2024/05/31 20:22:30.628475 fetcher.go:69: Article created: Astrônomos detectam planeta rochoso com atmosfera e bem maior que a Terra
-INFO : 2024/05/31 20:22:30.633823 fetcher.go:69: Article created: Tempestade solar ameaça redes elétricas e sistemas de navegação
-INFO : 2024/05/31 20:22:30.639010 fetcher.go:69: Article created: Especialistas debatem como podemos prever uma pandemia do futuro por doença 'X'
-INFO : 2024/05/31 20:22:30.643958 fetcher.go:69: Article created: Bactérias sobrevivem no solo do deserto do Atacama há milhões de anos
-INFO : 2024/05/31 20:22:30.651148 fetcher.go:69: Article created: Como as memórias são armazenadas em nosso cérebro?
-INFO : 2024/05/31 20:22:30.656277 fetcher.go:69: Article created: Um transplante de órgão pode mudar a personalidade de alguém?
-INFO : 2024/05/31 20:22:30.661188 fetcher.go:69: Article created: A papelocracia da pesquisa brasileira
-INFO : 2024/05/31 20:22:30.666071 fetcher.go:69: Article created: 'Conversas' entre baleias podem ter semelhanças com a linguagem dos humanos
-INFO : 2024/05/31 20:22:30.671055 fetcher.go:69: Article created: Conselho da Fapesp fala em 'extrema preocupação' com possível perda de verba
-INFO : 2024/05/31 20:22:30.677605 fetcher.go:69: Article created: Google DeepMind lança nova geração de modelo de IA para medicamentos
-INFO : 2024/05/31 20:22:30.682629 fetcher.go:69: Article created: Voo de cápsula da Boeing com astronautas da Nasa é adiado novamente
-INFO : 2024/05/31 20:22:30.864609 fetcher.go:45: Source created
-INFO : 2024/05/31 20:22:30.870406 fetcher.go:69: Article created: Veja onde assistir a Real Madrid e Borussia Dortmund na final da Champions
-INFO : 2024/05/31 20:22:30.880249 fetcher.go:69: Article created: Arena do Grêmio e Beira-Rio têm lama, peixe e entulho após enchente; veja fotos
-INFO : 2024/05/31 20:22:30.885748 fetcher.go:69: Article created: Qual foi a última vez que você desistiu cedo demais?
-INFO : 2024/05/31 20:22:30.891745 fetcher.go:69: Article created: Acusado de envolvimento com mercado de apostas, Paquetá se diz pronto para defender a seleção
-INFO : 2024/05/31 20:22:30.896421 fetcher.go:69: Article created: Muralha amarela tenta acabar com sequência de títulos do Brasil na Champions
-INFO : 2024/05/31 20:22:30.901671 fetcher.go:69: Article created: Italo Ferreira vence na onda olímpica de Teahupo'o
-INFO : 2024/05/31 20:22:30.906471 fetcher.go:69: Article created: Fifa amplia medidas para maternidade entre jogadoras e treinadoras no futebol
-INFO : 2024/05/31 20:22:30.911263 fetcher.go:69: Article created: França frustra plano de atentado durante os Jogos Olímpicos
-INFO : 2024/05/31 20:22:30.916180 fetcher.go:69: Article created: Os atuais invencíveis, os primeiros invencíveis e os mais famosos invencíveis
-INFO : 2024/05/31 20:22:30.922299 fetcher.go:69: Article created: Endrick se despede do Palmeiras em jogo sem gols no Allianz
-INFO : 2024/05/31 20:22:30.927415 fetcher.go:69: Article created: Especulado no futebol argentino, Di María é alvo de ameaças
-INFO : 2024/05/31 20:22:30.932540 fetcher.go:69: Article created: Cavani anuncia aposentadoria da seleção uruguaia a menos de um mês da Copa América
-INFO : 2024/05/31 20:22:30.937585 fetcher.go:69: Article created: Roland Garros bane álcool das arquibancadas
-INFO : 2024/05/31 20:22:30.942942 fetcher.go:69: Article created: CBF mantém convocação de Paquetá, acusado de envolvimento com mercado de apostas
-INFO : 2024/05/31 20:22:30.948203 fetcher.go:69: Article created: Jogadores do Talleres são autuados por desacato após jogo no Morumbis
-INFO : 2024/05/31 20:22:30.954424 fetcher.go:69: Article created: Aposta no Everton engoliu 777 e seus financiadores
-INFO : 2024/05/31 20:22:30.962597 fetcher.go:69: Article created: Grupo leva comunidade LBTQIA+ ao universo do montanhismo
-INFO : 2024/05/31 20:22:30.967716 fetcher.go:69: Article created: Grêmio volta ao futebol com vitória após pausa forçada por chuvas no Sul
-INFO : 2024/05/31 20:22:30.972342 fetcher.go:69: Article created: SporTV exibirá série inédita sobre a trajetória de Léo Batista
-INFO : 2024/05/31 20:22:30.977306 fetcher.go:69: Article created: A insossa final da Champions?
-INFO : 2024/05/31 20:22:30.981894 fetcher.go:69: Article created: 'Torcida de futebol' faz tenistas criticarem público francês em Roland Garros
-INFO : 2024/05/31 20:22:30.988347 fetcher.go:69: Article created: De malas prontas para Madri, Endrick se despede do Palmeiras
-INFO : 2024/05/31 20:22:30.993518 fetcher.go:69: Article created: A cidade oferece o Sena e o sonho
-INFO : 2024/05/31 20:22:30.998093 fetcher.go:69: Article created: Uniformes das Olimpíadas 2024 são considerados sexistas e não priorizam conforto de atletas
-INFO : 2024/05/31 20:22:31.003104 fetcher.go:69: Article created: Neymar vai leiloar chuteira banhada a ouro e partida de pôquer com ele em evento beneficente
-INFO : 2024/05/31 20:22:31.008214 fetcher.go:69: Article created: A complexidade também está no calendário do futebol brasileiro
-INFO : 2024/05/31 20:22:31.015008 fetcher.go:69: Article created: Globo negocia com clubes da Liga Forte União para manter apelo do Premiere
-INFO : 2024/05/31 20:22:31.021350 fetcher.go:69: Article created: Como nascimento de filhos, maratonas são marcos de vida
-INFO : 2024/05/31 20:22:31.028296 fetcher.go:69: Article created: Brasil fecha Roland Garros com seis derrotas em seis partidas de simples
-INFO : 2024/05/31 20:22:31.033660 fetcher.go:69: Article created: Falsos agentes desviaram R$ 2 milhões de FGTS de Paolo Guerrero, afirma PF
-INFO : 2024/05/31 20:22:31.039310 fetcher.go:69: Article created: Suspenso por doping, Thiago Braz deve perder Jogos Olímpicos de Paris
-INFO : 2024/05/31 20:22:31.044295 fetcher.go:69: Article created: Bill Walton, bicampeão da NBA, morre aos 71 anos
-INFO : 2024/05/31 20:22:31.049656 fetcher.go:69: Article created: A dois meses de 'superluta', Mike Tyson passa mal em voo para Los Angeles
-INFO : 2024/05/31 20:22:31.059631 fetcher.go:69: Article created: Bia Haddad perde na estreia em Roland Garros e sofrerá queda em ranking
-INFO : 2024/05/31 20:22:31.066352 fetcher.go:69: Article created: O primeiro adeus de Rafael Nadal em Roland Garros
-INFO : 2024/05/31 20:22:31.072371 fetcher.go:69: Article created: CBF aprova troca em mando de campo para minimizar desequilíbrio
-INFO : 2024/05/31 20:22:31.077942 fetcher.go:69: Article created: Após adeus a Cássio, Corinthians anuncia despedida de Paulinho
-INFO : 2024/05/31 20:22:31.082848 fetcher.go:69: Article created: Nadal cai na estreia em Roland Garros e pondera seu futuro no tênis
-INFO : 2024/05/31 20:22:31.088325 fetcher.go:69: Article created: Com equipe multicampeã, Barcelona se transforma na capital do futebol feminino
-INFO : 2024/05/31 20:22:31.093690 fetcher.go:69: Article created: Atletismo, natação e levantamento de peso devem ter recordes em Paris
-INFO : 2024/05/31 20:22:31.098294 fetcher.go:69: Article created: Ludmilla abre placar do Futebol Solidário; partida com artistas e jogadores termina em 5 x 5
-INFO : 2024/05/31 20:22:31.104616 fetcher.go:69: Article created: Belo e Denilson têm reencontro com direito a beijo no rosto: 'O que o Brasil queria ver'
-INFO : 2024/05/31 20:22:31.109575 fetcher.go:69: Article created: CBF pretende manter 8 de dezembro como data final do Brasileiro
-INFO : 2024/05/31 20:22:31.114479 fetcher.go:69: Article created: É difícil ser ético no futebol
-INFO : 2024/05/31 20:22:31.119697 fetcher.go:69: Article created: Meu senso crítico questiona as minhas análises sobre futebol
-INFO : 2024/05/31 20:22:31.124493 fetcher.go:69: Article created: Atacante do América-MG ignora gesto de lesão de goleiro do Santos e marca; veja vídeo
-INFO : 2024/05/31 20:22:31.129724 fetcher.go:69: Article created: Barcelona derrota Lyon na Champions feminina e consolida hegemonia na Europa
-INFO : 2024/05/31 20:22:31.134620 fetcher.go:69: Article created: Manchester United bate hegemonia do City e vence Copa da Inglaterra
-INFO : 2024/05/31 20:22:31.141086 fetcher.go:69: Article created: O caso Paquetá e suas metástases
-INFO : 2024/05/31 20:22:31.145449 fetcher.go:69: Article created: Com seis em Roland Garros, Brasil tem sua maior participação em 36 anos
-INFO : 2024/05/31 20:22:31.153227 fetcher.go:69: Article created: Fator psicológico será maior desafio na retomada dos jogos, diz Renato Gaúcho
-INFO : 2024/05/31 20:22:31.158305 fetcher.go:69: Article created: Patrocinadora reforça preocupação com denúncias no Corinthians
-INFO : 2024/05/31 20:22:31.163533 fetcher.go:69: Article created: Justiça dos EUA marca julgamento de processo para indenização das vítimas do voo da Chape
-INFO : 2024/05/31 20:22:31.168453 fetcher.go:69: Article created: A Copa do Mundo Feminina no Brasil já começou
-INFO : 2024/05/31 20:22:31.177293 fetcher.go:69: Article created: Bernardinho volta manso à seleção e espera por gatilho nas Olimpíadas de Paris
-INFO : 2024/05/31 20:22:31.182806 fetcher.go:69: Article created: Barcelona demite técnico Xavi Hernández
-INFO : 2024/05/31 20:22:31.187991 fetcher.go:69: Article created: Novo museu do tênis de Roland Garros queria coração desenhado por Guga na quadra
-INFO : 2024/05/31 20:22:31.193174 fetcher.go:69: Article created: O guardanapo de R$ 5 milhões
-INFO : 2024/05/31 20:22:31.197725 fetcher.go:69: Article created: Cássio cansou do Corinthians e Corinthians cansou do Cássio, comenta Lula; veja vídeo
-INFO : 2024/05/31 20:22:31.203107 fetcher.go:69: Article created: Superintendente de marketing do Corinthians pede licença em meio a acusações
-INFO : 2024/05/31 20:22:31.208323 fetcher.go:69: Article created: Federação inglesa acusa Paquetá de forçar amarelo para 'afetar o mercado de apostas'
-INFO : 2024/05/31 20:22:31.214677 fetcher.go:69: Article created: Palmeiras encaminha venda de Estevão ao Chelsea por 60 milhões de euros
-INFO : 2024/05/31 20:22:31.219650 fetcher.go:69: Article created: Paris não existe sem Notre-Dame
-INFO : 2024/05/31 20:22:31.224571 fetcher.go:69: Article created: Campeã italiana, Inter muda de dono por causa de dívida
-INFO : 2024/05/31 20:22:31.229102 fetcher.go:69: Article created: Família de Schumacher recebe indenização por 'entrevista' criada por IA
-INFO : 2024/05/31 20:22:31.235596 fetcher.go:69: Article created: O custo crescente da corrida
-INFO : 2024/05/31 20:22:31.241489 fetcher.go:69: Article created: Na Ilha do Cardoso, parceria inova ao incluir comunidades originárias na gestão
-INFO : 2024/05/31 20:22:31.246784 fetcher.go:69: Article created: Nigeriano brilha, Atalanta derruba invencibilidade do Leverkusen e conquista Liga Europa
-INFO : 2024/05/31 20:22:31.251046 fetcher.go:69: Article created: O Corinthians nas páginas de polícia
-INFO : 2024/05/31 20:22:31.256598 fetcher.go:69: Article created: Brasileiro de 22 anos está a um jogo da chave principal de Roland Garros
-INFO : 2024/05/31 20:22:31.261980 fetcher.go:69: Article created: Ex-campeões peso-pesado do UFC fazem combates sangrentos de MMA sem luvas
-INFO : 2024/05/31 20:22:31.267151 fetcher.go:69: Article created: CBF anuncia volta do Campeonato Brasileiro a partir de 1º de junho
-INFO : 2024/05/31 20:22:31.273431 fetcher.go:69: Article created: Patrocinadora do Corinthians estuda rescindir contrato em meio a denúncias
-INFO : 2024/05/31 20:22:31.277743 fetcher.go:69: Article created: Recebido com festa, Cássio diz que será feliz no Cruzeiro
-INFO : 2024/05/31 20:22:31.282432 fetcher.go:69: Article created: A difícil decisão do jogador sobre a hora de parar
-INFO : 2024/05/31 20:22:31.287205 fetcher.go:69: Article created: Grêmio e Inter lançam campanha para atrair doações de empresas ao Sul
-INFO : 2024/05/31 20:22:31.292084 fetcher.go:69: Article created: McLaren lança carro com pintura em homenagem a Senna
-INFO : 2024/05/31 20:22:31.296859 fetcher.go:69: Article created: Hábitos da geração Z ameaçam modelo de negócios do esporte
-INFO : 2024/05/31 20:22:31.303268 fetcher.go:69: Article created: Toni Kroos anuncia aposentadoria após a Eurocopa
-INFO : 2024/05/31 20:22:31.311599 fetcher.go:69: Article created: Globo produz documentário sobre máfia do apito, maior escândalo do futebol brasileiro
-INFO : 2024/05/31 20:22:31.316580 fetcher.go:69: Article created: Premier League não é chata, só o Guardiola
-INFO : 2024/05/31 20:22:31.321693 fetcher.go:69: Article created: Jogador cobre logo contra homofobia, e governo francês pede punição
-INFO : 2024/05/31 20:22:31.326914 fetcher.go:69: Article created: Tetra resgatou autoestima do brasileiro, afirma Romário
-INFO : 2024/05/31 20:22:31.334011 fetcher.go:69: Article created: Campeão tão perto, tão longe do torcedor
-INFO : 2024/05/31 20:22:31.339314 fetcher.go:69: Article created: Sunday Happy Sunday
-INFO : 2024/05/31 20:22:31.346040 fetcher.go:69: Article created: Manchester City entra na história do Campeonato Inglês com primeiro tetra
-INFO : 2024/05/31 20:22:31.351352 fetcher.go:69: Article created: Rayssa Leal vence etapa da China do pré-olímpico de skate
-INFO : 2024/05/31 20:22:31.356305 fetcher.go:69: Article created: Corrida em Ímola tem homenagens a Senna 30 anos após sua morte
-INFO : 2024/05/31 20:22:31.361528 fetcher.go:69: Article created: Campeão alemão, Bayer Leverkusen encerra campanha invicto
-INFO : 2024/05/31 20:22:31.366742 fetcher.go:69: Article created: Homenageado, Cássio diz que sai do Corinthians pela porta da frente
-INFO : 2024/05/31 20:22:31.371866 fetcher.go:69: Article created: Lá se foi um trio de ouro
-INFO : 2024/05/31 20:22:31.378318 fetcher.go:69: Article created: Perdemos três importantes membros do jornalismo esportivo brasileiro
-INFO : 2024/05/31 20:22:31.383325 fetcher.go:69: Article created: Saída de 'ídolo' Cássio comove corintianos nas redes
-INFO : 2024/05/31 20:22:31.388481 fetcher.go:69: Article created: Após foto com camisa do Corinthians, Gabigol é multado e não vai usar mais a 10 do Flamengo
-INFO : 2024/05/31 20:22:31.392845 fetcher.go:69: Article created: Cássio chega a acordo com Corinthians e deixa o clube após 12 anos
-INFO : 2024/05/31 20:22:31.400258 fetcher.go:69: Article created: Kelly Slater e tão falada aposentadoria
-INFO : 2024/05/31 20:22:31.404471 fetcher.go:69: Article created: Inter estima em até 90 dias prazo para voltar a jogar no Beira-Rio
-INFO : 2024/05/31 20:22:31.410490 fetcher.go:69: Article created: Governo confirma RS como uma das sedes da Copa de 2027; Marta pede estreia da seleção no estado
-INFO : 2024/05/31 20:22:31.415745 fetcher.go:69: Article created: A Premier League ficou previsível?
-INFO : 2024/05/31 20:22:31.420988 fetcher.go:69: Article created: Brasil supera candidatura europeia e vai receber Copa do Mundo feminina de 2027
-INFO : 2024/05/31 20:22:34.649704 fetcher.go:45: Source created
-INFO : 2024/05/31 20:22:34.655502 fetcher.go:69: Article created: As imagens da galáxia mais distante da Terra obtidas pela Nasa
-INFO : 2024/05/31 20:22:34.660619 fetcher.go:69: Article created: Por que aplaudimos?
-INFO : 2024/05/31 20:22:34.665686 fetcher.go:69: Article created: Infância de neandertais parece ter sido bem mais difícil do que a de humanos modernos
-INFO : 2024/05/31 20:22:34.672001 fetcher.go:69: Article created: Telescópio James Webb bate próprio recorde ao encontrar galáxia mais distante conhecida
-INFO : 2024/05/31 20:22:34.677379 fetcher.go:69: Article created: Escaneando o Universo, telescópio Euclid capta galáxias e berçário estelar
-INFO : 2024/05/31 20:22:34.682621 fetcher.go:69: Article created: Bactérias fabricavam 'bússola' com ferro há quase 2 bilhões de anos para se orientar no ambiente
-INFO : 2024/05/31 20:22:34.687530 fetcher.go:69: Article created: Com vetos, Lula sanciona projeto que regula pesquisa em humanos
-INFO : 2024/05/31 20:22:34.693021 fetcher.go:69: Article created: Telescópio Euclid descobre novos planetas sem estrelas
-INFO : 2024/05/31 20:22:34.698407 fetcher.go:69: Article created: Cientistas japoneses constroem o primeiro satélite de madeira do mundo
-INFO : 2024/05/31 20:22:34.705072 fetcher.go:69: Article created: O lado ainda fechado da ciência aberta
-INFO : 2024/05/31 20:22:34.712031 fetcher.go:69: Article created: Marcas em crânio egípcio de 4.000 anos sugerem tentativa de tratar câncer
-INFO : 2024/05/31 20:22:34.718716 fetcher.go:69: Article created: A descoberta dos sólidos platônicos
-INFO : 2024/05/31 20:22:34.724252 fetcher.go:69: Article created: Rios de lava em Vênus revelam um planeta mais vulcanicamente ativo
-INFO : 2024/05/31 20:22:34.729190 fetcher.go:69: Article created: A quem interessa a militarização das escolas?
-INFO : 2024/05/31 20:22:34.734219 fetcher.go:69: Article created: Mudança climática fez dinossauros desenvolverem sangue quente
-INFO : 2024/05/31 20:22:34.739260 fetcher.go:69: Article created: 'Capacidade de jogar, não a de pensar, é fator crucial do desenvolvimento', diz matemático de Oxford
-INFO : 2024/05/31 20:22:34.745574 fetcher.go:69: Article created: O antigo costume perdido de produzir máscaras de pessoas mortas
-INFO : 2024/05/31 20:22:34.750941 fetcher.go:69: Article created: A pena de pássaro 'sagrado' extinto vendida por R$ 147 mil em leilão
-INFO : 2024/05/31 20:22:34.756077 fetcher.go:69: Article created: Luz ultravioleta revela pele preservada em fóssil de dinossauro desenterrado na China
-INFO : 2024/05/31 20:22:34.761763 fetcher.go:69: Article created: As plantas são inteligentes? Se sim, o que isso significa para a sua salada?
-INFO : 2024/05/31 20:22:34.766957 fetcher.go:69: Article created: Com problema na propulsão, Nasa e Boeing decidem lançar cápsula em 1º de junho
-INFO : 2024/05/31 20:22:34.772119 fetcher.go:69: Article created: Cobras sangram pela boca e se fingem de mortas para escapar de presa
-INFO : 2024/05/31 20:22:34.777509 fetcher.go:69: Article created: O mistério sobre por que cérebros humanos estão encolhendo
-INFO : 2024/05/31 20:22:34.785167 fetcher.go:69: Article created: O que aconteceria com o Universo se a matéria escura sumisse?
-INFO : 2024/05/31 20:22:34.790309 fetcher.go:69: Article created: Estridência de negacionistas climáticos é sinal de que estamos vencendo, diz cientista sueco
-INFO : 2024/05/31 20:22:34.795458 fetcher.go:69: Article created: Substância psicodélica faz ratos de laboratório sonharem acordados, diz estudo
-INFO : 2024/05/31 20:22:34.800595 fetcher.go:69: Article created: Einstein visitou Brasil a contragosto e chamou cientista de 'macaco', mostram diários
-INFO : 2024/05/31 20:22:34.809213 fetcher.go:69: Article created: Boeing e Nasa dizem ter superado problemas técnicos para o voo tripulado da Starliner
-INFO : 2024/05/31 20:22:34.815521 fetcher.go:69: Article created: Cientista Carlos Nobre entra para grupo Planetary Guardians, criado pelo bilionário Richard Branson
-INFO : 2024/05/31 20:22:34.821185 fetcher.go:69: Article created: O mistério das canoas abandonadas perto de Roma há 7.000 anos
-INFO : 2024/05/31 20:22:34.826420 fetcher.go:69: Article created: Pedido de patente terá de indicar uso de conhecimento de povos indígenas
-INFO : 2024/05/31 20:22:34.831069 fetcher.go:69: Article created: Aves sem asas, moas tinham bom olfato e visão ultravioleta
-INFO : 2024/05/31 20:22:34.836244 fetcher.go:69: Article created: Contra biopirataria, avança acordo por patentes com dados sobre povos indígenas
-INFO : 2024/05/31 20:22:34.841136 fetcher.go:69: Article created: Corvos conseguem 'contar em voz alta' de forma parecida à de crianças pequenas
-INFO : 2024/05/31 20:22:34.847318 fetcher.go:69: Article created: Pesquisadora da USP recebe prêmio da L'Oréal-Unesco por contribuição para a biologia
-INFO : 2024/05/31 20:22:34.851836 fetcher.go:69: Article created: Como minhocas marinhas ajudam a entender a diversidade da costa brasileira
-INFO : 2024/05/31 20:22:34.856747 fetcher.go:69: Article created: Descoberta sobre campo magnético do Sol pode ajudar a prever tempestades que causam auroras
-INFO : 2024/05/31 20:22:34.861992 fetcher.go:69: Article created: Especialistas contam como tornar uma sociedade mais resiliente através de crises
-INFO : 2024/05/31 20:22:34.869377 fetcher.go:69: Article created: Lançamento de cápsula da Boeing volta a ser adiado devido a vazamento
-INFO : 2024/05/31 20:22:34.874509 fetcher.go:69: Article created: Macacos caem mortos de árvores no México em meio a onda de calor; veja vídeo
-INFO : 2024/05/31 20:22:34.880607 fetcher.go:69: Article created: Painel mostra a mudança no perfil dos estudantes das universidades públicas
-INFO : 2024/05/31 20:22:34.888560 fetcher.go:69: Article created: Clonagem de parente de estrela-do-mar é flagrada em fóssil
-INFO : 2024/05/31 20:22:34.892947 fetcher.go:69: Article created: Voluntários farão coleta mundial de água de lagos para estudo da biodiversidade
-INFO : 2024/05/31 20:22:34.898083 fetcher.go:69: Article created: O advento da matemática chinesa
-INFO : 2024/05/31 20:22:34.903784 fetcher.go:69: Article created: Como a linguagem dos neandertais era diferente da dos humanos modernos
-INFO : 2024/05/31 20:22:34.908914 fetcher.go:69: Article created: Barata-de-cozinha começou saga de dominação global há 2.100 anos
-INFO : 2024/05/31 20:22:34.915168 fetcher.go:69: Article created: Por que nunca esquecemos o primeiro beijo? Entenda como funciona a memória autobiográfica
-INFO : 2024/05/31 20:22:34.920155 fetcher.go:69: Article created: Biólogo pisa 40,5 mil vezes em jararacas ou perto delas para estudar quando e por que elas dão picadas
-INFO : 2024/05/31 20:22:34.924953 fetcher.go:69: Article created: Conferência quer ajudar a desenhar plano para a ciência brasileira
-INFO : 2024/05/31 20:22:34.929686 fetcher.go:69: Article created: Fragmento de cometa ilumina céu da Espanha e de Portugal; veja vídeo
-INFO : 2024/05/31 20:22:34.935458 fetcher.go:69: Article created: Ambientalistas recriam viagem de Charles Darwin às Ilhas Galápagos
-INFO : 2024/05/31 20:22:34.940337 fetcher.go:69: Article created: Com capitão de 90 anos a bordo, Blue Origin faz seu sétimo voo de turismo espacial
-INFO : 2024/05/31 20:22:34.946605 fetcher.go:69: Article created: Já em órbita lunar, missão chinesa terá minirrover-surpresa
-INFO : 2024/05/31 20:22:34.951935 fetcher.go:69: Article created: Tragédias anunciadas. Até quando?
-INFO : 2024/05/31 20:22:34.956562 fetcher.go:69: Article created: Por que as pessoas fazem música?
-INFO : 2024/05/31 20:22:34.961111 fetcher.go:69: Article created: Intolerância religiosa acaba levando à negação da ciência, indica estudo internacional
-INFO : 2024/05/31 20:22:34.966224 fetcher.go:69: Article created: Lula, Dilma e Mangabeira abortaram adaptação à mudança climática
-INFO : 2024/05/31 20:22:34.973670 fetcher.go:69: Article created: Secas, terremotos, conflitos e migrações marcaram colapso no fim da Idade do Bronze
-INFO : 2024/05/31 20:22:34.981246 fetcher.go:69: Article created: Preocupados com as mudanças climáticas, astrônomos se voltam ao estudo da Terra
-INFO : 2024/05/31 20:22:34.986331 fetcher.go:69: Article created: A pesquisadora que defende que temos 12 sentidos, e não apenas 5
-INFO : 2024/05/31 20:22:34.991076 fetcher.go:69: Article created: Cientistas calculam a energia necessária para gestar um bebê
-INFO : 2024/05/31 20:22:34.996212 fetcher.go:69: Article created: Com ferramentas, lontras-marinhas obtêm mais presas e reduzem danos nos dentes
-INFO : 2024/05/31 20:22:35.000952 fetcher.go:69: Article created: Queda na locomoção e falhas no sistema imune: estudo mostra como agrotóxicos afetam abelhas nativas
-INFO : 2024/05/31 20:22:35.007040 fetcher.go:69: Article created: Pirâmides do Egito margeavam braço do rio Nilo quando surgiram
-INFO : 2024/05/31 20:22:35.013446 fetcher.go:69: Article created: Como povos indígenas e comunidades tradicionais estão salvando ecossistemas
-INFO : 2024/05/31 20:22:35.017784 fetcher.go:69: Article created: Encontradas pela primeira vez moléculas orgânicas complexas no gelo de estrelas nascentes
-INFO : 2024/05/31 20:22:35.022603 fetcher.go:69: Article created: Blue Origin marca para domingo novo voo para levar turistas ao espaço
-INFO : 2024/05/31 20:22:35.029110 fetcher.go:69: Article created: Estudos põem em xeque principal hipótese alternativa à matéria escura
-INFO : 2024/05/31 20:22:35.034455 fetcher.go:69: Article created: Estudo revela evidências de violência em uma época de crise no antigo Peru
-INFO : 2024/05/31 20:22:35.039799 fetcher.go:69: Article created: Liu Hui foi o pioneiro da matemática chinesa
-INFO : 2024/05/31 20:22:35.044551 fetcher.go:69: Article created: Cinábrio, o cobiçado mineral que antigas civilizações usavam em rituais sem saber que podia se tornar tóxico
-INFO : 2024/05/31 20:22:35.051866 fetcher.go:69: Article created: Primeira viagem tripulada da Starliner é adiada novamente
-INFO : 2024/05/31 20:22:35.057440 fetcher.go:69: Article created: Lições da antropologia podem ajudar a prevenir pandemias
-INFO : 2024/05/31 20:22:35.064775 fetcher.go:69: Article created: Cientistas investigam causa dos altos patamares de energia das superexplosões estelares
-INFO : 2024/05/31 20:22:35.070449 fetcher.go:69: Article created: Em defesa da FAPESP e da Ciência e Tecnologia
-INFO : 2024/05/31 20:22:35.075680 fetcher.go:69: Article created: Como os buracos negros se tornam 'buracos brancos', segundo o físico Carlo Rovelli
-INFO : 2024/05/31 20:22:35.080828 fetcher.go:69: Article created: Por que os algoritmos são chamados de algoritmos?
-INFO : 2024/05/31 20:22:35.087071 fetcher.go:69: Article created: Auroras causadas por tempestade solar extrema chegam ao fim
-INFO : 2024/05/31 20:22:35.092609 fetcher.go:69: Article created: SpaceX planeja para junho novo teste do Starship, maior foguete já construído
-INFO : 2024/05/31 20:22:35.098043 fetcher.go:69: Article created: Pesquisadores brasileiros investigam o crescimento de plantas fora da Terra
-INFO : 2024/05/31 20:22:35.103047 fetcher.go:69: Article created: Webb detecta evidências de atmosfera em exoplaneta rochoso
-INFO : 2024/05/31 20:22:35.107525 fetcher.go:69: Article created: A Idade da Pedra era na verdade a Idade da Madeira?
-INFO : 2024/05/31 20:22:35.111709 fetcher.go:69: Article created: O que é a lei das consequências imprevistas (e por que ela é tão importante agora)
-INFO : 2024/05/31 20:22:35.119513 fetcher.go:69: Article created: Imagens da aurora boreal após tempestade solar viralizam; veja
-INFO : 2024/05/31 20:22:35.124350 fetcher.go:69: Article created: Primeira tempestade solar extrema em 20 anos causa auroras boreais espetaculares
-INFO : 2024/05/31 20:22:35.128760 fetcher.go:69: Article created: Com produtividade questionada, mães cientistas relatam preconceito na carreira acadêmica
-INFO : 2024/05/31 20:22:35.133972 fetcher.go:69: Article created: Crise climática produz cenários extremos, alterando probabilidade e frequência de grandes desastres
-INFO : 2024/05/31 20:22:35.139318 fetcher.go:69: Article created: Empresários e entidades apontam preocupação com possível perda de verba da Fapesp
-INFO : 2024/05/31 20:22:35.146599 fetcher.go:69: Article created: Elefantes mexem as orelhas, urinam e se tocam ao se cumprimentar
-INFO : 2024/05/31 20:22:35.152762 fetcher.go:69: Article created: Astrônomos detectam planeta rochoso com atmosfera e bem maior que a Terra
-INFO : 2024/05/31 20:22:35.157676 fetcher.go:69: Article created: Tempestade solar ameaça redes elétricas e sistemas de navegação
-INFO : 2024/05/31 20:22:35.162498 fetcher.go:69: Article created: Especialistas debatem como podemos prever uma pandemia do futuro por doença 'X'
-INFO : 2024/05/31 20:22:35.167689 fetcher.go:69: Article created: Bactérias sobrevivem no solo do deserto do Atacama há milhões de anos
-INFO : 2024/05/31 20:22:35.172542 fetcher.go:69: Article created: Como as memórias são armazenadas em nosso cérebro?
-INFO : 2024/05/31 20:22:35.177549 fetcher.go:69: Article created: Um transplante de órgão pode mudar a personalidade de alguém?
-INFO : 2024/05/31 20:22:35.183960 fetcher.go:69: Article created: A papelocracia da pesquisa brasileira
-INFO : 2024/05/31 20:22:35.188377 fetcher.go:69: Article created: 'Conversas' entre baleias podem ter semelhanças com a linguagem dos humanos
-INFO : 2024/05/31 20:22:35.192999 fetcher.go:69: Article created: Conselho da Fapesp fala em 'extrema preocupação' com possível perda de verba
-INFO : 2024/05/31 20:22:35.198163 fetcher.go:69: Article created: Google DeepMind lança nova geração de modelo de IA para medicamentos
-INFO : 2024/05/31 20:22:35.203682 fetcher.go:69: Article created: Voo de cápsula da Boeing com astronautas da Nasa é adiado novamente
-INFO : 2024/05/31 20:22:35.394127 fetcher.go:45: Source created
-INFO : 2024/05/31 20:22:35.400078 fetcher.go:69: Article created: Veja onde assistir a Real Madrid e Borussia Dortmund na final da Champions
-INFO : 2024/05/31 20:22:35.406931 fetcher.go:69: Article created: Arena do Grêmio e Beira-Rio têm lama, peixe e entulho após enchente; veja fotos
-INFO : 2024/05/31 20:22:35.415086 fetcher.go:69: Article created: Qual foi a última vez que você desistiu cedo demais?
-INFO : 2024/05/31 20:22:35.420876 fetcher.go:69: Article created: Acusado de envolvimento com mercado de apostas, Paquetá se diz pronto para defender a seleção
-INFO : 2024/05/31 20:22:35.426009 fetcher.go:69: Article created: Muralha amarela tenta acabar com sequência de títulos do Brasil na Champions
-INFO : 2024/05/31 20:22:35.431274 fetcher.go:69: Article created: Italo Ferreira vence na onda olímpica de Teahupo'o
-INFO : 2024/05/31 20:22:35.437729 fetcher.go:69: Article created: Fifa amplia medidas para maternidade entre jogadoras e treinadoras no futebol
-INFO : 2024/05/31 20:22:35.442120 fetcher.go:69: Article created: França frustra plano de atentado durante os Jogos Olímpicos
-INFO : 2024/05/31 20:22:35.447085 fetcher.go:69: Article created: Os atuais invencíveis, os primeiros invencíveis e os mais famosos invencíveis
-INFO : 2024/05/31 20:22:35.452375 fetcher.go:69: Article created: Endrick se despede do Palmeiras em jogo sem gols no Allianz
-INFO : 2024/05/31 20:22:35.456808 fetcher.go:69: Article created: Especulado no futebol argentino, Di María é alvo de ameaças
-INFO : 2024/05/31 20:22:35.462037 fetcher.go:69: Article created: Cavani anuncia aposentadoria da seleção uruguaia a menos de um mês da Copa América
-INFO : 2024/05/31 20:22:35.468657 fetcher.go:69: Article created: Roland Garros bane álcool das arquibancadas
-INFO : 2024/05/31 20:22:35.475122 fetcher.go:69: Article created: CBF mantém convocação de Paquetá, acusado de envolvimento com mercado de apostas
-INFO : 2024/05/31 20:22:35.480460 fetcher.go:69: Article created: Jogadores do Talleres são autuados por desacato após jogo no Morumbis
-INFO : 2024/05/31 20:22:35.485020 fetcher.go:69: Article created: Aposta no Everton engoliu 777 e seus financiadores
-INFO : 2024/05/31 20:22:35.490457 fetcher.go:69: Article created: Grupo leva comunidade LBTQIA+ ao universo do montanhismo
-INFO : 2024/05/31 20:22:35.498493 fetcher.go:69: Article created: Grêmio volta ao futebol com vitória após pausa forçada por chuvas no Sul
-INFO : 2024/05/31 20:22:35.504662 fetcher.go:69: Article created: SporTV exibirá série inédita sobre a trajetória de Léo Batista
-INFO : 2024/05/31 20:22:35.509988 fetcher.go:69: Article created: A insossa final da Champions?
-INFO : 2024/05/31 20:22:35.515126 fetcher.go:69: Article created: 'Torcida de futebol' faz tenistas criticarem público francês em Roland Garros
-INFO : 2024/05/31 20:22:35.519833 fetcher.go:69: Article created: De malas prontas para Madri, Endrick se despede do Palmeiras
-INFO : 2024/05/31 20:22:35.525012 fetcher.go:69: Article created: A cidade oferece o Sena e o sonho
-INFO : 2024/05/31 20:22:35.530025 fetcher.go:69: Article created: Uniformes das Olimpíadas 2024 são considerados sexistas e não priorizam conforto de atletas
-INFO : 2024/05/31 20:22:35.534437 fetcher.go:69: Article created: Neymar vai leiloar chuteira banhada a ouro e partida de pôquer com ele em evento beneficente
-INFO : 2024/05/31 20:22:35.540664 fetcher.go:69: Article created: A complexidade também está no calendário do futebol brasileiro
-INFO : 2024/05/31 20:22:35.544891 fetcher.go:69: Article created: Globo negocia com clubes da Liga Forte União para manter apelo do Premiere
-INFO : 2024/05/31 20:22:35.549977 fetcher.go:69: Article created: Como nascimento de filhos, maratonas são marcos de vida
-INFO : 2024/05/31 20:22:35.555148 fetcher.go:69: Article created: Brasil fecha Roland Garros com seis derrotas em seis partidas de simples
-INFO : 2024/05/31 20:22:35.560489 fetcher.go:69: Article created: Falsos agentes desviaram R$ 2 milhões de FGTS de Paolo Guerrero, afirma PF
-INFO : 2024/05/31 20:22:35.565821 fetcher.go:69: Article created: Suspenso por doping, Thiago Braz deve perder Jogos Olímpicos de Paris
-INFO : 2024/05/31 20:22:35.570072 fetcher.go:69: Article created: Bill Walton, bicampeão da NBA, morre aos 71 anos
-INFO : 2024/05/31 20:22:35.575760 fetcher.go:69: Article created: A dois meses de 'superluta', Mike Tyson passa mal em voo para Los Angeles
-INFO : 2024/05/31 20:22:35.580947 fetcher.go:69: Article created: Bia Haddad perde na estreia em Roland Garros e sofrerá queda em ranking
-INFO : 2024/05/31 20:22:35.586180 fetcher.go:69: Article created: O primeiro adeus de Rafael Nadal em Roland Garros
-INFO : 2024/05/31 20:22:35.593831 fetcher.go:69: Article created: CBF aprova troca em mando de campo para minimizar desequilíbrio
-INFO : 2024/05/31 20:22:35.598886 fetcher.go:69: Article created: Após adeus a Cássio, Corinthians anuncia despedida de Paulinho
-INFO : 2024/05/31 20:22:35.604552 fetcher.go:69: Article created: Nadal cai na estreia em Roland Garros e pondera seu futuro no tênis
-INFO : 2024/05/31 20:22:35.609597 fetcher.go:69: Article created: Com equipe multicampeã, Barcelona se transforma na capital do futebol feminino
-INFO : 2024/05/31 20:22:35.614873 fetcher.go:69: Article created: Atletismo, natação e levantamento de peso devem ter recordes em Paris
-INFO : 2024/05/31 20:22:35.620157 fetcher.go:69: Article created: Ludmilla abre placar do Futebol Solidário; partida com artistas e jogadores termina em 5 x 5
-INFO : 2024/05/31 20:22:35.625860 fetcher.go:69: Article created: Belo e Denilson têm reencontro com direito a beijo no rosto: 'O que o Brasil queria ver'
-INFO : 2024/05/31 20:22:35.631041 fetcher.go:69: Article created: CBF pretende manter 8 de dezembro como data final do Brasileiro
-INFO : 2024/05/31 20:22:35.635448 fetcher.go:69: Article created: É difícil ser ético no futebol
-INFO : 2024/05/31 20:22:35.640788 fetcher.go:69: Article created: Meu senso crítico questiona as minhas análises sobre futebol
-INFO : 2024/05/31 20:22:35.647286 fetcher.go:69: Article created: Atacante do América-MG ignora gesto de lesão de goleiro do Santos e marca; veja vídeo
-INFO : 2024/05/31 20:22:35.651647 fetcher.go:69: Article created: Barcelona derrota Lyon na Champions feminina e consolida hegemonia na Europa
-INFO : 2024/05/31 20:22:35.656554 fetcher.go:69: Article created: Manchester United bate hegemonia do City e vence Copa da Inglaterra
-INFO : 2024/05/31 20:22:35.661690 fetcher.go:69: Article created: O caso Paquetá e suas metástases
-INFO : 2024/05/31 20:22:35.666396 fetcher.go:69: Article created: Com seis em Roland Garros, Brasil tem sua maior participação em 36 anos
-INFO : 2024/05/31 20:22:35.671690 fetcher.go:69: Article created: Fator psicológico será maior desafio na retomada dos jogos, diz Renato Gaúcho
-INFO : 2024/05/31 20:22:35.680686 fetcher.go:69: Article created: Patrocinadora reforça preocupação com denúncias no Corinthians
-INFO : 2024/05/31 20:22:35.685741 fetcher.go:69: Article created: Justiça dos EUA marca julgamento de processo para indenização das vítimas do voo da Chape
-INFO : 2024/05/31 20:22:35.691366 fetcher.go:69: Article created: A Copa do Mundo Feminina no Brasil já começou
-INFO : 2024/05/31 20:22:35.696592 fetcher.go:69: Article created: Bernardinho volta manso à seleção e espera por gatilho nas Olimpíadas de Paris
-INFO : 2024/05/31 20:22:35.700595 fetcher.go:69: Article created: Barcelona demite técnico Xavi Hernández
-INFO : 2024/05/31 20:22:35.705833 fetcher.go:69: Article created: Novo museu do tênis de Roland Garros queria coração desenhado por Guga na quadra
-INFO : 2024/05/31 20:22:35.709787 fetcher.go:69: Article created: O guardanapo de R$ 5 milhões
-INFO : 2024/05/31 20:22:35.716064 fetcher.go:69: Article created: Cássio cansou do Corinthians e Corinthians cansou do Cássio, comenta Lula; veja vídeo
-INFO : 2024/05/31 20:22:35.720421 fetcher.go:69: Article created: Superintendente de marketing do Corinthians pede licença em meio a acusações
-INFO : 2024/05/31 20:22:35.725010 fetcher.go:69: Article created: Federação inglesa acusa Paquetá de forçar amarelo para 'afetar o mercado de apostas'
-INFO : 2024/05/31 20:22:35.730242 fetcher.go:69: Article created: Palmeiras encaminha venda de Estevão ao Chelsea por 60 milhões de euros
-INFO : 2024/05/31 20:22:35.735781 fetcher.go:69: Article created: Paris não existe sem Notre-Dame
-INFO : 2024/05/31 20:22:35.741043 fetcher.go:69: Article created: Campeã italiana, Inter muda de dono por causa de dívida
-INFO : 2024/05/31 20:22:35.746901 fetcher.go:69: Article created: Família de Schumacher recebe indenização por 'entrevista' criada por IA
-INFO : 2024/05/31 20:22:35.752141 fetcher.go:69: Article created: O custo crescente da corrida
-INFO : 2024/05/31 20:22:35.759447 fetcher.go:69: Article created: Na Ilha do Cardoso, parceria inova ao incluir comunidades originárias na gestão
-INFO : 2024/05/31 20:22:35.764478 fetcher.go:69: Article created: Nigeriano brilha, Atalanta derruba invencibilidade do Leverkusen e conquista Liga Europa
-INFO : 2024/05/31 20:22:35.769451 fetcher.go:69: Article created: O Corinthians nas páginas de polícia
-INFO : 2024/05/31 20:22:35.774493 fetcher.go:69: Article created: Brasileiro de 22 anos está a um jogo da chave principal de Roland Garros
-INFO : 2024/05/31 20:22:35.780769 fetcher.go:69: Article created: Ex-campeões peso-pesado do UFC fazem combates sangrentos de MMA sem luvas
-INFO : 2024/05/31 20:22:35.786688 fetcher.go:69: Article created: CBF anuncia volta do Campeonato Brasileiro a partir de 1º de junho
-INFO : 2024/05/31 20:22:35.791557 fetcher.go:69: Article created: Patrocinadora do Corinthians estuda rescindir contrato em meio a denúncias
-INFO : 2024/05/31 20:22:35.797023 fetcher.go:69: Article created: Recebido com festa, Cássio diz que será feliz no Cruzeiro
-INFO : 2024/05/31 20:22:35.802489 fetcher.go:69: Article created: A difícil decisão do jogador sobre a hora de parar
-INFO : 2024/05/31 20:22:35.808998 fetcher.go:69: Article created: Grêmio e Inter lançam campanha para atrair doações de empresas ao Sul
-INFO : 2024/05/31 20:22:35.814280 fetcher.go:69: Article created: McLaren lança carro com pintura em homenagem a Senna
-INFO : 2024/05/31 20:22:35.819555 fetcher.go:69: Article created: Hábitos da geração Z ameaçam modelo de negócios do esporte
-INFO : 2024/05/31 20:22:35.824816 fetcher.go:69: Article created: Toni Kroos anuncia aposentadoria após a Eurocopa
-INFO : 2024/05/31 20:22:35.829835 fetcher.go:69: Article created: Globo produz documentário sobre máfia do apito, maior escândalo do futebol brasileiro
-INFO : 2024/05/31 20:22:35.834561 fetcher.go:69: Article created: Premier League não é chata, só o Guardiola
-INFO : 2024/05/31 20:22:35.841670 fetcher.go:69: Article created: Jogador cobre logo contra homofobia, e governo francês pede punição
-INFO : 2024/05/31 20:22:35.848083 fetcher.go:69: Article created: Tetra resgatou autoestima do brasileiro, afirma Romário
-INFO : 2024/05/31 20:22:35.853520 fetcher.go:69: Article created: Campeão tão perto, tão longe do torcedor
-INFO : 2024/05/31 20:22:35.858786 fetcher.go:69: Article created: Sunday Happy Sunday
-INFO : 2024/05/31 20:22:35.863745 fetcher.go:69: Article created: Manchester City entra na história do Campeonato Inglês com primeiro tetra
-INFO : 2024/05/31 20:22:35.868210 fetcher.go:69: Article created: Rayssa Leal vence etapa da China do pré-olímpico de skate
-INFO : 2024/05/31 20:22:35.872597 fetcher.go:69: Article created: Corrida em Ímola tem homenagens a Senna 30 anos após sua morte
-INFO : 2024/05/31 20:22:35.877688 fetcher.go:69: Article created: Campeão alemão, Bayer Leverkusen encerra campanha invicto
-INFO : 2024/05/31 20:22:35.883594 fetcher.go:69: Article created: Homenageado, Cássio diz que sai do Corinthians pela porta da frente
-INFO : 2024/05/31 20:22:35.887991 fetcher.go:69: Article created: Lá se foi um trio de ouro
-INFO : 2024/05/31 20:22:35.893270 fetcher.go:69: Article created: Perdemos três importantes membros do jornalismo esportivo brasileiro
-INFO : 2024/05/31 20:22:35.898427 fetcher.go:69: Article created: Saída de 'ídolo' Cássio comove corintianos nas redes
-INFO : 2024/05/31 20:22:35.903170 fetcher.go:69: Article created: Após foto com camisa do Corinthians, Gabigol é multado e não vai usar mais a 10 do Flamengo
-INFO : 2024/05/31 20:22:35.908904 fetcher.go:69: Article created: Cássio chega a acordo com Corinthians e deixa o clube após 12 anos
-INFO : 2024/05/31 20:22:35.913830 fetcher.go:69: Article created: Kelly Slater e tão falada aposentadoria
-INFO : 2024/05/31 20:22:35.918572 fetcher.go:69: Article created: Inter estima em até 90 dias prazo para voltar a jogar no Beira-Rio
-INFO : 2024/05/31 20:22:35.925146 fetcher.go:69: Article created: Governo confirma RS como uma das sedes da Copa de 2027; Marta pede estreia da seleção no estado
-INFO : 2024/05/31 20:22:35.930261 fetcher.go:69: Article created: A Premier League ficou previsível?
-INFO : 2024/05/31 20:22:35.935379 fetcher.go:69: Article created: Brasil supera candidatura europeia e vai receber Copa do Mundo feminina de 2027
-INFO : 2024/05/31 20:22:39.647640 fetcher.go:45: Source created
-INFO : 2024/05/31 20:22:39.655505 fetcher.go:69: Article created: As imagens da galáxia mais distante da Terra obtidas pela Nasa
-INFO : 2024/05/31 20:22:39.661150 fetcher.go:69: Article created: Por que aplaudimos?
-INFO : 2024/05/31 20:22:39.666474 fetcher.go:69: Article created: Infância de neandertais parece ter sido bem mais difícil do que a de humanos modernos
-INFO : 2024/05/31 20:22:39.672130 fetcher.go:69: Article created: Telescópio James Webb bate próprio recorde ao encontrar galáxia mais distante conhecida
-INFO : 2024/05/31 20:22:39.677254 fetcher.go:69: Article created: Escaneando o Universo, telescópio Euclid capta galáxias e berçário estelar
-INFO : 2024/05/31 20:22:39.682413 fetcher.go:69: Article created: Bactérias fabricavam 'bússola' com ferro há quase 2 bilhões de anos para se orientar no ambiente
-INFO : 2024/05/31 20:22:39.688722 fetcher.go:69: Article created: Com vetos, Lula sanciona projeto que regula pesquisa em humanos
-INFO : 2024/05/31 20:22:39.693855 fetcher.go:69: Article created: Telescópio Euclid descobre novos planetas sem estrelas
-INFO : 2024/05/31 20:22:39.699025 fetcher.go:69: Article created: Cientistas japoneses constroem o primeiro satélite de madeira do mundo
-INFO : 2024/05/31 20:22:39.703982 fetcher.go:69: Article created: O lado ainda fechado da ciência aberta
-INFO : 2024/05/31 20:22:39.708546 fetcher.go:69: Article created: Marcas em crânio egípcio de 4.000 anos sugerem tentativa de tratar câncer
-INFO : 2024/05/31 20:22:39.713330 fetcher.go:69: Article created: A descoberta dos sólidos platônicos
-INFO : 2024/05/31 20:22:39.718495 fetcher.go:69: Article created: Rios de lava em Vênus revelam um planeta mais vulcanicamente ativo
-INFO : 2024/05/31 20:22:39.727256 fetcher.go:69: Article created: A quem interessa a militarização das escolas?
-INFO : 2024/05/31 20:22:39.732312 fetcher.go:69: Article created: Mudança climática fez dinossauros desenvolverem sangue quente
-INFO : 2024/05/31 20:22:39.737505 fetcher.go:69: Article created: 'Capacidade de jogar, não a de pensar, é fator crucial do desenvolvimento', diz matemático de Oxford
-INFO : 2024/05/31 20:22:39.742109 fetcher.go:69: Article created: O antigo costume perdido de produzir máscaras de pessoas mortas
-INFO : 2024/05/31 20:22:39.746671 fetcher.go:69: Article created: A pena de pássaro 'sagrado' extinto vendida por R$ 147 mil em leilão
-INFO : 2024/05/31 20:22:39.751787 fetcher.go:69: Article created: Luz ultravioleta revela pele preservada em fóssil de dinossauro desenterrado na China
-INFO : 2024/05/31 20:22:39.756676 fetcher.go:69: Article created: As plantas são inteligentes? Se sim, o que isso significa para a sua salada?
-INFO : 2024/05/31 20:22:39.763976 fetcher.go:69: Article created: Com problema na propulsão, Nasa e Boeing decidem lançar cápsula em 1º de junho
-INFO : 2024/05/31 20:22:39.769247 fetcher.go:69: Article created: Cobras sangram pela boca e se fingem de mortas para escapar de presa
-INFO : 2024/05/31 20:22:39.774201 fetcher.go:69: Article created: O mistério sobre por que cérebros humanos estão encolhendo
-INFO : 2024/05/31 20:22:39.778278 fetcher.go:69: Article created: O que aconteceria com o Universo se a matéria escura sumisse?
-INFO : 2024/05/31 20:22:39.782567 fetcher.go:69: Article created: Estridência de negacionistas climáticos é sinal de que estamos vencendo, diz cientista sueco
-INFO : 2024/05/31 20:22:39.787155 fetcher.go:69: Article created: Substância psicodélica faz ratos de laboratório sonharem acordados, diz estudo
-INFO : 2024/05/31 20:22:39.792905 fetcher.go:69: Article created: Einstein visitou Brasil a contragosto e chamou cientista de 'macaco', mostram diários
-INFO : 2024/05/31 20:22:39.797778 fetcher.go:69: Article created: Boeing e Nasa dizem ter superado problemas técnicos para o voo tripulado da Starliner
-INFO : 2024/05/31 20:22:39.805079 fetcher.go:69: Article created: Cientista Carlos Nobre entra para grupo Planetary Guardians, criado pelo bilionário Richard Branson
-INFO : 2024/05/31 20:22:39.810630 fetcher.go:69: Article created: O mistério das canoas abandonadas perto de Roma há 7.000 anos
-INFO : 2024/05/31 20:22:39.815748 fetcher.go:69: Article created: Pedido de patente terá de indicar uso de conhecimento de povos indígenas
-INFO : 2024/05/31 20:22:39.822228 fetcher.go:69: Article created: Aves sem asas, moas tinham bom olfato e visão ultravioleta
-INFO : 2024/05/31 20:22:39.827391 fetcher.go:69: Article created: Contra biopirataria, avança acordo por patentes com dados sobre povos indígenas
-INFO : 2024/05/31 20:22:39.832472 fetcher.go:69: Article created: Corvos conseguem 'contar em voz alta' de forma parecida à de crianças pequenas
-INFO : 2024/05/31 20:22:39.837877 fetcher.go:69: Article created: Pesquisadora da USP recebe prêmio da L'Oréal-Unesco por contribuição para a biologia
-INFO : 2024/05/31 20:22:39.843798 fetcher.go:69: Article created: Como minhocas marinhas ajudam a entender a diversidade da costa brasileira
-INFO : 2024/05/31 20:22:39.848712 fetcher.go:69: Article created: Descoberta sobre campo magnético do Sol pode ajudar a prever tempestades que causam auroras
-INFO : 2024/05/31 20:22:39.854966 fetcher.go:69: Article created: Especialistas contam como tornar uma sociedade mais resiliente através de crises
-INFO : 2024/05/31 20:22:39.860131 fetcher.go:69: Article created: Lançamento de cápsula da Boeing volta a ser adiado devido a vazamento
-INFO : 2024/05/31 20:22:39.865183 fetcher.go:69: Article created: Macacos caem mortos de árvores no México em meio a onda de calor; veja vídeo
-INFO : 2024/05/31 20:22:39.869700 fetcher.go:69: Article created: Painel mostra a mudança no perfil dos estudantes das universidades públicas
-INFO : 2024/05/31 20:22:39.874343 fetcher.go:69: Article created: Clonagem de parente de estrela-do-mar é flagrada em fóssil
-INFO : 2024/05/31 20:22:39.880776 fetcher.go:69: Article created: Voluntários farão coleta mundial de água de lagos para estudo da biodiversidade
-INFO : 2024/05/31 20:22:39.887178 fetcher.go:69: Article created: O advento da matemática chinesa
-INFO : 2024/05/31 20:22:39.892066 fetcher.go:69: Article created: Como a linguagem dos neandertais era diferente da dos humanos modernos
-INFO : 2024/05/31 20:22:39.897084 fetcher.go:69: Article created: Barata-de-cozinha começou saga de dominação global há 2.100 anos
-INFO : 2024/05/31 20:22:39.902211 fetcher.go:69: Article created: Por que nunca esquecemos o primeiro beijo? Entenda como funciona a memória autobiográfica
-INFO : 2024/05/31 20:22:39.907588 fetcher.go:69: Article created: Biólogo pisa 40,5 mil vezes em jararacas ou perto delas para estudar quando e por que elas dão picadas
-INFO : 2024/05/31 20:22:39.912815 fetcher.go:69: Article created: Conferência quer ajudar a desenhar plano para a ciência brasileira
-INFO : 2024/05/31 20:22:39.919417 fetcher.go:69: Article created: Fragmento de cometa ilumina céu da Espanha e de Portugal; veja vídeo
-INFO : 2024/05/31 20:22:39.924477 fetcher.go:69: Article created: Ambientalistas recriam viagem de Charles Darwin às Ilhas Galápagos
-INFO : 2024/05/31 20:22:39.929365 fetcher.go:69: Article created: Com capitão de 90 anos a bordo, Blue Origin faz seu sétimo voo de turismo espacial
-INFO : 2024/05/31 20:22:39.934092 fetcher.go:69: Article created: Já em órbita lunar, missão chinesa terá minirrover-surpresa
-INFO : 2024/05/31 20:22:39.938886 fetcher.go:69: Article created: Tragédias anunciadas. Até quando?
-INFO : 2024/05/31 20:22:39.943917 fetcher.go:69: Article created: Por que as pessoas fazem música?
-INFO : 2024/05/31 20:22:39.950335 fetcher.go:69: Article created: Intolerância religiosa acaba levando à negação da ciência, indica estudo internacional
-INFO : 2024/05/31 20:22:39.955632 fetcher.go:69: Article created: Lula, Dilma e Mangabeira abortaram adaptação à mudança climática
-INFO : 2024/05/31 20:22:39.963043 fetcher.go:69: Article created: Secas, terremotos, conflitos e migrações marcaram colapso no fim da Idade do Bronze
-INFO : 2024/05/31 20:22:39.968183 fetcher.go:69: Article created: Preocupados com as mudanças climáticas, astrônomos se voltam ao estudo da Terra
-INFO : 2024/05/31 20:22:39.972924 fetcher.go:69: Article created: A pesquisadora que defende que temos 12 sentidos, e não apenas 5
-INFO : 2024/05/31 20:22:39.980715 fetcher.go:69: Article created: Cientistas calculam a energia necessária para gestar um bebê
-INFO : 2024/05/31 20:22:39.985690 fetcher.go:69: Article created: Com ferramentas, lontras-marinhas obtêm mais presas e reduzem danos nos dentes
-INFO : 2024/05/31 20:22:39.991984 fetcher.go:69: Article created: Queda na locomoção e falhas no sistema imune: estudo mostra como agrotóxicos afetam abelhas nativas
-INFO : 2024/05/31 20:22:39.997257 fetcher.go:69: Article created: Pirâmides do Egito margeavam braço do rio Nilo quando surgiram
-INFO : 2024/05/31 20:22:40.001393 fetcher.go:69: Article created: Como povos indígenas e comunidades tradicionais estão salvando ecossistemas
-INFO : 2024/05/31 20:22:40.005785 fetcher.go:69: Article created: Encontradas pela primeira vez moléculas orgânicas complexas no gelo de estrelas nascentes
-INFO : 2024/05/31 20:22:40.010814 fetcher.go:69: Article created: Blue Origin marca para domingo novo voo para levar turistas ao espaço
-INFO : 2024/05/31 20:22:40.015351 fetcher.go:69: Article created: Estudos põem em xeque principal hipótese alternativa à matéria escura
-INFO : 2024/05/31 20:22:40.020741 fetcher.go:69: Article created: Estudo revela evidências de violência em uma época de crise no antigo Peru
-INFO : 2024/05/31 20:22:40.025766 fetcher.go:69: Article created: Liu Hui foi o pioneiro da matemática chinesa
-INFO : 2024/05/31 20:22:40.030737 fetcher.go:69: Article created: Cinábrio, o cobiçado mineral que antigas civilizações usavam em rituais sem saber que podia se tornar tóxico
-INFO : 2024/05/31 20:22:40.035565 fetcher.go:69: Article created: Primeira viagem tripulada da Starliner é adiada novamente
-INFO : 2024/05/31 20:22:40.040975 fetcher.go:69: Article created: Lições da antropologia podem ajudar a prevenir pandemias
-INFO : 2024/05/31 20:22:40.048461 fetcher.go:69: Article created: Cientistas investigam causa dos altos patamares de energia das superexplosões estelares
-INFO : 2024/05/31 20:22:40.054722 fetcher.go:69: Article created: Em defesa da FAPESP e da Ciência e Tecnologia
-INFO : 2024/05/31 20:22:40.060277 fetcher.go:69: Article created: Como os buracos negros se tornam 'buracos brancos', segundo o físico Carlo Rovelli
-INFO : 2024/05/31 20:22:40.065412 fetcher.go:69: Article created: Por que os algoritmos são chamados de algoritmos?
-INFO : 2024/05/31 20:22:40.070586 fetcher.go:69: Article created: Auroras causadas por tempestade solar extrema chegam ao fim
-INFO : 2024/05/31 20:22:40.075433 fetcher.go:69: Article created: SpaceX planeja para junho novo teste do Starship, maior foguete já construído
-INFO : 2024/05/31 20:22:40.080545 fetcher.go:69: Article created: Pesquisadores brasileiros investigam o crescimento de plantas fora da Terra
-INFO : 2024/05/31 20:22:40.086431 fetcher.go:69: Article created: Webb detecta evidências de atmosfera em exoplaneta rochoso
-INFO : 2024/05/31 20:22:40.090800 fetcher.go:69: Article created: A Idade da Pedra era na verdade a Idade da Madeira?
-INFO : 2024/05/31 20:22:40.095941 fetcher.go:69: Article created: O que é a lei das consequências imprevistas (e por que ela é tão importante agora)
-INFO : 2024/05/31 20:22:40.101168 fetcher.go:69: Article created: Imagens da aurora boreal após tempestade solar viralizam; veja
-INFO : 2024/05/31 20:22:40.106346 fetcher.go:69: Article created: Primeira tempestade solar extrema em 20 anos causa auroras boreais espetaculares
-INFO : 2024/05/31 20:22:40.112108 fetcher.go:69: Article created: Com produtividade questionada, mães cientistas relatam preconceito na carreira acadêmica
-INFO : 2024/05/31 20:22:40.118888 fetcher.go:69: Article created: Crise climática produz cenários extremos, alterando probabilidade e frequência de grandes desastres
-INFO : 2024/05/31 20:22:40.124009 fetcher.go:69: Article created: Empresários e entidades apontam preocupação com possível perda de verba da Fapesp
-INFO : 2024/05/31 20:22:40.137779 fetcher.go:69: Article created: Elefantes mexem as orelhas, urinam e se tocam ao se cumprimentar
-INFO : 2024/05/31 20:22:40.143199 fetcher.go:69: Article created: Astrônomos detectam planeta rochoso com atmosfera e bem maior que a Terra
-INFO : 2024/05/31 20:22:40.148104 fetcher.go:69: Article created: Tempestade solar ameaça redes elétricas e sistemas de navegação
-INFO : 2024/05/31 20:22:40.153051 fetcher.go:69: Article created: Especialistas debatem como podemos prever uma pandemia do futuro por doença 'X'
-INFO : 2024/05/31 20:22:40.158215 fetcher.go:69: Article created: Bactérias sobrevivem no solo do deserto do Atacama há milhões de anos
-INFO : 2024/05/31 20:22:40.165628 fetcher.go:69: Article created: Como as memórias são armazenadas em nosso cérebro?
-INFO : 2024/05/31 20:22:40.170412 fetcher.go:69: Article created: Um transplante de órgão pode mudar a personalidade de alguém?
-INFO : 2024/05/31 20:22:40.175558 fetcher.go:69: Article created: A papelocracia da pesquisa brasileira
-INFO : 2024/05/31 20:22:40.180428 fetcher.go:69: Article created: 'Conversas' entre baleias podem ter semelhanças com a linguagem dos humanos
-INFO : 2024/05/31 20:22:40.185518 fetcher.go:69: Article created: Conselho da Fapesp fala em 'extrema preocupação' com possível perda de verba
-INFO : 2024/05/31 20:22:40.191633 fetcher.go:69: Article created: Google DeepMind lança nova geração de modelo de IA para medicamentos
-INFO : 2024/05/31 20:22:40.196580 fetcher.go:69: Article created: Voo de cápsula da Boeing com astronautas da Nasa é adiado novamente
-INFO : 2024/05/31 20:22:40.379269 fetcher.go:45: Source created
-INFO : 2024/05/31 20:22:40.384723 fetcher.go:69: Article created: Veja onde assistir a Real Madrid e Borussia Dortmund na final da Champions
-INFO : 2024/05/31 20:22:40.390759 fetcher.go:69: Article created: Arena do Grêmio e Beira-Rio têm lama, peixe e entulho após enchente; veja fotos
-INFO : 2024/05/31 20:22:40.416354 fetcher.go:69: Article created: Qual foi a última vez que você desistiu cedo demais?
-INFO : 2024/05/31 20:22:40.422803 fetcher.go:69: Article created: Acusado de envolvimento com mercado de apostas, Paquetá se diz pronto para defender a seleção
-INFO : 2024/05/31 20:22:40.427839 fetcher.go:69: Article created: Muralha amarela tenta acabar com sequência de títulos do Brasil na Champions
-INFO : 2024/05/31 20:22:40.433701 fetcher.go:69: Article created: Italo Ferreira vence na onda olímpica de Teahupo'o
-INFO : 2024/05/31 20:22:40.438392 fetcher.go:69: Article created: Fifa amplia medidas para maternidade entre jogadoras e treinadoras no futebol
-INFO : 2024/05/31 20:22:40.443464 fetcher.go:69: Article created: França frustra plano de atentado durante os Jogos Olímpicos
-INFO : 2024/05/31 20:22:40.449032 fetcher.go:69: Article created: Os atuais invencíveis, os primeiros invencíveis e os mais famosos invencíveis
-INFO : 2024/05/31 20:22:40.455338 fetcher.go:69: Article created: Endrick se despede do Palmeiras em jogo sem gols no Allianz
-INFO : 2024/05/31 20:22:40.460515 fetcher.go:69: Article created: Especulado no futebol argentino, Di María é alvo de ameaças
-INFO : 2024/05/31 20:22:40.465382 fetcher.go:69: Article created: Cavani anuncia aposentadoria da seleção uruguaia a menos de um mês da Copa América
-INFO : 2024/05/31 20:22:40.470193 fetcher.go:69: Article created: Roland Garros bane álcool das arquibancadas
-INFO : 2024/05/31 20:22:40.474773 fetcher.go:69: Article created: CBF mantém convocação de Paquetá, acusado de envolvimento com mercado de apostas
-INFO : 2024/05/31 20:22:40.479891 fetcher.go:69: Article created: Jogadores do Talleres são autuados por desacato após jogo no Morumbis
-INFO : 2024/05/31 20:22:40.484675 fetcher.go:69: Article created: Aposta no Everton engoliu 777 e seus financiadores
-INFO : 2024/05/31 20:22:40.492161 fetcher.go:69: Article created: Grupo leva comunidade LBTQIA+ ao universo do montanhismo
-INFO : 2024/05/31 20:22:40.497163 fetcher.go:69: Article created: Grêmio volta ao futebol com vitória após pausa forçada por chuvas no Sul
-INFO : 2024/05/31 20:22:40.502079 fetcher.go:69: Article created: SporTV exibirá série inédita sobre a trajetória de Léo Batista
-INFO : 2024/05/31 20:22:40.507154 fetcher.go:69: Article created: A insossa final da Champions?
-INFO : 2024/05/31 20:22:40.512429 fetcher.go:69: Article created: 'Torcida de futebol' faz tenistas criticarem público francês em Roland Garros
-INFO : 2024/05/31 20:22:40.516569 fetcher.go:69: Article created: De malas prontas para Madri, Endrick se despede do Palmeiras
-INFO : 2024/05/31 20:22:40.521907 fetcher.go:69: Article created: A cidade oferece o Sena e o sonho
-INFO : 2024/05/31 20:22:40.526182 fetcher.go:69: Article created: Uniformes das Olimpíadas 2024 são considerados sexistas e não priorizam conforto de atletas
-INFO : 2024/05/31 20:22:40.530504 fetcher.go:69: Article created: Neymar vai leiloar chuteira banhada a ouro e partida de pôquer com ele em evento beneficente
-INFO : 2024/05/31 20:22:40.535375 fetcher.go:69: Article created: A complexidade também está no calendário do futebol brasileiro
-INFO : 2024/05/31 20:22:40.539544 fetcher.go:69: Article created: Globo negocia com clubes da Liga Forte União para manter apelo do Premiere
-INFO : 2024/05/31 20:22:40.544036 fetcher.go:69: Article created: Como nascimento de filhos, maratonas são marcos de vida
-INFO : 2024/05/31 20:22:40.550245 fetcher.go:69: Article created: Brasil fecha Roland Garros com seis derrotas em seis partidas de simples
-INFO : 2024/05/31 20:22:40.554725 fetcher.go:69: Article created: Falsos agentes desviaram R$ 2 milhões de FGTS de Paolo Guerrero, afirma PF
-INFO : 2024/05/31 20:22:40.559688 fetcher.go:69: Article created: Suspenso por doping, Thiago Braz deve perder Jogos Olímpicos de Paris
-INFO : 2024/05/31 20:22:40.564679 fetcher.go:69: Article created: Bill Walton, bicampeão da NBA, morre aos 71 anos
-INFO : 2024/05/31 20:22:40.569545 fetcher.go:69: Article created: A dois meses de 'superluta', Mike Tyson passa mal em voo para Los Angeles
-INFO : 2024/05/31 20:22:40.574653 fetcher.go:69: Article created: Bia Haddad perde na estreia em Roland Garros e sofrerá queda em ranking
-INFO : 2024/05/31 20:22:40.580028 fetcher.go:69: Article created: O primeiro adeus de Rafael Nadal em Roland Garros
-INFO : 2024/05/31 20:22:40.586138 fetcher.go:69: Article created: CBF aprova troca em mando de campo para minimizar desequilíbrio
-INFO : 2024/05/31 20:22:40.590841 fetcher.go:69: Article created: Após adeus a Cássio, Corinthians anuncia despedida de Paulinho
-INFO : 2024/05/31 20:22:40.596030 fetcher.go:69: Article created: Nadal cai na estreia em Roland Garros e pondera seu futuro no tênis
-INFO : 2024/05/31 20:22:40.600743 fetcher.go:69: Article created: Com equipe multicampeã, Barcelona se transforma na capital do futebol feminino
-INFO : 2024/05/31 20:22:40.605494 fetcher.go:69: Article created: Atletismo, natação e levantamento de peso devem ter recordes em Paris
-INFO : 2024/05/31 20:22:40.610559 fetcher.go:69: Article created: Ludmilla abre placar do Futebol Solidário; partida com artistas e jogadores termina em 5 x 5
-INFO : 2024/05/31 20:22:40.615035 fetcher.go:69: Article created: Belo e Denilson têm reencontro com direito a beijo no rosto: 'O que o Brasil queria ver'
-INFO : 2024/05/31 20:22:40.620776 fetcher.go:69: Article created: CBF pretende manter 8 de dezembro como data final do Brasileiro
-INFO : 2024/05/31 20:22:40.625643 fetcher.go:69: Article created: É difícil ser ético no futebol
-INFO : 2024/05/31 20:22:40.629848 fetcher.go:69: Article created: Meu senso crítico questiona as minhas análises sobre futebol
-INFO : 2024/05/31 20:22:40.635133 fetcher.go:69: Article created: Atacante do América-MG ignora gesto de lesão de goleiro do Santos e marca; veja vídeo
-INFO : 2024/05/31 20:22:40.640337 fetcher.go:69: Article created: Barcelona derrota Lyon na Champions feminina e consolida hegemonia na Europa
-INFO : 2024/05/31 20:22:40.645303 fetcher.go:69: Article created: Manchester United bate hegemonia do City e vence Copa da Inglaterra
-INFO : 2024/05/31 20:22:40.649297 fetcher.go:69: Article created: O caso Paquetá e suas metástases
-INFO : 2024/05/31 20:22:40.654505 fetcher.go:69: Article created: Com seis em Roland Garros, Brasil tem sua maior participação em 36 anos
-INFO : 2024/05/31 20:22:40.659516 fetcher.go:69: Article created: Fator psicológico será maior desafio na retomada dos jogos, diz Renato Gaúcho
-INFO : 2024/05/31 20:22:40.664682 fetcher.go:69: Article created: Patrocinadora reforça preocupação com denúncias no Corinthians
-INFO : 2024/05/31 20:22:40.669327 fetcher.go:69: Article created: Justiça dos EUA marca julgamento de processo para indenização das vítimas do voo da Chape
-INFO : 2024/05/31 20:22:40.674511 fetcher.go:69: Article created: A Copa do Mundo Feminina no Brasil já começou
-INFO : 2024/05/31 20:22:40.680778 fetcher.go:69: Article created: Bernardinho volta manso à seleção e espera por gatilho nas Olimpíadas de Paris
-INFO : 2024/05/31 20:22:40.685688 fetcher.go:69: Article created: Barcelona demite técnico Xavi Hernández
-INFO : 2024/05/31 20:22:40.690975 fetcher.go:69: Article created: Novo museu do tênis de Roland Garros queria coração desenhado por Guga na quadra
-INFO : 2024/05/31 20:22:40.695221 fetcher.go:69: Article created: O guardanapo de R$ 5 milhões
-INFO : 2024/05/31 20:22:40.699914 fetcher.go:69: Article created: Cássio cansou do Corinthians e Corinthians cansou do Cássio, comenta Lula; veja vídeo
-INFO : 2024/05/31 20:22:40.705125 fetcher.go:69: Article created: Superintendente de marketing do Corinthians pede licença em meio a acusações
-INFO : 2024/05/31 20:22:40.710190 fetcher.go:69: Article created: Federação inglesa acusa Paquetá de forçar amarelo para 'afetar o mercado de apostas'
-INFO : 2024/05/31 20:22:40.716595 fetcher.go:69: Article created: Palmeiras encaminha venda de Estevão ao Chelsea por 60 milhões de euros
-INFO : 2024/05/31 20:22:40.721998 fetcher.go:69: Article created: Paris não existe sem Notre-Dame
-INFO : 2024/05/31 20:22:40.726970 fetcher.go:69: Article created: Campeã italiana, Inter muda de dono por causa de dívida
-INFO : 2024/05/31 20:22:40.732062 fetcher.go:69: Article created: Família de Schumacher recebe indenização por 'entrevista' criada por IA
-INFO : 2024/05/31 20:22:40.737253 fetcher.go:69: Article created: O custo crescente da corrida
-INFO : 2024/05/31 20:22:40.743491 fetcher.go:69: Article created: Na Ilha do Cardoso, parceria inova ao incluir comunidades originárias na gestão
-INFO : 2024/05/31 20:22:40.748286 fetcher.go:69: Article created: Nigeriano brilha, Atalanta derruba invencibilidade do Leverkusen e conquista Liga Europa
-INFO : 2024/05/31 20:22:40.752945 fetcher.go:69: Article created: O Corinthians nas páginas de polícia
-INFO : 2024/05/31 20:22:40.758137 fetcher.go:69: Article created: Brasileiro de 22 anos está a um jogo da chave principal de Roland Garros
-INFO : 2024/05/31 20:22:40.762901 fetcher.go:69: Article created: Ex-campeões peso-pesado do UFC fazem combates sangrentos de MMA sem luvas
-INFO : 2024/05/31 20:22:40.767992 fetcher.go:69: Article created: CBF anuncia volta do Campeonato Brasileiro a partir de 1º de junho
-INFO : 2024/05/31 20:22:40.774151 fetcher.go:69: Article created: Patrocinadora do Corinthians estuda rescindir contrato em meio a denúncias
-INFO : 2024/05/31 20:22:40.778647 fetcher.go:69: Article created: Recebido com festa, Cássio diz que será feliz no Cruzeiro
-INFO : 2024/05/31 20:22:40.783959 fetcher.go:69: Article created: A difícil decisão do jogador sobre a hora de parar
-INFO : 2024/05/31 20:22:40.788645 fetcher.go:69: Article created: Grêmio e Inter lançam campanha para atrair doações de empresas ao Sul
-INFO : 2024/05/31 20:22:40.793719 fetcher.go:69: Article created: McLaren lança carro com pintura em homenagem a Senna
-INFO : 2024/05/31 20:22:40.798851 fetcher.go:69: Article created: Hábitos da geração Z ameaçam modelo de negócios do esporte
-INFO : 2024/05/31 20:22:40.803285 fetcher.go:69: Article created: Toni Kroos anuncia aposentadoria após a Eurocopa
-INFO : 2024/05/31 20:22:40.809556 fetcher.go:69: Article created: Globo produz documentário sobre máfia do apito, maior escândalo do futebol brasileiro
-INFO : 2024/05/31 20:22:40.814012 fetcher.go:69: Article created: Premier League não é chata, só o Guardiola
-INFO : 2024/05/31 20:22:40.819139 fetcher.go:69: Article created: Jogador cobre logo contra homofobia, e governo francês pede punição
-INFO : 2024/05/31 20:22:40.824204 fetcher.go:69: Article created: Tetra resgatou autoestima do brasileiro, afirma Romário
-INFO : 2024/05/31 20:22:40.828995 fetcher.go:69: Article created: Campeão tão perto, tão longe do torcedor
-INFO : 2024/05/31 20:22:40.832990 fetcher.go:69: Article created: Sunday Happy Sunday
-INFO : 2024/05/31 20:22:40.838221 fetcher.go:69: Article created: Manchester City entra na história do Campeonato Inglês com primeiro tetra
-INFO : 2024/05/31 20:22:40.844030 fetcher.go:69: Article created: Rayssa Leal vence etapa da China do pré-olímpico de skate
-INFO : 2024/05/31 20:22:40.848802 fetcher.go:69: Article created: Corrida em Ímola tem homenagens a Senna 30 anos após sua morte
-INFO : 2024/05/31 20:22:40.853447 fetcher.go:69: Article created: Campeão alemão, Bayer Leverkusen encerra campanha invicto
-INFO : 2024/05/31 20:22:40.858665 fetcher.go:69: Article created: Homenageado, Cássio diz que sai do Corinthians pela porta da frente
-INFO : 2024/05/31 20:22:40.865112 fetcher.go:69: Article created: Lá se foi um trio de ouro
-INFO : 2024/05/31 20:22:40.870853 fetcher.go:69: Article created: Perdemos três importantes membros do jornalismo esportivo brasileiro
-INFO : 2024/05/31 20:22:40.875904 fetcher.go:69: Article created: Saída de 'ídolo' Cássio comove corintianos nas redes
-INFO : 2024/05/31 20:22:40.881260 fetcher.go:69: Article created: Após foto com camisa do Corinthians, Gabigol é multado e não vai usar mais a 10 do Flamengo
-INFO : 2024/05/31 20:22:40.887133 fetcher.go:69: Article created: Cássio chega a acordo com Corinthians e deixa o clube após 12 anos
-INFO : 2024/05/31 20:22:40.892398 fetcher.go:69: Article created: Kelly Slater e tão falada aposentadoria
-INFO : 2024/05/31 20:22:40.898780 fetcher.go:69: Article created: Inter estima em até 90 dias prazo para voltar a jogar no Beira-Rio
-INFO : 2024/05/31 20:22:40.903476 fetcher.go:69: Article created: Governo confirma RS como uma das sedes da Copa de 2027; Marta pede estreia da seleção no estado
-INFO : 2024/05/31 20:22:40.908610 fetcher.go:69: Article created: A Premier League ficou previsível?
-INFO : 2024/05/31 20:22:40.912804 fetcher.go:69: Article created: Brasil supera candidatura europeia e vai receber Copa do Mundo feminina de 2027
+INFO : 2024/06/01 15:03:08.249446 fetcher.go:78: Article created: Castanha de caju dá uma surra no pistache
+INFO : 2024/06/01 15:03:08.257040 fetcher.go:78: Article created: Taste SP 2024: comidinhas judaicas e taiwanesas são destaque no 2º fim de semana do evento
+INFO : 2024/06/01 15:03:08.263383 fetcher.go:78: Article created: Taste SP: Chefs do Mocotó e Evvai são destaque no segundo fim de semana do evento
+INFO : 2024/06/01 15:03:08.269995 fetcher.go:78: Article created: Japas Cervejaria organiza nova edição do festival Kurafuto, no Pavilhão Japonês
+INFO : 2024/06/01 15:03:08.276778 fetcher.go:78: Article created: Dino Restaurante, em SP, tem show e brinquedos mas não se limita ao menu infantil
+INFO : 2024/06/01 15:03:08.283724 fetcher.go:78: Article created: Veja onde assistir à final da Champions League entre Real Madrid e Dortmund em São Paulo
+INFO : 2024/06/01 15:03:08.291680 fetcher.go:78: Article created: Por que as pessoas estão pagando para jantar com desconhecidos
+INFO : 2024/06/01 15:03:08.296775 fetcher.go:78: Article created: As 5 mudanças simples na sua dieta que podem aumentar sua energia
+INFO : 2024/06/01 15:03:08.302359 fetcher.go:78: Article created: Onde tomar café em Santiago, no Chile; veja guia de boas cafeterias
+INFO : 2024/06/01 15:03:08.307860 fetcher.go:78: Article created: As 7 piores furadas das hamburguerias
+INFO : 2024/06/01 15:03:08.314670 fetcher.go:78: Article created: Clube do vinho vale a pena? Um guia para decidir
+INFO : 2024/06/01 15:03:08.320458 fetcher.go:78: Article created: Sete dicas para o hambúrguer perfeito na brasa
+INFO : 2024/06/01 15:03:08.325975 fetcher.go:78: Article created: No Dia do Hambúrguer, veja novidades, promoções e até lanches de graça em São Paulo
+INFO : 2024/06/01 15:03:08.331587 fetcher.go:78: Article created: Pode um restaurante chique barrar cliente que estiver de regata, chinelo e bermuda?
+INFO : 2024/06/01 15:03:08.337146 fetcher.go:78: Article created: No Dia do Hambúrguer, uma especialidade lotada de cebola
+INFO : 2024/06/01 15:03:08.341824 fetcher.go:78: Article created: Público do Taste SP se diverte com brincadeiras imersivas e brindes
+INFO : 2024/06/01 15:03:08.349789 fetcher.go:78: Article created: Vinícola que ganhou Oscar do vinho fica perto de São Paulo
+INFO : 2024/06/01 15:03:08.354648 fetcher.go:78: Article created: Por que a Coca-Cola tem gosto diferente em cada país?
+INFO : 2024/06/01 15:03:08.360878 fetcher.go:78: Article created: Primeiro sábado do Taste SP une restaurantes premiados e estrelas da gastronomia
+INFO : 2024/06/01 15:03:08.365752 fetcher.go:78: Article created: Conheça o balcão que ganhou uma estrela Michelin servindo tacos no México
+INFO : 2024/06/01 15:03:08.370788 fetcher.go:78: Article created: Taste SP 2024: vinho e quitutes quentes fazem sucesso na abertura do evento
+INFO : 2024/06/01 15:03:08.375769 fetcher.go:78: Article created: Restaurante Merci, no Complexo Vila Anália, tem novo chef e menu
+INFO : 2024/06/01 15:03:08.383636 fetcher.go:78: Article created: 'Super Size Me' mudou a fast food para menos pior
+INFO : 2024/06/01 15:03:08.388567 fetcher.go:78: Article created: Bar Presidenta, na rua Augusta, tem festival com artistas de sete estados do país
+INFO : 2024/06/01 15:03:08.393810 fetcher.go:78: Article created: Dia Nacional do Café: como fazer café na prensa francesa; especialista ensina em vídeo
+INFO : 2024/06/01 15:03:08.398596 fetcher.go:78: Article created: Dia Nacional do Café: como fazer um coado perfeito; especialista ensina truques em vídeo
+INFO : 2024/06/01 15:03:08.403584 fetcher.go:78: Article created: Dia Nacional do Café: bebida é celebrada hoje por marcar início da colheita no Brasil
+INFO : 2024/06/01 15:03:08.408691 fetcher.go:78: Article created: Dia Nacional do Café: como fazer café na cafeteira italiana, a moka; especialista ensina em vídeo
+INFO : 2024/06/01 15:03:08.415059 fetcher.go:78: Article created: Brasil leva cervejas com mandioca para festival no Canadá
+INFO : 2024/06/01 15:03:08.420421 fetcher.go:78: Article created: Festival de café em SP tem ofertas, shows e palestras no centro histórico
+INFO : 2024/06/01 15:03:08.425829 fetcher.go:78: Article created: Taste São Paulo chega à 8ª edição com nove dias de atividades no Parque Villa-Lobos
+INFO : 2024/06/01 15:03:08.431244 fetcher.go:78: Article created: A seita dos comedores de miojo cru
+INFO : 2024/06/01 15:03:08.440201 fetcher.go:78: Article created: Dia Nacional do Café: 10 fatos sobre o café brasileiro que talvez você não saiba
+INFO : 2024/06/01 15:03:08.445628 fetcher.go:78: Article created: Quem leva a melhor, Guia Michelin ou ranking 50 Best Restaurants?
+INFO : 2024/06/01 15:03:08.450882 fetcher.go:78: Article created: Veja por quanto tempo é indicado armazenar frango, salmão e carne na geladeira
+INFO : 2024/06/01 15:03:08.457160 fetcher.go:78: Article created: O que é o 'efeito Michelin' e qual o impacto dele para restaurantes
+INFO : 2024/06/01 15:03:08.462215 fetcher.go:78: Article created: Brasil tem 21 restaurantes com estrelas Michelin; veja lista completa
+INFO : 2024/06/01 15:03:08.466923 fetcher.go:78: Article created: Rede Red Lobster vai à falência após acordo ilimitado de camarão
+INFO : 2024/06/01 15:03:08.471800 fetcher.go:78: Article created: Verão infinito faz brasileiro encher a taça de vinho branco
+INFO : 2024/06/01 15:03:08.477028 fetcher.go:78: Article created: Conchiglioni com abóbora é atalho para massa recheada saborosa e fácil de fazer
+INFO : 2024/06/01 15:03:08.482071 fetcher.go:78: Article created: Brasil passa a ter seis restaurantes com duas estrelas Michelin, mas segue sem cotação máxima
+INFO : 2024/06/01 15:03:08.487860 fetcher.go:78: Article created: Moët e Chandon tem loja com vending machine de champanhe em SP
+INFO : 2024/06/01 15:03:08.492551 fetcher.go:78: Article created: Rótulos de brasileiro são destaque na Vinhos de Portugal
+INFO : 2024/06/01 15:03:08.497637 fetcher.go:78: Article created: Brasília ganha sua primeira vinícola e tem 100% de produção local
+INFO : 2024/06/01 15:03:08.503907 fetcher.go:78: Article created: Instituto Capim Santo assume gestão do restaurante do Instituto Baccarelli
+INFO : 2024/06/01 15:03:08.508937 fetcher.go:78: Article created: Oue Sushi, em SP, é sofrível e faz pratos sem graça e até incomíveis
+INFO : 2024/06/01 15:03:08.514206 fetcher.go:78: Article created: Entenda o que é o omakassê, menu-confiança à japonesa cada vez mais popular em SP
+INFO : 2024/06/01 15:03:08.521900 fetcher.go:78: Article created: Bar Pirajá anuncia edição do Samba do Trabalhador com Moacyr Luz em São Paulo
+INFO : 2024/06/01 15:03:08.527074 fetcher.go:78: Article created: Churrasco no abrigo e chimarrão com água de chuva: como gaúchos se viram na terra arrasada
+INFO : 2024/06/01 15:03:08.531802 fetcher.go:78: Article created: MrBeast Burger, rede do youtuber americano, chega a São Paulo
+INFO : 2024/06/01 15:03:08.537932 fetcher.go:78: Article created: Gourmetização do café é dominada por homens brancos, diz pesquisa
+INFO : 2024/06/01 15:03:08.543378 fetcher.go:78: Article created: Clima preocupa cafeicultores, mas obter certificação ainda é desafio
+INFO : 2024/06/01 15:03:08.547924 fetcher.go:78: Article created: La Casserole celebra 70 anos com sete meses de programações especiais
+INFO : 2024/06/01 15:03:08.552531 fetcher.go:78: Article created: Escola Le Cordon Bleu recebe festival com feira de produtores, aulas e jantar
+INFO : 2024/06/01 15:03:08.557374 fetcher.go:78: Article created: Solos vulcânicos e 'Pelé' dos vinhos são aposta de nova vinícola paulista
+INFO : 2024/06/01 15:03:08.562280 fetcher.go:78: Article created: Cervejaria Maralto inaugura brewpub perto do Allianz Parque
+INFO : 2024/06/01 15:03:08.567124 fetcher.go:78: Article created: Virado tem pequenos pratos que valem mais do que um pê-efe
+INFO : 2024/06/01 15:03:08.572471 fetcher.go:78: Article created: Base BBQ tem ótimas carnes, ambiente acolhedor e vista aprazível
+INFO : 2024/06/01 15:03:08.577097 fetcher.go:78: Article created: Tania Bulhões, famosa pela decoração, inaugura restaurante em São Paulo
+INFO : 2024/06/01 15:03:08.581756 fetcher.go:78: Article created: Perdizes: veja restaurantes, padarias e sorveterias que valem a visita na região oeste de SP
+INFO : 2024/06/01 15:03:08.586732 fetcher.go:78: Article created: Daniel de Mesquita Benevides ministrará curso sobre coquetéis em SP
+INFO : 2024/06/01 15:03:08.591722 fetcher.go:78: Article created: Na air fryer, costelinha ao missô leva só cinco ingredientes
+INFO : 2024/06/01 15:03:08.597059 fetcher.go:78: Article created: Conheça o Republica del Fuego, em Buenos Aires
+INFO : 2024/06/01 15:03:08.606707 fetcher.go:78: Article created: Festival levará gastronomia francesa a capitais brasileiras em junho
+INFO : 2024/06/01 15:03:08.612881 fetcher.go:78: Article created: Biscoito montanha-russa faz sucesso nas redes; saiba como fazer
+INFO : 2024/06/01 15:03:08.617781 fetcher.go:78: Article created: Mães também gostam de vinho
+INFO : 2024/06/01 15:03:08.622352 fetcher.go:78: Article created: Jojo Ramen celebra oito anos com receitas especiais cocriadas com chefs convidados
+INFO : 2024/06/01 15:03:08.627663 fetcher.go:78: Article created: Morar no McDonald's, nem nos meus piores pesadelos
+INFO : 2024/06/01 15:03:08.632828 fetcher.go:78: Article created: Bialetti lança cafeteira prensa francesa com a Dolce & Gabbana
+INFO : 2024/06/01 15:03:08.639083 fetcher.go:78: Article created: Frango na Airfyer: aprenda diferentes receitas para não enjoar da proteína
+INFO : 2024/06/01 15:03:08.643329 fetcher.go:78: Article created: Doações para o Rio Grande do Sul; veja restaurantes, chefs e eventos beneficentes em SP
+INFO : 2024/06/01 15:03:08.648251 fetcher.go:78: Article created: Croma Beer lança 7 cervejas envelhecidas para celebrar 7º aniversário
+INFO : 2024/06/01 15:03:08.653322 fetcher.go:78: Article created: 'Oscar do café': experimentei os melhores cafés do Brasil; veja como são
+INFO : 2024/06/01 15:03:08.658324 fetcher.go:78: Article created: Com estoque deficiente, supermercados de Porto Alegre e região racionam venda de água
+INFO : 2024/06/01 15:03:08.663201 fetcher.go:78: Article created: Hecatombe gaúcha aniquilou até mesmo o Polentaço
+INFO : 2024/06/01 15:03:08.669147 fetcher.go:78: Article created: Ambev para produção de cerveja para envasar água para o RS
+INFO : 2024/06/01 15:03:08.673393 fetcher.go:78: Article created: Sorveteria em Santa Cecília atrai com sabores judaicos e minimuro das lamentações
+INFO : 2024/06/01 15:03:08.678388 fetcher.go:78: Article created: Compre um vinho produzido no Rio Grande do Sul
+INFO : 2024/06/01 15:03:08.683161 fetcher.go:78: Article created: Para o Dia das Mães, o molho de cebola agridoce da dona Ana
+INFO : 2024/06/01 15:03:08.690537 fetcher.go:78: Article created: Vinho brasileiro está no centro da catástrofe do Sul
+INFO : 2024/06/01 15:03:08.694632 fetcher.go:78: Article created: Diego Sacilotto, ex-Masterchef, amplia império gastronômico na ZN com quatro novas casas
+INFO : 2024/06/01 15:03:08.701564 fetcher.go:78: Article created: Como o bolo Floresta Negra se tornou a sobremesa favorita do mundo?
+INFO : 2024/06/01 15:03:08.706517 fetcher.go:78: Article created: Você sabe diferenciar o bife ancho do bife de chorizo?
+INFO : 2024/06/01 15:03:08.711966 fetcher.go:78: Article created: Sorveteria em São Paulo serve sabores inspirados em fragrâncias de perfume
+INFO : 2024/06/01 15:03:08.716572 fetcher.go:78: Article created: Bar dos Arcos tem nova carta de drinques inspirada na artista Lygia Clark; veja imagens
+INFO : 2024/06/01 15:03:08.722371 fetcher.go:78: Article created: No Dia das Mães, veja restaurantes com menus especiais e encomendas em São Paulo
+INFO : 2024/06/01 15:03:08.727633 fetcher.go:78: Article created: Café Botanista fecha no centro de SP após invasão
+INFO : 2024/06/01 15:03:08.732298 fetcher.go:78: Article created: Depois do dilúvio, vêm os cogumelos
+INFO : 2024/06/01 15:03:08.738775 fetcher.go:78: Article created: Aprenda a fazer o hambúrguer de siri do Bob Esponja
+INFO : 2024/06/01 15:03:08.743377 fetcher.go:78: Article created: Restaurante temático de Bob Esponja emula a Fenda do Bikini em SP
+INFO : 2024/06/01 15:03:08.748287 fetcher.go:78: Article created: Dia das Mães: veja dicas de presentes para quem adora café
+INFO : 2024/06/01 15:03:08.752954 fetcher.go:78: Article created: Uísques japoneses estão em alta no Brasil, mas nunca foram tão caros como agora
+INFO : 2024/06/01 15:03:08.759534 fetcher.go:78: Article created: Aprenda a fazer pisco sour, o drinque típico do Peru
+INFO : 2024/06/01 15:03:08.765514 fetcher.go:78: Article created: O doce de leite fajuto e o declínio da civilização
+INFO : 2024/06/01 15:03:08.772679 fetcher.go:78: Article created: Brass Brew faz festa de 3 anos na charmosa Casa das Caldeiras
+INFO : 2024/06/01 15:03:08.792830 fetcher.go:78: Article created: Brunch Weekend oferece menus com drinques por R$ 89 em São Paulo
+INFO : 2024/06/01 15:03:08.801836 fetcher.go:78: Article created: Sete vinhos que você precisa tomar antes de morrer
+INFO : 2024/06/01 15:03:08.806919 fetcher.go:78: Article created: É falso que alimentos com selo da rã sejam produzidos por Bill Gates
+INFO : 2024/06/01 15:03:08.812698 fetcher.go:78: Article created: Fuja das regiões hypadas para beber bem e gastar menos
+INFO : 2024/06/01 15:03:08.818348 fetcher.go:78: Article created: The Little Coffee Shop, em Pinheiros, vai fechar após quase dez anos
+INFO : 2024/06/01 15:03:18.250790 fetcher.go:78: Article created: Castanha de caju dá uma surra no pistache
+INFO : 2024/06/01 15:03:18.257064 fetcher.go:78: Article created: Taste SP 2024: comidinhas judaicas e taiwanesas são destaque no 2º fim de semana do evento
+INFO : 2024/06/01 15:03:18.261889 fetcher.go:78: Article created: Taste SP: Chefs do Mocotó e Evvai são destaque no segundo fim de semana do evento
+INFO : 2024/06/01 15:03:18.266999 fetcher.go:78: Article created: Japas Cervejaria organiza nova edição do festival Kurafuto, no Pavilhão Japonês
+INFO : 2024/06/01 15:03:18.271780 fetcher.go:78: Article created: Dino Restaurante, em SP, tem show e brinquedos mas não se limita ao menu infantil
+INFO : 2024/06/01 15:03:18.276862 fetcher.go:78: Article created: Veja onde assistir à final da Champions League entre Real Madrid e Dortmund em São Paulo
+INFO : 2024/06/01 15:03:18.282154 fetcher.go:78: Article created: Por que as pessoas estão pagando para jantar com desconhecidos
+INFO : 2024/06/01 15:03:18.288101 fetcher.go:78: Article created: As 5 mudanças simples na sua dieta que podem aumentar sua energia
+INFO : 2024/06/01 15:03:18.292617 fetcher.go:78: Article created: Onde tomar café em Santiago, no Chile; veja guia de boas cafeterias
+INFO : 2024/06/01 15:03:18.298398 fetcher.go:78: Article created: As 7 piores furadas das hamburguerias
+INFO : 2024/06/01 15:03:18.303262 fetcher.go:78: Article created: Clube do vinho vale a pena? Um guia para decidir
+INFO : 2024/06/01 15:03:18.309204 fetcher.go:78: Article created: Sete dicas para o hambúrguer perfeito na brasa
+INFO : 2024/06/01 15:03:18.335702 fetcher.go:78: Article created: No Dia do Hambúrguer, veja novidades, promoções e até lanches de graça em São Paulo
+INFO : 2024/06/01 15:03:18.342380 fetcher.go:78: Article created: Pode um restaurante chique barrar cliente que estiver de regata, chinelo e bermuda?
+INFO : 2024/06/01 15:03:18.347643 fetcher.go:78: Article created: No Dia do Hambúrguer, uma especialidade lotada de cebola
+INFO : 2024/06/01 15:03:18.353300 fetcher.go:78: Article created: Público do Taste SP se diverte com brincadeiras imersivas e brindes
+INFO : 2024/06/01 15:03:18.358817 fetcher.go:78: Article created: Vinícola que ganhou Oscar do vinho fica perto de São Paulo
+INFO : 2024/06/01 15:03:18.364230 fetcher.go:78: Article created: Por que a Coca-Cola tem gosto diferente em cada país?
+INFO : 2024/06/01 15:03:18.369573 fetcher.go:78: Article created: Primeiro sábado do Taste SP une restaurantes premiados e estrelas da gastronomia
+INFO : 2024/06/01 15:03:18.374755 fetcher.go:78: Article created: Conheça o balcão que ganhou uma estrela Michelin servindo tacos no México
+INFO : 2024/06/01 15:03:18.379442 fetcher.go:78: Article created: Taste SP 2024: vinho e quitutes quentes fazem sucesso na abertura do evento
+INFO : 2024/06/01 15:03:18.383948 fetcher.go:78: Article created: Restaurante Merci, no Complexo Vila Anália, tem novo chef e menu
+INFO : 2024/06/01 15:03:18.388780 fetcher.go:78: Article created: 'Super Size Me' mudou a fast food para menos pior
+INFO : 2024/06/01 15:03:18.393328 fetcher.go:78: Article created: Bar Presidenta, na rua Augusta, tem festival com artistas de sete estados do país
+INFO : 2024/06/01 15:03:18.399065 fetcher.go:78: Article created: Dia Nacional do Café: como fazer café na prensa francesa; especialista ensina em vídeo
+INFO : 2024/06/01 15:03:18.405120 fetcher.go:78: Article created: Dia Nacional do Café: como fazer um coado perfeito; especialista ensina truques em vídeo
+INFO : 2024/06/01 15:03:18.409611 fetcher.go:78: Article created: Dia Nacional do Café: bebida é celebrada hoje por marcar início da colheita no Brasil
+INFO : 2024/06/01 15:03:18.414791 fetcher.go:78: Article created: Dia Nacional do Café: como fazer café na cafeteira italiana, a moka; especialista ensina em vídeo
+INFO : 2024/06/01 15:03:18.419859 fetcher.go:78: Article created: Brasil leva cervejas com mandioca para festival no Canadá
+INFO : 2024/06/01 15:03:18.424855 fetcher.go:78: Article created: Festival de café em SP tem ofertas, shows e palestras no centro histórico
+INFO : 2024/06/01 15:03:18.429695 fetcher.go:78: Article created: Taste São Paulo chega à 8ª edição com nove dias de atividades no Parque Villa-Lobos
+INFO : 2024/06/01 15:03:18.434162 fetcher.go:78: Article created: A seita dos comedores de miojo cru
+INFO : 2024/06/01 15:03:18.441715 fetcher.go:78: Article created: Dia Nacional do Café: 10 fatos sobre o café brasileiro que talvez você não saiba
+INFO : 2024/06/01 15:03:18.446535 fetcher.go:78: Article created: Quem leva a melhor, Guia Michelin ou ranking 50 Best Restaurants?
+INFO : 2024/06/01 15:03:18.451416 fetcher.go:78: Article created: Veja por quanto tempo é indicado armazenar frango, salmão e carne na geladeira
+INFO : 2024/06/01 15:03:18.456781 fetcher.go:78: Article created: O que é o 'efeito Michelin' e qual o impacto dele para restaurantes
+INFO : 2024/06/01 15:03:18.461765 fetcher.go:78: Article created: Brasil tem 21 restaurantes com estrelas Michelin; veja lista completa
+INFO : 2024/06/01 15:03:18.474951 fetcher.go:78: Article created: Rede Red Lobster vai à falência após acordo ilimitado de camarão
+INFO : 2024/06/01 15:03:18.481523 fetcher.go:78: Article created: Verão infinito faz brasileiro encher a taça de vinho branco
+INFO : 2024/06/01 15:03:18.487435 fetcher.go:78: Article created: Conchiglioni com abóbora é atalho para massa recheada saborosa e fácil de fazer
+INFO : 2024/06/01 15:03:18.493901 fetcher.go:78: Article created: Brasil passa a ter seis restaurantes com duas estrelas Michelin, mas segue sem cotação máxima
+INFO : 2024/06/01 15:03:18.499873 fetcher.go:78: Article created: Moët e Chandon tem loja com vending machine de champanhe em SP
+INFO : 2024/06/01 15:03:18.505019 fetcher.go:78: Article created: Rótulos de brasileiro são destaque na Vinhos de Portugal
+INFO : 2024/06/01 15:03:18.509917 fetcher.go:78: Article created: Brasília ganha sua primeira vinícola e tem 100% de produção local
+INFO : 2024/06/01 15:03:18.516807 fetcher.go:78: Article created: Instituto Capim Santo assume gestão do restaurante do Instituto Baccarelli
+INFO : 2024/06/01 15:03:18.522826 fetcher.go:78: Article created: Oue Sushi, em SP, é sofrível e faz pratos sem graça e até incomíveis
+INFO : 2024/06/01 15:03:18.527715 fetcher.go:78: Article created: Entenda o que é o omakassê, menu-confiança à japonesa cada vez mais popular em SP
+INFO : 2024/06/01 15:03:18.532794 fetcher.go:78: Article created: Bar Pirajá anuncia edição do Samba do Trabalhador com Moacyr Luz em São Paulo
+INFO : 2024/06/01 15:03:18.538271 fetcher.go:78: Article created: Churrasco no abrigo e chimarrão com água de chuva: como gaúchos se viram na terra arrasada
+INFO : 2024/06/01 15:03:18.543807 fetcher.go:78: Article created: MrBeast Burger, rede do youtuber americano, chega a São Paulo
+INFO : 2024/06/01 15:03:18.550688 fetcher.go:78: Article created: Gourmetização do café é dominada por homens brancos, diz pesquisa
+INFO : 2024/06/01 15:03:18.556804 fetcher.go:78: Article created: Clima preocupa cafeicultores, mas obter certificação ainda é desafio
+INFO : 2024/06/01 15:03:18.561927 fetcher.go:78: Article created: La Casserole celebra 70 anos com sete meses de programações especiais
+INFO : 2024/06/01 15:03:18.567245 fetcher.go:78: Article created: Escola Le Cordon Bleu recebe festival com feira de produtores, aulas e jantar
+INFO : 2024/06/01 15:03:18.572234 fetcher.go:78: Article created: Solos vulcânicos e 'Pelé' dos vinhos são aposta de nova vinícola paulista
+INFO : 2024/06/01 15:03:18.577778 fetcher.go:78: Article created: Cervejaria Maralto inaugura brewpub perto do Allianz Parque
+INFO : 2024/06/01 15:03:18.592827 fetcher.go:78: Article created: Virado tem pequenos pratos que valem mais do que um pê-efe
+INFO : 2024/06/01 15:03:18.599730 fetcher.go:78: Article created: Base BBQ tem ótimas carnes, ambiente acolhedor e vista aprazível
+INFO : 2024/06/01 15:03:18.605115 fetcher.go:78: Article created: Tania Bulhões, famosa pela decoração, inaugura restaurante em São Paulo
+INFO : 2024/06/01 15:03:18.609729 fetcher.go:78: Article created: Perdizes: veja restaurantes, padarias e sorveterias que valem a visita na região oeste de SP
+INFO : 2024/06/01 15:03:18.614753 fetcher.go:78: Article created: Daniel de Mesquita Benevides ministrará curso sobre coquetéis em SP
+INFO : 2024/06/01 15:03:18.619959 fetcher.go:78: Article created: Na air fryer, costelinha ao missô leva só cinco ingredientes
+INFO : 2024/06/01 15:03:18.624944 fetcher.go:78: Article created: Conheça o Republica del Fuego, em Buenos Aires
+INFO : 2024/06/01 15:03:18.631021 fetcher.go:78: Article created: Festival levará gastronomia francesa a capitais brasileiras em junho
+INFO : 2024/06/01 15:03:18.635304 fetcher.go:78: Article created: Biscoito montanha-russa faz sucesso nas redes; saiba como fazer
+INFO : 2024/06/01 15:03:18.640206 fetcher.go:78: Article created: Mães também gostam de vinho
+INFO : 2024/06/01 15:03:18.644529 fetcher.go:78: Article created: Jojo Ramen celebra oito anos com receitas especiais cocriadas com chefs convidados
+INFO : 2024/06/01 15:03:18.649037 fetcher.go:78: Article created: Morar no McDonald's, nem nos meus piores pesadelos
+INFO : 2024/06/01 15:03:18.657697 fetcher.go:78: Article created: Bialetti lança cafeteira prensa francesa com a Dolce & Gabbana
+INFO : 2024/06/01 15:03:18.665945 fetcher.go:78: Article created: Frango na Airfyer: aprenda diferentes receitas para não enjoar da proteína
+INFO : 2024/06/01 15:03:18.670510 fetcher.go:78: Article created: Doações para o Rio Grande do Sul; veja restaurantes, chefs e eventos beneficentes em SP
+INFO : 2024/06/01 15:03:18.675818 fetcher.go:78: Article created: Croma Beer lança 7 cervejas envelhecidas para celebrar 7º aniversário
+INFO : 2024/06/01 15:03:18.681069 fetcher.go:78: Article created: 'Oscar do café': experimentei os melhores cafés do Brasil; veja como são
+INFO : 2024/06/01 15:03:18.686208 fetcher.go:78: Article created: Com estoque deficiente, supermercados de Porto Alegre e região racionam venda de água
+INFO : 2024/06/01 15:03:18.691345 fetcher.go:78: Article created: Hecatombe gaúcha aniquilou até mesmo o Polentaço
+INFO : 2024/06/01 15:03:18.696313 fetcher.go:78: Article created: Ambev para produção de cerveja para envasar água para o RS
+INFO : 2024/06/01 15:03:18.702461 fetcher.go:78: Article created: Sorveteria em Santa Cecília atrai com sabores judaicos e minimuro das lamentações
+INFO : 2024/06/01 15:03:18.706667 fetcher.go:78: Article created: Compre um vinho produzido no Rio Grande do Sul
+INFO : 2024/06/01 15:03:18.711493 fetcher.go:78: Article created: Para o Dia das Mães, o molho de cebola agridoce da dona Ana
+INFO : 2024/06/01 15:03:18.716281 fetcher.go:78: Article created: Vinho brasileiro está no centro da catástrofe do Sul
+INFO : 2024/06/01 15:03:18.720649 fetcher.go:78: Article created: Diego Sacilotto, ex-Masterchef, amplia império gastronômico na ZN com quatro novas casas
+INFO : 2024/06/01 15:03:18.728278 fetcher.go:78: Article created: Como o bolo Floresta Negra se tornou a sobremesa favorita do mundo?
+INFO : 2024/06/01 15:03:18.733496 fetcher.go:78: Article created: Você sabe diferenciar o bife ancho do bife de chorizo?
+INFO : 2024/06/01 15:03:18.737849 fetcher.go:78: Article created: Sorveteria em São Paulo serve sabores inspirados em fragrâncias de perfume
+INFO : 2024/06/01 15:03:18.746152 fetcher.go:78: Article created: Bar dos Arcos tem nova carta de drinques inspirada na artista Lygia Clark; veja imagens
+INFO : 2024/06/01 15:03:18.751992 fetcher.go:78: Article created: No Dia das Mães, veja restaurantes com menus especiais e encomendas em São Paulo
+INFO : 2024/06/01 15:03:18.790882 fetcher.go:78: Article created: Café Botanista fecha no centro de SP após invasão
+INFO : 2024/06/01 15:03:18.796646 fetcher.go:78: Article created: Depois do dilúvio, vêm os cogumelos
+INFO : 2024/06/01 15:03:18.801372 fetcher.go:78: Article created: Aprenda a fazer o hambúrguer de siri do Bob Esponja
+INFO : 2024/06/01 15:03:18.806093 fetcher.go:78: Article created: Restaurante temático de Bob Esponja emula a Fenda do Bikini em SP
+INFO : 2024/06/01 15:03:18.810397 fetcher.go:78: Article created: Dia das Mães: veja dicas de presentes para quem adora café
+INFO : 2024/06/01 15:03:18.814608 fetcher.go:78: Article created: Uísques japoneses estão em alta no Brasil, mas nunca foram tão caros como agora
+INFO : 2024/06/01 15:03:18.820617 fetcher.go:78: Article created: Aprenda a fazer pisco sour, o drinque típico do Peru
+INFO : 2024/06/01 15:03:18.825057 fetcher.go:78: Article created: O doce de leite fajuto e o declínio da civilização
+INFO : 2024/06/01 15:03:18.829990 fetcher.go:78: Article created: Brass Brew faz festa de 3 anos na charmosa Casa das Caldeiras
+INFO : 2024/06/01 15:03:18.834422 fetcher.go:78: Article created: Brunch Weekend oferece menus com drinques por R$ 89 em São Paulo
+INFO : 2024/06/01 15:03:18.839255 fetcher.go:78: Article created: Sete vinhos que você precisa tomar antes de morrer
+INFO : 2024/06/01 15:03:18.843842 fetcher.go:78: Article created: É falso que alimentos com selo da rã sejam produzidos por Bill Gates
+INFO : 2024/06/01 15:03:18.850241 fetcher.go:78: Article created: Fuja das regiões hypadas para beber bem e gastar menos
+INFO : 2024/06/01 15:03:18.855410 fetcher.go:78: Article created: The Little Coffee Shop, em Pinheiros, vai fechar após quase dez anos
+INFO : 2024/06/01 15:03:28.254729 fetcher.go:78: Article created: Castanha de caju dá uma surra no pistache
+INFO : 2024/06/01 15:03:28.261046 fetcher.go:78: Article created: Taste SP 2024: comidinhas judaicas e taiwanesas são destaque no 2º fim de semana do evento
+INFO : 2024/06/01 15:03:28.266655 fetcher.go:78: Article created: Taste SP: Chefs do Mocotó e Evvai são destaque no segundo fim de semana do evento
+INFO : 2024/06/01 15:03:28.272475 fetcher.go:78: Article created: Japas Cervejaria organiza nova edição do festival Kurafuto, no Pavilhão Japonês
+INFO : 2024/06/01 15:03:28.278356 fetcher.go:78: Article created: Dino Restaurante, em SP, tem show e brinquedos mas não se limita ao menu infantil
+INFO : 2024/06/01 15:03:28.284844 fetcher.go:78: Article created: Veja onde assistir à final da Champions League entre Real Madrid e Dortmund em São Paulo
+INFO : 2024/06/01 15:03:28.289541 fetcher.go:78: Article created: Por que as pessoas estão pagando para jantar com desconhecidos
+INFO : 2024/06/01 15:03:28.294268 fetcher.go:78: Article created: As 5 mudanças simples na sua dieta que podem aumentar sua energia
+INFO : 2024/06/01 15:03:28.298884 fetcher.go:78: Article created: Onde tomar café em Santiago, no Chile; veja guia de boas cafeterias
+INFO : 2024/06/01 15:03:28.303451 fetcher.go:78: Article created: As 7 piores furadas das hamburguerias
+INFO : 2024/06/01 15:03:28.308483 fetcher.go:78: Article created: Clube do vinho vale a pena? Um guia para decidir
+INFO : 2024/06/01 15:03:28.315786 fetcher.go:78: Article created: Sete dicas para o hambúrguer perfeito na brasa
+INFO : 2024/06/01 15:03:28.321133 fetcher.go:78: Article created: No Dia do Hambúrguer, veja novidades, promoções e até lanches de graça em São Paulo
+INFO : 2024/06/01 15:03:28.326421 fetcher.go:78: Article created: Pode um restaurante chique barrar cliente que estiver de regata, chinelo e bermuda?
+INFO : 2024/06/01 15:03:28.331632 fetcher.go:78: Article created: No Dia do Hambúrguer, uma especialidade lotada de cebola
+INFO : 2024/06/01 15:03:28.336586 fetcher.go:78: Article created: Público do Taste SP se diverte com brincadeiras imersivas e brindes
+INFO : 2024/06/01 15:03:28.341547 fetcher.go:78: Article created: Vinícola que ganhou Oscar do vinho fica perto de São Paulo
+INFO : 2024/06/01 15:03:28.348088 fetcher.go:78: Article created: Por que a Coca-Cola tem gosto diferente em cada país?
+INFO : 2024/06/01 15:03:28.353162 fetcher.go:78: Article created: Primeiro sábado do Taste SP une restaurantes premiados e estrelas da gastronomia
+INFO : 2024/06/01 15:03:28.358435 fetcher.go:78: Article created: Conheça o balcão que ganhou uma estrela Michelin servindo tacos no México
+INFO : 2024/06/01 15:03:28.363510 fetcher.go:78: Article created: Taste SP 2024: vinho e quitutes quentes fazem sucesso na abertura do evento
+INFO : 2024/06/01 15:03:28.368611 fetcher.go:78: Article created: Restaurante Merci, no Complexo Vila Anália, tem novo chef e menu
+INFO : 2024/06/01 15:03:28.373261 fetcher.go:78: Article created: 'Super Size Me' mudou a fast food para menos pior
+INFO : 2024/06/01 15:03:28.379997 fetcher.go:78: Article created: Bar Presidenta, na rua Augusta, tem festival com artistas de sete estados do país
+INFO : 2024/06/01 15:03:28.385370 fetcher.go:78: Article created: Dia Nacional do Café: como fazer café na prensa francesa; especialista ensina em vídeo
+INFO : 2024/06/01 15:03:28.389860 fetcher.go:78: Article created: Dia Nacional do Café: como fazer um coado perfeito; especialista ensina truques em vídeo
+INFO : 2024/06/01 15:03:28.394931 fetcher.go:78: Article created: Dia Nacional do Café: bebida é celebrada hoje por marcar início da colheita no Brasil
+INFO : 2024/06/01 15:03:28.399460 fetcher.go:78: Article created: Dia Nacional do Café: como fazer café na cafeteira italiana, a moka; especialista ensina em vídeo
+INFO : 2024/06/01 15:03:28.404461 fetcher.go:78: Article created: Brasil leva cervejas com mandioca para festival no Canadá
+INFO : 2024/06/01 15:03:28.409207 fetcher.go:78: Article created: Festival de café em SP tem ofertas, shows e palestras no centro histórico
+INFO : 2024/06/01 15:03:28.415683 fetcher.go:78: Article created: Taste São Paulo chega à 8ª edição com nove dias de atividades no Parque Villa-Lobos
+INFO : 2024/06/01 15:03:28.420519 fetcher.go:78: Article created: A seita dos comedores de miojo cru
+INFO : 2024/06/01 15:03:28.425702 fetcher.go:78: Article created: Dia Nacional do Café: 10 fatos sobre o café brasileiro que talvez você não saiba
+INFO : 2024/06/01 15:03:28.431293 fetcher.go:78: Article created: Quem leva a melhor, Guia Michelin ou ranking 50 Best Restaurants?
+INFO : 2024/06/01 15:03:28.436328 fetcher.go:78: Article created: Veja por quanto tempo é indicado armazenar frango, salmão e carne na geladeira
+INFO : 2024/06/01 15:03:28.441590 fetcher.go:78: Article created: O que é o 'efeito Michelin' e qual o impacto dele para restaurantes
+INFO : 2024/06/01 15:03:28.447092 fetcher.go:78: Article created: Brasil tem 21 restaurantes com estrelas Michelin; veja lista completa
+INFO : 2024/06/01 15:03:28.451962 fetcher.go:78: Article created: Rede Red Lobster vai à falência após acordo ilimitado de camarão
+INFO : 2024/06/01 15:03:28.456625 fetcher.go:78: Article created: Verão infinito faz brasileiro encher a taça de vinho branco
+INFO : 2024/06/01 15:03:28.461223 fetcher.go:78: Article created: Conchiglioni com abóbora é atalho para massa recheada saborosa e fácil de fazer
+INFO : 2024/06/01 15:03:28.466101 fetcher.go:78: Article created: Brasil passa a ter seis restaurantes com duas estrelas Michelin, mas segue sem cotação máxima
+INFO : 2024/06/01 15:03:28.470847 fetcher.go:78: Article created: Moët e Chandon tem loja com vending machine de champanhe em SP
+INFO : 2024/06/01 15:03:28.477825 fetcher.go:78: Article created: Rótulos de brasileiro são destaque na Vinhos de Portugal
+INFO : 2024/06/01 15:03:28.483318 fetcher.go:78: Article created: Brasília ganha sua primeira vinícola e tem 100% de produção local
+INFO : 2024/06/01 15:03:28.487904 fetcher.go:78: Article created: Instituto Capim Santo assume gestão do restaurante do Instituto Baccarelli
+INFO : 2024/06/01 15:03:28.492244 fetcher.go:78: Article created: Oue Sushi, em SP, é sofrível e faz pratos sem graça e até incomíveis
+INFO : 2024/06/01 15:03:28.497413 fetcher.go:78: Article created: Entenda o que é o omakassê, menu-confiança à japonesa cada vez mais popular em SP
+INFO : 2024/06/01 15:03:28.503325 fetcher.go:78: Article created: Bar Pirajá anuncia edição do Samba do Trabalhador com Moacyr Luz em São Paulo
+INFO : 2024/06/01 15:03:28.507694 fetcher.go:78: Article created: Churrasco no abrigo e chimarrão com água de chuva: como gaúchos se viram na terra arrasada
+INFO : 2024/06/01 15:03:28.514548 fetcher.go:78: Article created: MrBeast Burger, rede do youtuber americano, chega a São Paulo
+INFO : 2024/06/01 15:03:28.519374 fetcher.go:78: Article created: Gourmetização do café é dominada por homens brancos, diz pesquisa
+INFO : 2024/06/01 15:03:28.523634 fetcher.go:78: Article created: Clima preocupa cafeicultores, mas obter certificação ainda é desafio
+INFO : 2024/06/01 15:03:28.528846 fetcher.go:78: Article created: La Casserole celebra 70 anos com sete meses de programações especiais
+INFO : 2024/06/01 15:03:28.534119 fetcher.go:78: Article created: Escola Le Cordon Bleu recebe festival com feira de produtores, aulas e jantar
+INFO : 2024/06/01 15:03:28.540823 fetcher.go:78: Article created: Solos vulcânicos e 'Pelé' dos vinhos são aposta de nova vinícola paulista
+INFO : 2024/06/01 15:03:28.545992 fetcher.go:78: Article created: Cervejaria Maralto inaugura brewpub perto do Allianz Parque
+INFO : 2024/06/01 15:03:28.551328 fetcher.go:78: Article created: Virado tem pequenos pratos que valem mais do que um pê-efe
+INFO : 2024/06/01 15:03:28.556521 fetcher.go:78: Article created: Base BBQ tem ótimas carnes, ambiente acolhedor e vista aprazível
+INFO : 2024/06/01 15:03:28.561815 fetcher.go:78: Article created: Tania Bulhões, famosa pela decoração, inaugura restaurante em São Paulo
+INFO : 2024/06/01 15:03:28.567068 fetcher.go:78: Article created: Perdizes: veja restaurantes, padarias e sorveterias que valem a visita na região oeste de SP
+INFO : 2024/06/01 15:03:28.573653 fetcher.go:78: Article created: Daniel de Mesquita Benevides ministrará curso sobre coquetéis em SP
+INFO : 2024/06/01 15:03:28.578751 fetcher.go:78: Article created: Na air fryer, costelinha ao missô leva só cinco ingredientes
+INFO : 2024/06/01 15:03:28.583038 fetcher.go:78: Article created: Conheça o Republica del Fuego, em Buenos Aires
+INFO : 2024/06/01 15:03:28.588224 fetcher.go:78: Article created: Festival levará gastronomia francesa a capitais brasileiras em junho
+INFO : 2024/06/01 15:03:28.593831 fetcher.go:78: Article created: Biscoito montanha-russa faz sucesso nas redes; saiba como fazer
+INFO : 2024/06/01 15:03:28.599213 fetcher.go:78: Article created: Mães também gostam de vinho
+INFO : 2024/06/01 15:03:28.605350 fetcher.go:78: Article created: Jojo Ramen celebra oito anos com receitas especiais cocriadas com chefs convidados
+INFO : 2024/06/01 15:03:28.609599 fetcher.go:78: Article created: Morar no McDonald's, nem nos meus piores pesadelos
+INFO : 2024/06/01 15:03:28.614959 fetcher.go:78: Article created: Bialetti lança cafeteira prensa francesa com a Dolce & Gabbana
+INFO : 2024/06/01 15:03:28.620379 fetcher.go:78: Article created: Frango na Airfyer: aprenda diferentes receitas para não enjoar da proteína
+INFO : 2024/06/01 15:03:28.625327 fetcher.go:78: Article created: Doações para o Rio Grande do Sul; veja restaurantes, chefs e eventos beneficentes em SP
+INFO : 2024/06/01 15:03:28.630409 fetcher.go:78: Article created: Croma Beer lança 7 cervejas envelhecidas para celebrar 7º aniversário
+INFO : 2024/06/01 15:03:28.634910 fetcher.go:78: Article created: 'Oscar do café': experimentei os melhores cafés do Brasil; veja como são
+INFO : 2024/06/01 15:03:28.641264 fetcher.go:78: Article created: Com estoque deficiente, supermercados de Porto Alegre e região racionam venda de água
+INFO : 2024/06/01 15:03:28.646282 fetcher.go:78: Article created: Hecatombe gaúcha aniquilou até mesmo o Polentaço
+INFO : 2024/06/01 15:03:28.651351 fetcher.go:78: Article created: Ambev para produção de cerveja para envasar água para o RS
+INFO : 2024/06/01 15:03:28.656486 fetcher.go:78: Article created: Sorveteria em Santa Cecília atrai com sabores judaicos e minimuro das lamentações
+INFO : 2024/06/01 15:03:28.661146 fetcher.go:78: Article created: Compre um vinho produzido no Rio Grande do Sul
+INFO : 2024/06/01 15:03:28.665777 fetcher.go:78: Article created: Para o Dia das Mães, o molho de cebola agridoce da dona Ana
+INFO : 2024/06/01 15:03:28.671997 fetcher.go:78: Article created: Vinho brasileiro está no centro da catástrofe do Sul
+INFO : 2024/06/01 15:03:28.677097 fetcher.go:78: Article created: Diego Sacilotto, ex-Masterchef, amplia império gastronômico na ZN com quatro novas casas
+INFO : 2024/06/01 15:03:28.682481 fetcher.go:78: Article created: Como o bolo Floresta Negra se tornou a sobremesa favorita do mundo?
+INFO : 2024/06/01 15:03:28.687724 fetcher.go:78: Article created: Você sabe diferenciar o bife ancho do bife de chorizo?
+INFO : 2024/06/01 15:03:28.693647 fetcher.go:78: Article created: Sorveteria em São Paulo serve sabores inspirados em fragrâncias de perfume
+INFO : 2024/06/01 15:03:28.699473 fetcher.go:78: Article created: Bar dos Arcos tem nova carta de drinques inspirada na artista Lygia Clark; veja imagens
+INFO : 2024/06/01 15:03:28.705517 fetcher.go:78: Article created: No Dia das Mães, veja restaurantes com menus especiais e encomendas em São Paulo
+INFO : 2024/06/01 15:03:28.710309 fetcher.go:78: Article created: Café Botanista fecha no centro de SP após invasão
+INFO : 2024/06/01 15:03:28.714460 fetcher.go:78: Article created: Depois do dilúvio, vêm os cogumelos
+INFO : 2024/06/01 15:03:28.719686 fetcher.go:78: Article created: Aprenda a fazer o hambúrguer de siri do Bob Esponja
+INFO : 2024/06/01 15:03:28.724399 fetcher.go:78: Article created: Restaurante temático de Bob Esponja emula a Fenda do Bikini em SP
+INFO : 2024/06/01 15:03:28.729628 fetcher.go:78: Article created: Dia das Mães: veja dicas de presentes para quem adora café
+INFO : 2024/06/01 15:03:28.734968 fetcher.go:78: Article created: Uísques japoneses estão em alta no Brasil, mas nunca foram tão caros como agora
+INFO : 2024/06/01 15:03:28.741457 fetcher.go:78: Article created: Aprenda a fazer pisco sour, o drinque típico do Peru
+INFO : 2024/06/01 15:03:28.746058 fetcher.go:78: Article created: O doce de leite fajuto e o declínio da civilização
+INFO : 2024/06/01 15:03:28.750145 fetcher.go:78: Article created: Brass Brew faz festa de 3 anos na charmosa Casa das Caldeiras
+INFO : 2024/06/01 15:03:28.755163 fetcher.go:78: Article created: Brunch Weekend oferece menus com drinques por R$ 89 em São Paulo
+INFO : 2024/06/01 15:03:28.760700 fetcher.go:78: Article created: Sete vinhos que você precisa tomar antes de morrer
+INFO : 2024/06/01 15:03:28.765604 fetcher.go:78: Article created: É falso que alimentos com selo da rã sejam produzidos por Bill Gates
+INFO : 2024/06/01 15:03:28.770396 fetcher.go:78: Article created: Fuja das regiões hypadas para beber bem e gastar menos
+INFO : 2024/06/01 15:03:28.777694 fetcher.go:78: Article created: The Little Coffee Shop, em Pinheiros, vai fechar após quase dez anos
+INFO : 2024/06/01 15:03:38.250709 fetcher.go:78: Article created: Castanha de caju dá uma surra no pistache
+INFO : 2024/06/01 15:03:38.255712 fetcher.go:78: Article created: Taste SP 2024: comidinhas judaicas e taiwanesas são destaque no 2º fim de semana do evento
+INFO : 2024/06/01 15:03:38.260490 fetcher.go:78: Article created: Taste SP: Chefs do Mocotó e Evvai são destaque no segundo fim de semana do evento
+INFO : 2024/06/01 15:03:38.265320 fetcher.go:78: Article created: Japas Cervejaria organiza nova edição do festival Kurafuto, no Pavilhão Japonês
+INFO : 2024/06/01 15:03:38.270355 fetcher.go:78: Article created: Dino Restaurante, em SP, tem show e brinquedos mas não se limita ao menu infantil
+INFO : 2024/06/01 15:03:38.276123 fetcher.go:78: Article created: Veja onde assistir à final da Champions League entre Real Madrid e Dortmund em São Paulo
+INFO : 2024/06/01 15:03:38.280469 fetcher.go:78: Article created: Por que as pessoas estão pagando para jantar com desconhecidos
+INFO : 2024/06/01 15:03:38.284462 fetcher.go:78: Article created: As 5 mudanças simples na sua dieta que podem aumentar sua energia
+INFO : 2024/06/01 15:03:38.289251 fetcher.go:78: Article created: Onde tomar café em Santiago, no Chile; veja guia de boas cafeterias
+INFO : 2024/06/01 15:03:38.294158 fetcher.go:78: Article created: As 7 piores furadas das hamburguerias
+INFO : 2024/06/01 15:03:38.298900 fetcher.go:78: Article created: Clube do vinho vale a pena? Um guia para decidir
+INFO : 2024/06/01 15:03:38.303419 fetcher.go:78: Article created: Sete dicas para o hambúrguer perfeito na brasa
+INFO : 2024/06/01 15:03:38.308619 fetcher.go:78: Article created: No Dia do Hambúrguer, veja novidades, promoções e até lanches de graça em São Paulo
+INFO : 2024/06/01 15:03:38.312975 fetcher.go:78: Article created: Pode um restaurante chique barrar cliente que estiver de regata, chinelo e bermuda?
+INFO : 2024/06/01 15:03:38.317098 fetcher.go:78: Article created: No Dia do Hambúrguer, uma especialidade lotada de cebola
+INFO : 2024/06/01 15:03:38.321648 fetcher.go:78: Article created: Público do Taste SP se diverte com brincadeiras imersivas e brindes
+INFO : 2024/06/01 15:03:38.326887 fetcher.go:78: Article created: Vinícola que ganhou Oscar do vinho fica perto de São Paulo
+INFO : 2024/06/01 15:03:38.332426 fetcher.go:78: Article created: Por que a Coca-Cola tem gosto diferente em cada país?
+INFO : 2024/06/01 15:03:38.338932 fetcher.go:78: Article created: Primeiro sábado do Taste SP une restaurantes premiados e estrelas da gastronomia
+INFO : 2024/06/01 15:03:38.343969 fetcher.go:78: Article created: Conheça o balcão que ganhou uma estrela Michelin servindo tacos no México
+INFO : 2024/06/01 15:03:38.348267 fetcher.go:78: Article created: Taste SP 2024: vinho e quitutes quentes fazem sucesso na abertura do evento
+INFO : 2024/06/01 15:03:38.353126 fetcher.go:78: Article created: Restaurante Merci, no Complexo Vila Anália, tem novo chef e menu
+INFO : 2024/06/01 15:03:38.358614 fetcher.go:78: Article created: 'Super Size Me' mudou a fast food para menos pior
+INFO : 2024/06/01 15:03:38.362912 fetcher.go:78: Article created: Bar Presidenta, na rua Augusta, tem festival com artistas de sete estados do país
+INFO : 2024/06/01 15:03:38.368242 fetcher.go:78: Article created: Dia Nacional do Café: como fazer café na prensa francesa; especialista ensina em vídeo
+INFO : 2024/06/01 15:03:38.373495 fetcher.go:78: Article created: Dia Nacional do Café: como fazer um coado perfeito; especialista ensina truques em vídeo
+INFO : 2024/06/01 15:03:38.378826 fetcher.go:78: Article created: Dia Nacional do Café: bebida é celebrada hoje por marcar início da colheita no Brasil
+INFO : 2024/06/01 15:03:38.383286 fetcher.go:78: Article created: Dia Nacional do Café: como fazer café na cafeteira italiana, a moka; especialista ensina em vídeo
+INFO : 2024/06/01 15:03:38.388263 fetcher.go:78: Article created: Brasil leva cervejas com mandioca para festival no Canadá
+INFO : 2024/06/01 15:03:38.393322 fetcher.go:78: Article created: Festival de café em SP tem ofertas, shows e palestras no centro histórico
+INFO : 2024/06/01 15:03:38.399375 fetcher.go:78: Article created: Taste São Paulo chega à 8ª edição com nove dias de atividades no Parque Villa-Lobos
+INFO : 2024/06/01 15:03:38.404617 fetcher.go:78: Article created: A seita dos comedores de miojo cru
+INFO : 2024/06/01 15:03:38.409786 fetcher.go:78: Article created: Dia Nacional do Café: 10 fatos sobre o café brasileiro que talvez você não saiba
+INFO : 2024/06/01 15:03:38.414890 fetcher.go:78: Article created: Quem leva a melhor, Guia Michelin ou ranking 50 Best Restaurants?
+INFO : 2024/06/01 15:03:38.419803 fetcher.go:78: Article created: Veja por quanto tempo é indicado armazenar frango, salmão e carne na geladeira
+INFO : 2024/06/01 15:03:38.424807 fetcher.go:78: Article created: O que é o 'efeito Michelin' e qual o impacto dele para restaurantes
+INFO : 2024/06/01 15:03:38.431449 fetcher.go:78: Article created: Brasil tem 21 restaurantes com estrelas Michelin; veja lista completa
+INFO : 2024/06/01 15:03:38.436311 fetcher.go:78: Article created: Rede Red Lobster vai à falência após acordo ilimitado de camarão
+INFO : 2024/06/01 15:03:38.441498 fetcher.go:78: Article created: Verão infinito faz brasileiro encher a taça de vinho branco
+INFO : 2024/06/01 15:03:38.476805 fetcher.go:78: Article created: Conchiglioni com abóbora é atalho para massa recheada saborosa e fácil de fazer
+INFO : 2024/06/01 15:03:38.481766 fetcher.go:78: Article created: Brasil passa a ter seis restaurantes com duas estrelas Michelin, mas segue sem cotação máxima
+INFO : 2024/06/01 15:03:38.487076 fetcher.go:78: Article created: Moët e Chandon tem loja com vending machine de champanhe em SP
+INFO : 2024/06/01 15:03:38.492246 fetcher.go:78: Article created: Rótulos de brasileiro são destaque na Vinhos de Portugal
+INFO : 2024/06/01 15:03:38.496770 fetcher.go:78: Article created: Brasília ganha sua primeira vinícola e tem 100% de produção local
+INFO : 2024/06/01 15:03:38.502050 fetcher.go:78: Article created: Instituto Capim Santo assume gestão do restaurante do Instituto Baccarelli
+INFO : 2024/06/01 15:03:38.507603 fetcher.go:78: Article created: Oue Sushi, em SP, é sofrível e faz pratos sem graça e até incomíveis
+INFO : 2024/06/01 15:03:38.513470 fetcher.go:78: Article created: Entenda o que é o omakassê, menu-confiança à japonesa cada vez mais popular em SP
+INFO : 2024/06/01 15:03:38.517739 fetcher.go:78: Article created: Bar Pirajá anuncia edição do Samba do Trabalhador com Moacyr Luz em São Paulo
+INFO : 2024/06/01 15:03:38.522077 fetcher.go:78: Article created: Churrasco no abrigo e chimarrão com água de chuva: como gaúchos se viram na terra arrasada
+INFO : 2024/06/01 15:03:38.527154 fetcher.go:78: Article created: MrBeast Burger, rede do youtuber americano, chega a São Paulo
+INFO : 2024/06/01 15:03:38.531768 fetcher.go:78: Article created: Gourmetização do café é dominada por homens brancos, diz pesquisa
+INFO : 2024/06/01 15:03:38.536693 fetcher.go:78: Article created: Clima preocupa cafeicultores, mas obter certificação ainda é desafio
+INFO : 2024/06/01 15:03:38.542770 fetcher.go:78: Article created: La Casserole celebra 70 anos com sete meses de programações especiais
+INFO : 2024/06/01 15:03:38.547307 fetcher.go:78: Article created: Escola Le Cordon Bleu recebe festival com feira de produtores, aulas e jantar
+INFO : 2024/06/01 15:03:38.552441 fetcher.go:78: Article created: Solos vulcânicos e 'Pelé' dos vinhos são aposta de nova vinícola paulista
+INFO : 2024/06/01 15:03:38.557204 fetcher.go:78: Article created: Cervejaria Maralto inaugura brewpub perto do Allianz Parque
+INFO : 2024/06/01 15:03:38.562257 fetcher.go:78: Article created: Virado tem pequenos pratos que valem mais do que um pê-efe
+INFO : 2024/06/01 15:03:38.567195 fetcher.go:78: Article created: Base BBQ tem ótimas carnes, ambiente acolhedor e vista aprazível
+INFO : 2024/06/01 15:03:38.571838 fetcher.go:78: Article created: Tania Bulhões, famosa pela decoração, inaugura restaurante em São Paulo
+INFO : 2024/06/01 15:03:38.579509 fetcher.go:78: Article created: Perdizes: veja restaurantes, padarias e sorveterias que valem a visita na região oeste de SP
+INFO : 2024/06/01 15:03:38.584085 fetcher.go:78: Article created: Daniel de Mesquita Benevides ministrará curso sobre coquetéis em SP
+INFO : 2024/06/01 15:03:38.588114 fetcher.go:78: Article created: Na air fryer, costelinha ao missô leva só cinco ingredientes
+INFO : 2024/06/01 15:03:38.593254 fetcher.go:78: Article created: Conheça o Republica del Fuego, em Buenos Aires
+INFO : 2024/06/01 15:03:38.597982 fetcher.go:78: Article created: Festival levará gastronomia francesa a capitais brasileiras em junho
+INFO : 2024/06/01 15:03:38.603001 fetcher.go:78: Article created: Biscoito montanha-russa faz sucesso nas redes; saiba como fazer
+INFO : 2024/06/01 15:03:38.609340 fetcher.go:78: Article created: Mães também gostam de vinho
+INFO : 2024/06/01 15:03:38.613891 fetcher.go:78: Article created: Jojo Ramen celebra oito anos com receitas especiais cocriadas com chefs convidados
+INFO : 2024/06/01 15:03:38.618969 fetcher.go:78: Article created: Morar no McDonald's, nem nos meus piores pesadelos
+INFO : 2024/06/01 15:03:38.624124 fetcher.go:78: Article created: Bialetti lança cafeteira prensa francesa com a Dolce & Gabbana
+INFO : 2024/06/01 15:03:38.629811 fetcher.go:78: Article created: Frango na Airfyer: aprenda diferentes receitas para não enjoar da proteína
+INFO : 2024/06/01 15:03:38.634677 fetcher.go:78: Article created: Doações para o Rio Grande do Sul; veja restaurantes, chefs e eventos beneficentes em SP
+INFO : 2024/06/01 15:03:38.639551 fetcher.go:78: Article created: Croma Beer lança 7 cervejas envelhecidas para celebrar 7º aniversário
+INFO : 2024/06/01 15:03:38.645030 fetcher.go:78: Article created: 'Oscar do café': experimentei os melhores cafés do Brasil; veja como são
+INFO : 2024/06/01 15:03:38.649497 fetcher.go:78: Article created: Com estoque deficiente, supermercados de Porto Alegre e região racionam venda de água
+INFO : 2024/06/01 15:03:38.654603 fetcher.go:78: Article created: Hecatombe gaúcha aniquilou até mesmo o Polentaço
+INFO : 2024/06/01 15:03:38.659418 fetcher.go:78: Article created: Ambev para produção de cerveja para envasar água para o RS
+INFO : 2024/06/01 15:03:38.663991 fetcher.go:78: Article created: Sorveteria em Santa Cecília atrai com sabores judaicos e minimuro das lamentações
+INFO : 2024/06/01 15:03:38.667946 fetcher.go:78: Article created: Compre um vinho produzido no Rio Grande do Sul
+INFO : 2024/06/01 15:03:38.673394 fetcher.go:78: Article created: Para o Dia das Mães, o molho de cebola agridoce da dona Ana
+INFO : 2024/06/01 15:03:38.678384 fetcher.go:78: Article created: Vinho brasileiro está no centro da catástrofe do Sul
+INFO : 2024/06/01 15:03:38.683442 fetcher.go:78: Article created: Diego Sacilotto, ex-Masterchef, amplia império gastronômico na ZN com quatro novas casas
+INFO : 2024/06/01 15:03:38.688247 fetcher.go:78: Article created: Como o bolo Floresta Negra se tornou a sobremesa favorita do mundo?
+INFO : 2024/06/01 15:03:38.693235 fetcher.go:78: Article created: Você sabe diferenciar o bife ancho do bife de chorizo?
+INFO : 2024/06/01 15:03:38.698071 fetcher.go:78: Article created: Sorveteria em São Paulo serve sabores inspirados em fragrâncias de perfume
+INFO : 2024/06/01 15:03:38.704023 fetcher.go:78: Article created: Bar dos Arcos tem nova carta de drinques inspirada na artista Lygia Clark; veja imagens
+INFO : 2024/06/01 15:03:38.708842 fetcher.go:78: Article created: No Dia das Mães, veja restaurantes com menus especiais e encomendas em São Paulo
+INFO : 2024/06/01 15:03:38.713545 fetcher.go:78: Article created: Café Botanista fecha no centro de SP após invasão
+INFO : 2024/06/01 15:03:38.718753 fetcher.go:78: Article created: Depois do dilúvio, vêm os cogumelos
+INFO : 2024/06/01 15:03:38.723553 fetcher.go:78: Article created: Aprenda a fazer o hambúrguer de siri do Bob Esponja
+INFO : 2024/06/01 15:03:38.728224 fetcher.go:78: Article created: Restaurante temático de Bob Esponja emula a Fenda do Bikini em SP
+INFO : 2024/06/01 15:03:38.732939 fetcher.go:78: Article created: Dia das Mães: veja dicas de presentes para quem adora café
+INFO : 2024/06/01 15:03:38.738724 fetcher.go:78: Article created: Uísques japoneses estão em alta no Brasil, mas nunca foram tão caros como agora
+INFO : 2024/06/01 15:03:38.743304 fetcher.go:78: Article created: Aprenda a fazer pisco sour, o drinque típico do Peru
+INFO : 2024/06/01 15:03:38.748314 fetcher.go:78: Article created: O doce de leite fajuto e o declínio da civilização
+INFO : 2024/06/01 15:03:38.752900 fetcher.go:78: Article created: Brass Brew faz festa de 3 anos na charmosa Casa das Caldeiras
+INFO : 2024/06/01 15:03:38.757888 fetcher.go:78: Article created: Brunch Weekend oferece menus com drinques por R$ 89 em São Paulo
+INFO : 2024/06/01 15:03:38.762861 fetcher.go:78: Article created: Sete vinhos que você precisa tomar antes de morrer
+INFO : 2024/06/01 15:03:38.768778 fetcher.go:78: Article created: É falso que alimentos com selo da rã sejam produzidos por Bill Gates
+INFO : 2024/06/01 15:03:38.773025 fetcher.go:78: Article created: Fuja das regiões hypadas para beber bem e gastar menos
+INFO : 2024/06/01 15:03:38.778101 fetcher.go:78: Article created: The Little Coffee Shop, em Pinheiros, vai fechar após quase dez anos
+INFO : 2024/06/01 15:03:48.241298 fetcher.go:78: Article created: Castanha de caju dá uma surra no pistache
+INFO : 2024/06/01 15:03:48.245997 fetcher.go:78: Article created: Taste SP 2024: comidinhas judaicas e taiwanesas são destaque no 2º fim de semana do evento
+INFO : 2024/06/01 15:03:48.250802 fetcher.go:78: Article created: Taste SP: Chefs do Mocotó e Evvai são destaque no segundo fim de semana do evento
+INFO : 2024/06/01 15:03:48.255280 fetcher.go:78: Article created: Japas Cervejaria organiza nova edição do festival Kurafuto, no Pavilhão Japonês
+INFO : 2024/06/01 15:03:48.261320 fetcher.go:78: Article created: Dino Restaurante, em SP, tem show e brinquedos mas não se limita ao menu infantil
+INFO : 2024/06/01 15:03:48.265826 fetcher.go:78: Article created: Veja onde assistir à final da Champions League entre Real Madrid e Dortmund em São Paulo
+INFO : 2024/06/01 15:03:48.270561 fetcher.go:78: Article created: Por que as pessoas estão pagando para jantar com desconhecidos
+INFO : 2024/06/01 15:03:48.275512 fetcher.go:78: Article created: As 5 mudanças simples na sua dieta que podem aumentar sua energia
+INFO : 2024/06/01 15:03:48.280685 fetcher.go:78: Article created: Onde tomar café em Santiago, no Chile; veja guia de boas cafeterias
+INFO : 2024/06/01 15:03:48.284830 fetcher.go:78: Article created: As 7 piores furadas das hamburguerias
+INFO : 2024/06/01 15:03:48.291921 fetcher.go:78: Article created: Clube do vinho vale a pena? Um guia para decidir
+INFO : 2024/06/01 15:03:48.298481 fetcher.go:78: Article created: Sete dicas para o hambúrguer perfeito na brasa
+INFO : 2024/06/01 15:03:48.303944 fetcher.go:78: Article created: No Dia do Hambúrguer, veja novidades, promoções e até lanches de graça em São Paulo
+INFO : 2024/06/01 15:03:48.308652 fetcher.go:78: Article created: Pode um restaurante chique barrar cliente que estiver de regata, chinelo e bermuda?
+INFO : 2024/06/01 15:03:48.313574 fetcher.go:78: Article created: No Dia do Hambúrguer, uma especialidade lotada de cebola
+INFO : 2024/06/01 15:03:48.317749 fetcher.go:78: Article created: Público do Taste SP se diverte com brincadeiras imersivas e brindes
+INFO : 2024/06/01 15:03:48.323847 fetcher.go:78: Article created: Vinícola que ganhou Oscar do vinho fica perto de São Paulo
+INFO : 2024/06/01 15:03:48.328286 fetcher.go:78: Article created: Por que a Coca-Cola tem gosto diferente em cada país?
+INFO : 2024/06/01 15:03:48.332826 fetcher.go:78: Article created: Primeiro sábado do Taste SP une restaurantes premiados e estrelas da gastronomia
+INFO : 2024/06/01 15:03:48.337800 fetcher.go:78: Article created: Conheça o balcão que ganhou uma estrela Michelin servindo tacos no México
+INFO : 2024/06/01 15:03:48.342463 fetcher.go:78: Article created: Taste SP 2024: vinho e quitutes quentes fazem sucesso na abertura do evento
+INFO : 2024/06/01 15:03:48.346515 fetcher.go:78: Article created: Restaurante Merci, no Complexo Vila Anália, tem novo chef e menu
+INFO : 2024/06/01 15:03:48.352516 fetcher.go:78: Article created: 'Super Size Me' mudou a fast food para menos pior
+INFO : 2024/06/01 15:03:48.356794 fetcher.go:78: Article created: Bar Presidenta, na rua Augusta, tem festival com artistas de sete estados do país
+INFO : 2024/06/01 15:03:48.361714 fetcher.go:78: Article created: Dia Nacional do Café: como fazer café na prensa francesa; especialista ensina em vídeo
+INFO : 2024/06/01 15:03:48.366838 fetcher.go:78: Article created: Dia Nacional do Café: como fazer um coado perfeito; especialista ensina truques em vídeo
+INFO : 2024/06/01 15:03:48.371716 fetcher.go:78: Article created: Dia Nacional do Café: bebida é celebrada hoje por marcar início da colheita no Brasil
+INFO : 2024/06/01 15:03:48.376890 fetcher.go:78: Article created: Dia Nacional do Café: como fazer café na cafeteira italiana, a moka; especialista ensina em vídeo
+INFO : 2024/06/01 15:03:48.381917 fetcher.go:78: Article created: Brasil leva cervejas com mandioca para festival no Canadá
+INFO : 2024/06/01 15:03:48.387729 fetcher.go:78: Article created: Festival de café em SP tem ofertas, shows e palestras no centro histórico
+INFO : 2024/06/01 15:03:48.392366 fetcher.go:78: Article created: Taste São Paulo chega à 8ª edição com nove dias de atividades no Parque Villa-Lobos
+INFO : 2024/06/01 15:03:48.397745 fetcher.go:78: Article created: A seita dos comedores de miojo cru
+INFO : 2024/06/01 15:03:48.402470 fetcher.go:78: Article created: Dia Nacional do Café: 10 fatos sobre o café brasileiro que talvez você não saiba
+INFO : 2024/06/01 15:03:48.406990 fetcher.go:78: Article created: Quem leva a melhor, Guia Michelin ou ranking 50 Best Restaurants?
+INFO : 2024/06/01 15:03:48.412399 fetcher.go:78: Article created: Veja por quanto tempo é indicado armazenar frango, salmão e carne na geladeira
+INFO : 2024/06/01 15:03:48.419654 fetcher.go:78: Article created: O que é o 'efeito Michelin' e qual o impacto dele para restaurantes
+INFO : 2024/06/01 15:03:48.424788 fetcher.go:78: Article created: Brasil tem 21 restaurantes com estrelas Michelin; veja lista completa
+INFO : 2024/06/01 15:03:48.429018 fetcher.go:78: Article created: Rede Red Lobster vai à falência após acordo ilimitado de camarão
+INFO : 2024/06/01 15:03:48.434198 fetcher.go:78: Article created: Verão infinito faz brasileiro encher a taça de vinho branco
+INFO : 2024/06/01 15:03:48.439354 fetcher.go:78: Article created: Conchiglioni com abóbora é atalho para massa recheada saborosa e fácil de fazer
+INFO : 2024/06/01 15:03:48.445156 fetcher.go:78: Article created: Brasil passa a ter seis restaurantes com duas estrelas Michelin, mas segue sem cotação máxima
+INFO : 2024/06/01 15:03:48.482116 fetcher.go:78: Article created: Moët e Chandon tem loja com vending machine de champanhe em SP
+INFO : 2024/06/01 15:03:48.487640 fetcher.go:78: Article created: Rótulos de brasileiro são destaque na Vinhos de Portugal
+INFO : 2024/06/01 15:03:48.491724 fetcher.go:78: Article created: Brasília ganha sua primeira vinícola e tem 100% de produção local
+INFO : 2024/06/01 15:03:48.496870 fetcher.go:78: Article created: Instituto Capim Santo assume gestão do restaurante do Instituto Baccarelli
+INFO : 2024/06/01 15:03:48.501899 fetcher.go:78: Article created: Oue Sushi, em SP, é sofrível e faz pratos sem graça e até incomíveis
+INFO : 2024/06/01 15:03:48.506452 fetcher.go:78: Article created: Entenda o que é o omakassê, menu-confiança à japonesa cada vez mais popular em SP
+INFO : 2024/06/01 15:03:48.512107 fetcher.go:78: Article created: Bar Pirajá anuncia edição do Samba do Trabalhador com Moacyr Luz em São Paulo
+INFO : 2024/06/01 15:03:48.516757 fetcher.go:78: Article created: Churrasco no abrigo e chimarrão com água de chuva: como gaúchos se viram na terra arrasada
+INFO : 2024/06/01 15:03:48.520770 fetcher.go:78: Article created: MrBeast Burger, rede do youtuber americano, chega a São Paulo
+INFO : 2024/06/01 15:03:48.524799 fetcher.go:78: Article created: Gourmetização do café é dominada por homens brancos, diz pesquisa
+INFO : 2024/06/01 15:03:48.529029 fetcher.go:78: Article created: Clima preocupa cafeicultores, mas obter certificação ainda é desafio
+INFO : 2024/06/01 15:03:48.534304 fetcher.go:78: Article created: La Casserole celebra 70 anos com sete meses de programações especiais
+INFO : 2024/06/01 15:03:48.540406 fetcher.go:78: Article created: Escola Le Cordon Bleu recebe festival com feira de produtores, aulas e jantar
+INFO : 2024/06/01 15:03:48.545423 fetcher.go:78: Article created: Solos vulcânicos e 'Pelé' dos vinhos são aposta de nova vinícola paulista
+INFO : 2024/06/01 15:03:48.549999 fetcher.go:78: Article created: Cervejaria Maralto inaugura brewpub perto do Allianz Parque
+INFO : 2024/06/01 15:03:48.554950 fetcher.go:78: Article created: Virado tem pequenos pratos que valem mais do que um pê-efe
+INFO : 2024/06/01 15:03:48.559941 fetcher.go:78: Article created: Base BBQ tem ótimas carnes, ambiente acolhedor e vista aprazível
+INFO : 2024/06/01 15:03:48.564738 fetcher.go:78: Article created: Tania Bulhões, famosa pela decoração, inaugura restaurante em São Paulo
+INFO : 2024/06/01 15:03:48.570764 fetcher.go:78: Article created: Perdizes: veja restaurantes, padarias e sorveterias que valem a visita na região oeste de SP
+INFO : 2024/06/01 15:03:48.575613 fetcher.go:78: Article created: Daniel de Mesquita Benevides ministrará curso sobre coquetéis em SP
+INFO : 2024/06/01 15:03:48.580391 fetcher.go:78: Article created: Na air fryer, costelinha ao missô leva só cinco ingredientes
+INFO : 2024/06/01 15:03:48.585338 fetcher.go:78: Article created: Conheça o Republica del Fuego, em Buenos Aires
+INFO : 2024/06/01 15:03:48.590409 fetcher.go:78: Article created: Festival levará gastronomia francesa a capitais brasileiras em junho
+INFO : 2024/06/01 15:03:48.595292 fetcher.go:78: Article created: Biscoito montanha-russa faz sucesso nas redes; saiba como fazer
+INFO : 2024/06/01 15:03:48.601291 fetcher.go:78: Article created: Mães também gostam de vinho
+INFO : 2024/06/01 15:03:48.605548 fetcher.go:78: Article created: Jojo Ramen celebra oito anos com receitas especiais cocriadas com chefs convidados
+INFO : 2024/06/01 15:03:48.610801 fetcher.go:78: Article created: Morar no McDonald's, nem nos meus piores pesadelos
+INFO : 2024/06/01 15:03:48.615659 fetcher.go:78: Article created: Bialetti lança cafeteira prensa francesa com a Dolce & Gabbana
+INFO : 2024/06/01 15:03:48.620490 fetcher.go:78: Article created: Frango na Airfyer: aprenda diferentes receitas para não enjoar da proteína
+INFO : 2024/06/01 15:03:48.624794 fetcher.go:78: Article created: Doações para o Rio Grande do Sul; veja restaurantes, chefs e eventos beneficentes em SP
+INFO : 2024/06/01 15:03:48.628868 fetcher.go:78: Article created: Croma Beer lança 7 cervejas envelhecidas para celebrar 7º aniversário
+INFO : 2024/06/01 15:03:48.634509 fetcher.go:78: Article created: 'Oscar do café': experimentei os melhores cafés do Brasil; veja como são
+INFO : 2024/06/01 15:03:48.639131 fetcher.go:78: Article created: Com estoque deficiente, supermercados de Porto Alegre e região racionam venda de água
+INFO : 2024/06/01 15:03:48.644174 fetcher.go:78: Article created: Hecatombe gaúcha aniquilou até mesmo o Polentaço
+INFO : 2024/06/01 15:03:48.648797 fetcher.go:78: Article created: Ambev para produção de cerveja para envasar água para o RS
+INFO : 2024/06/01 15:03:48.653425 fetcher.go:78: Article created: Sorveteria em Santa Cecília atrai com sabores judaicos e minimuro das lamentações
+INFO : 2024/06/01 15:03:48.657830 fetcher.go:78: Article created: Compre um vinho produzido no Rio Grande do Sul
+INFO : 2024/06/01 15:03:48.663608 fetcher.go:78: Article created: Para o Dia das Mães, o molho de cebola agridoce da dona Ana
+INFO : 2024/06/01 15:03:48.667991 fetcher.go:78: Article created: Vinho brasileiro está no centro da catástrofe do Sul
+INFO : 2024/06/01 15:03:48.672922 fetcher.go:78: Article created: Diego Sacilotto, ex-Masterchef, amplia império gastronômico na ZN com quatro novas casas
+INFO : 2024/06/01 15:03:48.677355 fetcher.go:78: Article created: Como o bolo Floresta Negra se tornou a sobremesa favorita do mundo?
+INFO : 2024/06/01 15:03:48.681773 fetcher.go:78: Article created: Você sabe diferenciar o bife ancho do bife de chorizo?
+INFO : 2024/06/01 15:03:48.686496 fetcher.go:78: Article created: Sorveteria em São Paulo serve sabores inspirados em fragrâncias de perfume
+INFO : 2024/06/01 15:03:48.692362 fetcher.go:78: Article created: Bar dos Arcos tem nova carta de drinques inspirada na artista Lygia Clark; veja imagens
+INFO : 2024/06/01 15:03:48.696597 fetcher.go:78: Article created: No Dia das Mães, veja restaurantes com menus especiais e encomendas em São Paulo
+INFO : 2024/06/01 15:03:48.700919 fetcher.go:78: Article created: Café Botanista fecha no centro de SP após invasão
+INFO : 2024/06/01 15:03:48.705681 fetcher.go:78: Article created: Depois do dilúvio, vêm os cogumelos
+INFO : 2024/06/01 15:03:48.709754 fetcher.go:78: Article created: Aprenda a fazer o hambúrguer de siri do Bob Esponja
+INFO : 2024/06/01 15:03:48.714740 fetcher.go:78: Article created: Restaurante temático de Bob Esponja emula a Fenda do Bikini em SP
+INFO : 2024/06/01 15:03:48.718897 fetcher.go:78: Article created: Dia das Mães: veja dicas de presentes para quem adora café
+INFO : 2024/06/01 15:03:48.724922 fetcher.go:78: Article created: Uísques japoneses estão em alta no Brasil, mas nunca foram tão caros como agora
+INFO : 2024/06/01 15:03:48.729360 fetcher.go:78: Article created: Aprenda a fazer pisco sour, o drinque típico do Peru
+INFO : 2024/06/01 15:03:48.734404 fetcher.go:78: Article created: O doce de leite fajuto e o declínio da civilização
+INFO : 2024/06/01 15:03:48.739451 fetcher.go:78: Article created: Brass Brew faz festa de 3 anos na charmosa Casa das Caldeiras
+INFO : 2024/06/01 15:03:48.745290 fetcher.go:78: Article created: Brunch Weekend oferece menus com drinques por R$ 89 em São Paulo
+INFO : 2024/06/01 15:03:48.750237 fetcher.go:78: Article created: Sete vinhos que você precisa tomar antes de morrer
+INFO : 2024/06/01 15:03:48.755825 fetcher.go:78: Article created: É falso que alimentos com selo da rã sejam produzidos por Bill Gates
+INFO : 2024/06/01 15:03:48.762085 fetcher.go:78: Article created: Fuja das regiões hypadas para beber bem e gastar menos
+INFO : 2024/06/01 15:03:48.766985 fetcher.go:78: Article created: The Little Coffee Shop, em Pinheiros, vai fechar após quase dez anos
+INFO : 2024/06/01 15:03:58.244182 fetcher.go:78: Article created: Castanha de caju dá uma surra no pistache
+INFO : 2024/06/01 15:03:58.249961 fetcher.go:78: Article created: Taste SP 2024: comidinhas judaicas e taiwanesas são destaque no 2º fim de semana do evento
+INFO : 2024/06/01 15:03:58.256126 fetcher.go:78: Article created: Taste SP: Chefs do Mocotó e Evvai são destaque no segundo fim de semana do evento
+INFO : 2024/06/01 15:03:58.261387 fetcher.go:78: Article created: Japas Cervejaria organiza nova edição do festival Kurafuto, no Pavilhão Japonês
+INFO : 2024/06/01 15:03:58.268724 fetcher.go:78: Article created: Dino Restaurante, em SP, tem show e brinquedos mas não se limita ao menu infantil
+INFO : 2024/06/01 15:03:58.274634 fetcher.go:78: Article created: Veja onde assistir à final da Champions League entre Real Madrid e Dortmund em São Paulo
+INFO : 2024/06/01 15:03:58.280037 fetcher.go:78: Article created: Por que as pessoas estão pagando para jantar com desconhecidos
+INFO : 2024/06/01 15:03:58.285351 fetcher.go:78: Article created: As 5 mudanças simples na sua dieta que podem aumentar sua energia
+INFO : 2024/06/01 15:03:58.291060 fetcher.go:78: Article created: Onde tomar café em Santiago, no Chile; veja guia de boas cafeterias
+INFO : 2024/06/01 15:03:58.296404 fetcher.go:78: Article created: As 7 piores furadas das hamburguerias
+INFO : 2024/06/01 15:03:58.303166 fetcher.go:78: Article created: Clube do vinho vale a pena? Um guia para decidir
+INFO : 2024/06/01 15:03:58.307792 fetcher.go:78: Article created: Sete dicas para o hambúrguer perfeito na brasa
+INFO : 2024/06/01 15:03:58.313418 fetcher.go:78: Article created: No Dia do Hambúrguer, veja novidades, promoções e até lanches de graça em São Paulo
+INFO : 2024/06/01 15:03:58.318712 fetcher.go:78: Article created: Pode um restaurante chique barrar cliente que estiver de regata, chinelo e bermuda?
+INFO : 2024/06/01 15:03:58.324460 fetcher.go:78: Article created: No Dia do Hambúrguer, uma especialidade lotada de cebola
+INFO : 2024/06/01 15:03:58.329885 fetcher.go:78: Article created: Público do Taste SP se diverte com brincadeiras imersivas e brindes
+INFO : 2024/06/01 15:03:58.335091 fetcher.go:78: Article created: Vinícola que ganhou Oscar do vinho fica perto de São Paulo
+INFO : 2024/06/01 15:03:58.342782 fetcher.go:78: Article created: Por que a Coca-Cola tem gosto diferente em cada país?
+INFO : 2024/06/01 15:03:58.349466 fetcher.go:78: Article created: Primeiro sábado do Taste SP une restaurantes premiados e estrelas da gastronomia
+INFO : 2024/06/01 15:03:58.354540 fetcher.go:78: Article created: Conheça o balcão que ganhou uma estrela Michelin servindo tacos no México
+INFO : 2024/06/01 15:03:58.360571 fetcher.go:78: Article created: Taste SP 2024: vinho e quitutes quentes fazem sucesso na abertura do evento
+INFO : 2024/06/01 15:03:58.365653 fetcher.go:78: Article created: Restaurante Merci, no Complexo Vila Anália, tem novo chef e menu
+INFO : 2024/06/01 15:03:58.369847 fetcher.go:78: Article created: 'Super Size Me' mudou a fast food para menos pior
+INFO : 2024/06/01 15:03:58.374887 fetcher.go:78: Article created: Bar Presidenta, na rua Augusta, tem festival com artistas de sete estados do país
+INFO : 2024/06/01 15:03:58.380182 fetcher.go:78: Article created: Dia Nacional do Café: como fazer café na prensa francesa; especialista ensina em vídeo
+INFO : 2024/06/01 15:03:58.385110 fetcher.go:78: Article created: Dia Nacional do Café: como fazer um coado perfeito; especialista ensina truques em vídeo
+INFO : 2024/06/01 15:03:58.390988 fetcher.go:78: Article created: Dia Nacional do Café: bebida é celebrada hoje por marcar início da colheita no Brasil
+INFO : 2024/06/01 15:03:58.395421 fetcher.go:78: Article created: Dia Nacional do Café: como fazer café na cafeteira italiana, a moka; especialista ensina em vídeo
+INFO : 2024/06/01 15:03:58.400352 fetcher.go:78: Article created: Brasil leva cervejas com mandioca para festival no Canadá
+INFO : 2024/06/01 15:03:58.405250 fetcher.go:78: Article created: Festival de café em SP tem ofertas, shows e palestras no centro histórico
+INFO : 2024/06/01 15:03:58.409628 fetcher.go:78: Article created: Taste São Paulo chega à 8ª edição com nove dias de atividades no Parque Villa-Lobos
+INFO : 2024/06/01 15:03:58.414555 fetcher.go:78: Article created: A seita dos comedores de miojo cru
+INFO : 2024/06/01 15:03:58.419402 fetcher.go:78: Article created: Dia Nacional do Café: 10 fatos sobre o café brasileiro que talvez você não saiba
+INFO : 2024/06/01 15:03:58.425128 fetcher.go:78: Article created: Quem leva a melhor, Guia Michelin ou ranking 50 Best Restaurants?
+INFO : 2024/06/01 15:03:58.429497 fetcher.go:78: Article created: Veja por quanto tempo é indicado armazenar frango, salmão e carne na geladeira
+INFO : 2024/06/01 15:03:58.434401 fetcher.go:78: Article created: O que é o 'efeito Michelin' e qual o impacto dele para restaurantes
+INFO : 2024/06/01 15:03:58.439011 fetcher.go:78: Article created: Brasil tem 21 restaurantes com estrelas Michelin; veja lista completa
+INFO : 2024/06/01 15:03:58.444218 fetcher.go:78: Article created: Rede Red Lobster vai à falência após acordo ilimitado de camarão
+INFO : 2024/06/01 15:03:58.448985 fetcher.go:78: Article created: Verão infinito faz brasileiro encher a taça de vinho branco
+INFO : 2024/06/01 15:03:58.456063 fetcher.go:78: Article created: Conchiglioni com abóbora é atalho para massa recheada saborosa e fácil de fazer
+INFO : 2024/06/01 15:03:58.460881 fetcher.go:78: Article created: Brasil passa a ter seis restaurantes com duas estrelas Michelin, mas segue sem cotação máxima
+INFO : 2024/06/01 15:03:58.465674 fetcher.go:78: Article created: Moët e Chandon tem loja com vending machine de champanhe em SP
+INFO : 2024/06/01 15:03:58.470380 fetcher.go:78: Article created: Rótulos de brasileiro são destaque na Vinhos de Portugal
+INFO : 2024/06/01 15:03:58.475512 fetcher.go:78: Article created: Brasília ganha sua primeira vinícola e tem 100% de produção local
+INFO : 2024/06/01 15:03:58.480808 fetcher.go:78: Article created: Instituto Capim Santo assume gestão do restaurante do Instituto Baccarelli
+INFO : 2024/06/01 15:03:58.486945 fetcher.go:78: Article created: Oue Sushi, em SP, é sofrível e faz pratos sem graça e até incomíveis
+INFO : 2024/06/01 15:03:58.491222 fetcher.go:78: Article created: Entenda o que é o omakassê, menu-confiança à japonesa cada vez mais popular em SP
+INFO : 2024/06/01 15:03:58.496360 fetcher.go:78: Article created: Bar Pirajá anuncia edição do Samba do Trabalhador com Moacyr Luz em São Paulo
+INFO : 2024/06/01 15:03:58.501449 fetcher.go:78: Article created: Churrasco no abrigo e chimarrão com água de chuva: como gaúchos se viram na terra arrasada
+INFO : 2024/06/01 15:03:58.506348 fetcher.go:78: Article created: MrBeast Burger, rede do youtuber americano, chega a São Paulo
+INFO : 2024/06/01 15:03:58.511271 fetcher.go:78: Article created: Gourmetização do café é dominada por homens brancos, diz pesquisa
+INFO : 2024/06/01 15:03:58.518337 fetcher.go:78: Article created: Clima preocupa cafeicultores, mas obter certificação ainda é desafio
+INFO : 2024/06/01 15:03:58.523185 fetcher.go:78: Article created: La Casserole celebra 70 anos com sete meses de programações especiais
+INFO : 2024/06/01 15:03:58.527188 fetcher.go:78: Article created: Escola Le Cordon Bleu recebe festival com feira de produtores, aulas e jantar
+INFO : 2024/06/01 15:03:58.532198 fetcher.go:78: Article created: Solos vulcânicos e 'Pelé' dos vinhos são aposta de nova vinícola paulista
+INFO : 2024/06/01 15:03:58.537421 fetcher.go:78: Article created: Cervejaria Maralto inaugura brewpub perto do Allianz Parque
+INFO : 2024/06/01 15:03:58.542372 fetcher.go:78: Article created: Virado tem pequenos pratos que valem mais do que um pê-efe
+INFO : 2024/06/01 15:03:58.548324 fetcher.go:78: Article created: Base BBQ tem ótimas carnes, ambiente acolhedor e vista aprazível
+INFO : 2024/06/01 15:03:58.553261 fetcher.go:78: Article created: Tania Bulhões, famosa pela decoração, inaugura restaurante em São Paulo
+INFO : 2024/06/01 15:03:58.558196 fetcher.go:78: Article created: Perdizes: veja restaurantes, padarias e sorveterias que valem a visita na região oeste de SP
+INFO : 2024/06/01 15:03:58.563606 fetcher.go:78: Article created: Daniel de Mesquita Benevides ministrará curso sobre coquetéis em SP
+INFO : 2024/06/01 15:03:58.567535 fetcher.go:78: Article created: Na air fryer, costelinha ao missô leva só cinco ingredientes
+INFO : 2024/06/01 15:03:58.571871 fetcher.go:78: Article created: Conheça o Republica del Fuego, em Buenos Aires
+INFO : 2024/06/01 15:03:58.576835 fetcher.go:78: Article created: Festival levará gastronomia francesa a capitais brasileiras em junho
+INFO : 2024/06/01 15:03:58.581884 fetcher.go:78: Article created: Biscoito montanha-russa faz sucesso nas redes; saiba como fazer
+INFO : 2024/06/01 15:03:58.586833 fetcher.go:78: Article created: Mães também gostam de vinho
+INFO : 2024/06/01 15:03:58.591456 fetcher.go:78: Article created: Jojo Ramen celebra oito anos com receitas especiais cocriadas com chefs convidados
+INFO : 2024/06/01 15:03:58.595511 fetcher.go:78: Article created: Morar no McDonald's, nem nos meus piores pesadelos
+INFO : 2024/06/01 15:03:58.600127 fetcher.go:78: Article created: Bialetti lança cafeteira prensa francesa com a Dolce & Gabbana
+INFO : 2024/06/01 15:03:58.604931 fetcher.go:78: Article created: Frango na Airfyer: aprenda diferentes receitas para não enjoar da proteína
+INFO : 2024/06/01 15:03:58.610855 fetcher.go:78: Article created: Doações para o Rio Grande do Sul; veja restaurantes, chefs e eventos beneficentes em SP
+INFO : 2024/06/01 15:03:58.615166 fetcher.go:78: Article created: Croma Beer lança 7 cervejas envelhecidas para celebrar 7º aniversário
+INFO : 2024/06/01 15:03:58.620096 fetcher.go:78: Article created: 'Oscar do café': experimentei os melhores cafés do Brasil; veja como são
+INFO : 2024/06/01 15:03:58.624659 fetcher.go:78: Article created: Com estoque deficiente, supermercados de Porto Alegre e região racionam venda de água
+INFO : 2024/06/01 15:03:58.629496 fetcher.go:78: Article created: Hecatombe gaúcha aniquilou até mesmo o Polentaço
+INFO : 2024/06/01 15:03:58.634012 fetcher.go:78: Article created: Ambev para produção de cerveja para envasar água para o RS
+INFO : 2024/06/01 15:03:58.640036 fetcher.go:78: Article created: Sorveteria em Santa Cecília atrai com sabores judaicos e minimuro das lamentações
+INFO : 2024/06/01 15:03:58.645425 fetcher.go:78: Article created: Compre um vinho produzido no Rio Grande do Sul
+INFO : 2024/06/01 15:03:58.650192 fetcher.go:78: Article created: Para o Dia das Mães, o molho de cebola agridoce da dona Ana
+INFO : 2024/06/01 15:03:58.655114 fetcher.go:78: Article created: Vinho brasileiro está no centro da catástrofe do Sul
+INFO : 2024/06/01 15:03:58.660550 fetcher.go:78: Article created: Diego Sacilotto, ex-Masterchef, amplia império gastronômico na ZN com quatro novas casas
+INFO : 2024/06/01 15:03:58.665222 fetcher.go:78: Article created: Como o bolo Floresta Negra se tornou a sobremesa favorita do mundo?
+INFO : 2024/06/01 15:03:58.672010 fetcher.go:78: Article created: Você sabe diferenciar o bife ancho do bife de chorizo?
+INFO : 2024/06/01 15:03:58.677384 fetcher.go:78: Article created: Sorveteria em São Paulo serve sabores inspirados em fragrâncias de perfume
+INFO : 2024/06/01 15:03:58.682577 fetcher.go:78: Article created: Bar dos Arcos tem nova carta de drinques inspirada na artista Lygia Clark; veja imagens
+INFO : 2024/06/01 15:03:58.688229 fetcher.go:78: Article created: No Dia das Mães, veja restaurantes com menus especiais e encomendas em São Paulo
+INFO : 2024/06/01 15:03:58.694304 fetcher.go:78: Article created: Café Botanista fecha no centro de SP após invasão
+INFO : 2024/06/01 15:03:58.699433 fetcher.go:78: Article created: Depois do dilúvio, vêm os cogumelos
+INFO : 2024/06/01 15:03:58.704439 fetcher.go:78: Article created: Aprenda a fazer o hambúrguer de siri do Bob Esponja
+INFO : 2024/06/01 15:03:58.710491 fetcher.go:78: Article created: Restaurante temático de Bob Esponja emula a Fenda do Bikini em SP
+INFO : 2024/06/01 15:03:58.721394 fetcher.go:78: Article created: Dia das Mães: veja dicas de presentes para quem adora café
+INFO : 2024/06/01 15:03:58.726738 fetcher.go:78: Article created: Uísques japoneses estão em alta no Brasil, mas nunca foram tão caros como agora
+INFO : 2024/06/01 15:03:58.731736 fetcher.go:78: Article created: Aprenda a fazer pisco sour, o drinque típico do Peru
+INFO : 2024/06/01 15:03:58.736656 fetcher.go:78: Article created: O doce de leite fajuto e o declínio da civilização
+INFO : 2024/06/01 15:03:58.741813 fetcher.go:78: Article created: Brass Brew faz festa de 3 anos na charmosa Casa das Caldeiras
+INFO : 2024/06/01 15:03:58.748570 fetcher.go:78: Article created: Brunch Weekend oferece menus com drinques por R$ 89 em São Paulo
+INFO : 2024/06/01 15:03:58.753746 fetcher.go:78: Article created: Sete vinhos que você precisa tomar antes de morrer
+INFO : 2024/06/01 15:03:58.758588 fetcher.go:78: Article created: É falso que alimentos com selo da rã sejam produzidos por Bill Gates
+INFO : 2024/06/01 15:03:58.764603 fetcher.go:78: Article created: Fuja das regiões hypadas para beber bem e gastar menos
+INFO : 2024/06/01 15:03:58.769937 fetcher.go:78: Article created: The Little Coffee Shop, em Pinheiros, vai fechar após quase dez anos

@@ -15,8 +15,8 @@ POST http://localhost:8080/sources
 Content-Type: application/json
 
 {
-  "name": "Minha Fonte",
-  "url": "https://minhafonte.com"
+  "name": "Folha de São Paulo Comida",
+  "url": "https://feeds.folha.uol.com.br/comida/rss091.xml"
 }
 
 ###
@@ -34,4 +34,10 @@ Content-Type: application/json
 
 ### Deletar uma fonte
 DELETE http://localhost:8080/sources/1
+Content-Type: application/json
+
+###
+
+### Carregar feed de uma fonte
+GET http://localhost:8080/sources/loadFeed/3
 Content-Type: application/json

@@ -1,6 +1,8 @@
 package sources
 
-import "time"
+import (
+	"time"
+)
 
 type Source struct {
 	ID      int       `json:"id"`

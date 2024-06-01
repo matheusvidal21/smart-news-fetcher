@@ -27,9 +27,6 @@ func main() {
 	sourceHandler := di.NewSourceHandler(db)
 	router := gin.Default()
 
-	//fetcher := di.NewFetcher(db)
-	//	fetcher.StartScheduler(5 * time.Second)
-
 	articles := router.Group("/articles")
 	{
 		articles.GET("/", articleHandler.FindAll)
@@ -47,6 +44,7 @@ func main() {
 		sources.POST("/", sourceHandler.Create)
 		sources.PUT("/:id", sourceHandler.Update)
 		sources.DELETE("/:id", sourceHandler.Delete)
+		sources.GET("/loadFeed/:id", sourceHandler.LoadFeed)
 	}
 
 	router.Run(conf.WebServerPort)

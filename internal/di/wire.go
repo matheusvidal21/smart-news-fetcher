@@ -11,6 +11,11 @@ import (
 	"github.com/matheusvidal21/smart-news-fetcher/internal/sources"
 )
 
+var setFetcherDependecy = wire.NewSet(
+	fetcher.NewFetcher,
+	wire.Bind(new(fetcher.FetcherInterface), new(*fetcher.Fetcher)),
+)
+
 var setSourceHandlerDependecy = wire.NewSet(
 	sources.NewSourceHandler,
 	wire.Bind(new(sources.SourceHandlerInterface), new(*sources.SourceHandler)),
@@ -53,20 +58,12 @@ func NewArticleHandler(db *sql.DB) *articles.ArticleHandler {
 func NewSourceHandler(db *sql.DB) *sources.SourceHandler {
 	wire.Build(
 		setSourceRepositoryDependecy,
+		setArticleRepositoryDependecy,
+		setArticleServiceDependecy,
+		setFetcherDependecy,
 		setSourceServiceDependecy,
 		setSourceHandlerDependecy,
 	)
 
 	return &sources.SourceHandler{}
-}
-
-func NewFetcher(db *sql.DB) *fetcher.Fetcher {
-	wire.Build(
-		setSourceRepositoryDependecy,
-		setSourceServiceDependecy,
-		setArticleRepositoryDependecy,
-		setArticleServiceDependecy,
-		fetcher.NewFetcher,
-	)
-	return &fetcher.Fetcher{}
 }

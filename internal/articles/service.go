@@ -1,6 +1,7 @@
 package articles
 
 import (
+	"errors"
 	"github.com/matheusvidal21/smart-news-fetcher/internal/dto"
 )
 
@@ -22,14 +23,18 @@ func NewArticleService(articleRepository ArticleRepositoryInterface) *ArticleSer
 }
 
 func (as *ArticleService) FindAll(page, limit int, sort string) ([]Article, error) {
-	return as.articleRepository.FindAll(page, limit, sort)
+	articles, err := as.articleRepository.FindAll(page, limit, sort)
+	if err != nil {
+		return nil, errors.New("Articles not found: " + err.Error())
+	}
+	return articles, nil
 }
 
 func (as *ArticleService) FindOne(id int) (dto.FindOneArticleOutput, error) {
 	article, err := as.articleRepository.FindOne(id)
 
 	if err != nil {
-		return dto.FindOneArticleOutput{}, err
+		return dto.FindOneArticleOutput{}, errors.New("Article not found: " + err.Error())
 	}
 
 	return dto.FindOneArticleOutput{
@@ -58,7 +63,7 @@ func (as *ArticleService) Create(articleDto dto.CreateArticleInput) (dto.CreateA
 	articleSaved, err := as.articleRepository.Create(article)
 
 	if err != nil {
-		return dto.CreateArticleOutput{}, err
+		return dto.CreateArticleOutput{}, errors.New("Article not created: " + err.Error())
 	}
 
 	return dto.CreateArticleOutput{
@@ -86,7 +91,7 @@ func (as *ArticleService) Update(id int, articleDto dto.UpdateArticleInput) (dto
 	articleSaved, err := as.articleRepository.Update(id, article)
 
 	if err != nil {
-		return dto.UpdateArticleOutput{}, err
+		return dto.UpdateArticleOutput{}, errors.New("Article not updated: " + err.Error())
 	}
 
 	return dto.UpdateArticleOutput{
@@ -102,9 +107,18 @@ func (as *ArticleService) Update(id int, articleDto dto.UpdateArticleInput) (dto
 }
 
 func (as *ArticleService) Delete(id int) error {
-	return as.articleRepository.Delete(id)
+	err := as.articleRepository.Delete(id)
+	if err != nil {
+		return errors.New("Article not deleted: " + err.Error())
+	}
+	return nil
 }
 
 func (as *ArticleService) FindAllBySourceId(sourceID int) ([]Article, error) {
-	return as.articleRepository.FindAllBySourceId(sourceID)
+	articles, err := as.articleRepository.FindAllBySourceId(sourceID)
+
+	if err != nil {
+		return nil, errors.New("Articles not found: " + err.Error())
+	}
+	return articles, nil
 }

@@ -5,6 +5,7 @@ import (
 	"github.com/matheusvidal21/smart-news-fetcher/internal/dto"
 	"net/http"
 	"strconv"
+	"time"
 )
 
 type SourceHandlerInterface interface {
@@ -131,7 +132,13 @@ func (sh *SourceHandler) LoadFeed(c *gin.Context) {
 		c.JSON(http.StatusBadRequest, gin.H{"error": "Invalid source ID"})
 		return
 	}
-	err = sh.sourceService.LoadFeed(id)
+
+	duration, err := time.ParseDuration(c.DefaultQuery("time", "10s"))
+	if err != nil {
+		c.JSON(http.StatusBadRequest, gin.H{"error": "Invalid duration"})
+	}
+
+	err = sh.sourceService.LoadFeed(id, duration)
 	if err != nil {
 		c.JSON(http.StatusInternalServerError, gin.H{"error": err.Error()})
 		return

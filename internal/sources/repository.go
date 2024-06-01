@@ -30,9 +30,9 @@ func (sr *SourceRepository) FindAll(page, limit int, sort string) ([]Source, err
 	}
 
 	if page != 0 && limit != 0 {
-		sql = sql + " ORDER BY created_at " + sort + " LIMIT ? OFFSET ? "
+		sql = sql + " ORDER BY saved_at " + sort + " LIMIT ? OFFSET ? "
 	} else {
-		sql = sql + " ORDER BY created_at " + sort
+		sql = sql + " ORDER BY saved_at " + sort
 	}
 
 	rows, err := sr.db.Query(sql, limit, offset)
