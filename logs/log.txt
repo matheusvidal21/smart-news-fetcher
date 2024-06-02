@@ -598,3 +598,6 @@ INFO : 2024/06/01 15:03:58.753746 fetcher.go:78: Article created: Sete vinhos qu
 INFO : 2024/06/01 15:03:58.758588 fetcher.go:78: Article created: É falso que alimentos com selo da rã sejam produzidos por Bill Gates
 INFO : 2024/06/01 15:03:58.764603 fetcher.go:78: Article created: Fuja das regiões hypadas para beber bem e gastar menos
 INFO : 2024/06/01 15:03:58.769937 fetcher.go:78: Article created: The Little Coffee Shop, em Pinheiros, vai fechar após quase dez anos
+INFO : 2024/06/01 22:45:00.436719 fetcher.go:51: Feed parsed: https://feeds.folha.uol.com.br/comida/rss091.xml
+INFO : 2024/06/01 22:57:41.962737 fetcher.go:51: Feed parsed: https://feeds.folha.uol.com.br/comida/rss091.xml
+ERROR: 2024/06/01 22:58:26.785836 fetcher.go:48: Failed to parse feed: Get "https://minhafonteatualizada.com": dial tcp: lookup minhafonteatualizada.com on 172.26.160.1:53: no such host

@@ -88,3 +88,30 @@ type FindOneSourceOutput struct {
 	Url     string    `json:"url"`
 	SavedAt time.Time `json:"saved_at"`
 }
+
+type CreateUserInput struct {
+	Username string `json:"username"`
+	Email    string `json:"email"`
+	Password string `json:"password"`
+}
+
+type CreateUserOutput struct {
+	ID       int    `json:"id"`
+	Username string `json:"username"`
+	Email    string `json:"email"`
+}
+
+type FindUserByEmailOutput struct {
+	ID       int    `json:"id"`
+	Username string `json:"username"`
+	Email    string `json:"email"`
+}
+
+type LoginUserInput struct {
+	Email    string `json:"email"`
+	Password string `json:"password"`
+}
+
+type LoginUserOutput struct {
+	Token string `json:"token"`
+}

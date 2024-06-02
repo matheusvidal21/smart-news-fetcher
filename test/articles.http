@@ -1,18 +1,21 @@
 ### Obter todos os artigos com paginação e ordenação
 GET http://localhost:8080/articles
 Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6InRlc3R1c2VyIiwiZXhwIjoxNzE3Mjk1MjQ5fQ.h0fnlpIvp-LA4YA2-s2H4hrRmG4oCPTKEY_Fxgu1w7Y
 
 ###
 
 ### Obter um artigo específico por ID
 GET http://localhost:8080/articles/2
 Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6InRlc3R1c2VyIiwiZXhwIjoxNzE3Mjk1MjQ5fQ.h0fnlpIvp-LA4YA2-s2H4hrRmG4oCPTKEY_Fxgu1w7Y
 
 ###
 
 ### Criar um novo artigo
 POST http://localhost:8080/articles
 Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6InRlc3R1c2VyIiwiZXhwIjoxNzE3Mjk1MjQ5fQ.h0fnlpIvp-LA4YA2-s2H4hrRmG4oCPTKEY_Fxgu1w7Y
 
 {
   "title": "Meu artigo",
@@ -27,6 +30,7 @@ Content-Type: application/json
 ### Atualizar um artigo existente
 PUT http://localhost:8080/articles/3
 Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6InRlc3R1c2VyIiwiZXhwIjoxNzE3Mjk1MjQ5fQ.h0fnlpIvp-LA4YA2-s2H4hrRmG4oCPTKEY_Fxgu1w7Y
 
 {
   "title": "Meu artigo atualizado",
@@ -41,9 +45,11 @@ Content-Type: application/json
 ### Deletar um artigo
 DELETE http://localhost:8080/articles/2
 Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6InRlc3R1c2VyIiwiZXhwIjoxNzE3Mjk1MjQ5fQ.h0fnlpIvp-LA4YA2-s2H4hrRmG4oCPTKEY_Fxgu1w7Y
 
 ###
 
 ### Obter artigos com base no source id
-GET http://localhost:8080/articles/source/1
+GET http://localhost:8080/articles/source/3
 Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6InRlc3R1c2VyIiwiZXhwIjoxNzE3Mjk1MjQ5fQ.h0fnlpIvp-LA4YA2-s2H4hrRmG4oCPTKEY_Fxgu1w7Y

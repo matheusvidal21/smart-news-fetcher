@@ -1,6 +1,8 @@
 ### Obter todas as fontes com paginação e ordenação
 GET http://localhost:8080/sources
 Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6InRlc3R1c2VyIiwiZXhwIjoxNzE3Mjk1MjQ5fQ.h0fnlpIvp-LA4YA2-s2H4hrRmG4oCPTKEY_Fxgu1w7Y
+
 
 ###
 
@@ -13,6 +15,7 @@ Content-Type: application/json
 ### Criar uma nova fonte
 POST http://localhost:8080/sources
 Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6InRlc3R1c2VyIiwiZXhwIjoxNzE3Mjk1MjQ5fQ.h0fnlpIvp-LA4YA2-s2H4hrRmG4oCPTKEY_Fxgu1w7Y
 
 {
   "name": "Folha de São Paulo Comida",
@@ -24,6 +27,7 @@ Content-Type: application/json
 ### Atualizar uma fonte existente
 PUT http://localhost:8080/sources/1
 Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6InRlc3R1c2VyIiwiZXhwIjoxNzE3Mjk1MjQ5fQ.h0fnlpIvp-LA4YA2-s2H4hrRmG4oCPTKEY_Fxgu1w7Y
 
 {
   "name": "Minha Fonte Atualizada",
@@ -35,9 +39,11 @@ Content-Type: application/json
 ### Deletar uma fonte
 DELETE http://localhost:8080/sources/1
 Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6InRlc3R1c2VyIiwiZXhwIjoxNzE3Mjk1MjQ5fQ.h0fnlpIvp-LA4YA2-s2H4hrRmG4oCPTKEY_Fxgu1w7Y
 
 ###
 
 ### Carregar feed de uma fonte
 GET http://localhost:8080/sources/loadFeed/3
 Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6InRlc3R1c2VyIiwiZXhwIjoxNzE3Mjk1MjQ5fQ.h0fnlpIvp-LA4YA2-s2H4hrRmG4oCPTKEY_Fxgu1w7Y

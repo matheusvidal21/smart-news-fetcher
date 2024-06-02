@@ -1,0 +1,33 @@
+### Obter usuário específico por email
+GET http://localhost:8080/users/test@example.com
+Content-Type: application/json
+
+###
+
+### Criar um novo usuário
+POST http://localhost:8080/users
+Content-Type: application/json
+
+{
+  "username": "testuser",
+  "email": "test@example.com",
+  "password": "password"
+}
+
+###
+
+### Deletar um usuário
+DELETE http://localhost:8080/users/test@example.com
+Content-Type: application/json
+
+###
+
+### Login de usuário
+POST http://localhost:8080/users/login
+Content-Type: application/json
+
+{
+  "email": "test@example.com",
+  "password": "password"
+}
+

@@ -10,8 +10,10 @@ import (
 	"database/sql"
 	"github.com/google/wire"
 	"github.com/matheusvidal21/smart-news-fetcher/internal/articles"
+	"github.com/matheusvidal21/smart-news-fetcher/internal/auth"
 	"github.com/matheusvidal21/smart-news-fetcher/internal/fetcher"
 	"github.com/matheusvidal21/smart-news-fetcher/internal/sources"
+	"github.com/matheusvidal21/smart-news-fetcher/internal/user"
 )
 
 // Injectors from wire.go:
@@ -33,6 +35,13 @@ func NewSourceHandler(db *sql.DB) *sources.SourceHandler {
 	return sourceHandler
 }
 
+func NewUserHandler(db *sql.DB, jwtService auth.JWTServiceInterface) *user.UserHandler {
+	userRepository := user.NewUserRepository(db)
+	userService := user.NewUserService(userRepository, jwtService)
+	userHandler := user.NewUserHandler(userService)
+	return userHandler
+}
+
 // wire.go:
 
 var setFetcherDependecy = wire.NewSet(fetcher.NewFetcher, wire.Bind(new(fetcher.FetcherInterface), new(*fetcher.Fetcher)))
@@ -48,3 +57,9 @@ var setArticleHandlerDependecy = wire.NewSet(articles.NewArticleHandler, wire.Bi
 var setArticleServiceDependecy = wire.NewSet(articles.NewArticleService, wire.Bind(new(articles.ArticleServiceInterface), new(*articles.ArticleService)))
 
 var setArticleRepositoryDependecy = wire.NewSet(articles.NewArticleRepository, wire.Bind(new(articles.ArticleRepositoryInterface), new(*articles.ArticleRepository)))
+
+var setUserRepositoryDependecy = wire.NewSet(user.NewUserRepository, wire.Bind(new(user.UserRepositoryInterface), new(*user.UserRepository)))
+
+var setUserServiceDependecy = wire.NewSet(user.NewUserService, wire.Bind(new(user.UserServiceInterface), new(*user.UserService)))
+
+var setUserHandlerDependecy = wire.NewSet(user.NewUserHandler, wire.Bind(new(user.UserHandlerInterface), new(*user.UserHandler)))

@@ -7,8 +7,10 @@ import (
 	"database/sql"
 	"github.com/google/wire"
 	"github.com/matheusvidal21/smart-news-fetcher/internal/articles"
+	"github.com/matheusvidal21/smart-news-fetcher/internal/auth"
 	"github.com/matheusvidal21/smart-news-fetcher/internal/fetcher"
 	"github.com/matheusvidal21/smart-news-fetcher/internal/sources"
+	"github.com/matheusvidal21/smart-news-fetcher/internal/user"
 )
 
 var setFetcherDependecy = wire.NewSet(
@@ -46,6 +48,21 @@ var setArticleRepositoryDependecy = wire.NewSet(
 	wire.Bind(new(articles.ArticleRepositoryInterface), new(*articles.ArticleRepository)),
 )
 
+var setUserRepositoryDependecy = wire.NewSet(
+	user.NewUserRepository,
+	wire.Bind(new(user.UserRepositoryInterface), new(*user.UserRepository)),
+)
+
+var setUserServiceDependecy = wire.NewSet(
+	user.NewUserService,
+	wire.Bind(new(user.UserServiceInterface), new(*user.UserService)),
+)
+
+var setUserHandlerDependecy = wire.NewSet(
+	user.NewUserHandler,
+	wire.Bind(new(user.UserHandlerInterface), new(*user.UserHandler)),
+)
+
 func NewArticleHandler(db *sql.DB) *articles.ArticleHandler {
 	wire.Build(
 		setArticleRepositoryDependecy,
@@ -66,4 +83,13 @@ func NewSourceHandler(db *sql.DB) *sources.SourceHandler {
 	)
 
 	return &sources.SourceHandler{}
+}
+
+func NewUserHandler(db *sql.DB, jwtService auth.JWTServiceInterface) *user.UserHandler {
+	wire.Build(
+		setUserRepositoryDependecy,
+		setUserServiceDependecy,
+		setUserHandlerDependecy,
+	)
+	return &user.UserHandler{}
 }

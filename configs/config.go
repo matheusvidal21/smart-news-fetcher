@@ -1,18 +1,24 @@
 package configs
 
-import "github.com/spf13/viper"
+import (
+	"github.com/golang-jwt/jwt/v4"
+	"github.com/spf13/viper"
+)
 
 var cfg *conf
 
 type conf struct {
-	DBDriver      string `mapstructure:"DB_DRIVER"`
-	DBHost        string `mapstructure:"DB_HOST"`
-	DBPort        string `mapstructure:"DB_PORT"`
-	DBUser        string `mapstructure:"DB_USER"`
-	DBPassword    string `mapstructure:"DB_PASSWORD"`
-	DBSource      string `mapstructure:"DB_SOURCE"`
-	DBName        string `mapstructure:"DB_NAME"`
-	WebServerPort string `mapstructure:"WEB_SERVER_PORT"`
+	DBDriver             string `mapstructure:"DB_DRIVER"`
+	DBHost               string `mapstructure:"DB_HOST"`
+	DBPort               string `mapstructure:"DB_PORT"`
+	DBUser               string `mapstructure:"DB_USER"`
+	DBPassword           string `mapstructure:"DB_PASSWORD"`
+	DBSource             string `mapstructure:"DB_SOURCE"`
+	DBName               string `mapstructure:"DB_NAME"`
+	WebServerPort        string `mapstructure:"WEB_SERVER_PORT"`
+	JWTSecretKey         string `mapstructure:"JWT_SECRET_KEY"`
+	JWTExpirationMinutes string `mapstructure:"JWT_EXPIRATION_MINUTES"`
+	TokenAuth            *jwt.Token
 }
 
 func LoadConfigs(path string) *conf {
