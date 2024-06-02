@@ -15,24 +15,25 @@ Content-Type: application/json
 ### Criar uma nova fonte
 POST http://localhost:8080/sources
 Content-Type: application/json
-Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6InRlc3RAZXhhbXBsZS5jb20iLCJleHAiOjE3MTczNTI3NzZ9.1RhXTYhmRCRu6gzm1v9QjOJMCAvIqotygpv1Hfk4TvA
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6ImdvbWVzaXNhYmVsYTEzQGdtYWlsLmNvbSIsImV4cCI6MTcxNzM2MDcxMX0.ASPyMZp8p4D38Re_L_U-xw45O1kjKcKyBXStgGvJa5k
 
 {
   "name": "Folha de São Paulo Comida",
   "url": "https://feeds.folha.uol.com.br/comida/rss091.xml",
-  "user_id": 1
+  "user_id": 2
 }
 
 ###
 
 ### Atualizar uma fonte existente
-PUT http://localhost:8080/sources/1
+PUT http://localhost:8080/sources/4
 Content-Type: application/json
-Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6InRlc3RAZXhhbXBsZS5jb20iLCJleHAiOjE3MTcyOTk5ODB9.LrL7d5iyG5fU60_2P7-GPVvIO1Ep9ea52uGkSG3Ln3U
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6ImdvbWVzaXNhYmVsYTEzQGdtYWlsLmNvbSIsImV4cCI6MTcxNzM2MDcxMX0.ASPyMZp8p4D38Re_L_U-xw45O1kjKcKyBXStgGvJa5k
 
 {
   "name": "Minha Fonte Atualizada",
-  "url": "https://minhafonteatualizada.com"
+  "url": "https://feeds.folha.uol.com.br/comida/rss091.xml",
+  "update_interval": 1
 }
 
 ###

@@ -3,6 +3,7 @@ package service
 import (
 	"errors"
 	"github.com/matheusvidal21/smart-news-fetcher/internal/dto"
+	"github.com/matheusvidal21/smart-news-fetcher/internal/email"
 	"github.com/matheusvidal21/smart-news-fetcher/internal/interfaces"
 	"github.com/matheusvidal21/smart-news-fetcher/internal/models"
 	"time"
@@ -11,13 +12,15 @@ import (
 type SourceService struct {
 	sourceRepository interfaces.SourceRepositoryInterface
 	userService      interfaces.UserServiceInterface
+	emailService     interfaces.EmailService
 	fetcher          interfaces.FetcherInterface
 }
 
-func NewSourceService(sourceRepository interfaces.SourceRepositoryInterface, userService interfaces.UserServiceInterface, fetcher interfaces.FetcherInterface) *SourceService {
+func NewSourceService(sourceRepository interfaces.SourceRepositoryInterface, userService interfaces.UserServiceInterface, emailService interfaces.EmailService, fetcher interfaces.FetcherInterface) *SourceService {
 	return &SourceService{
 		sourceRepository: sourceRepository,
 		userService:      userService,
+		emailService:     emailService,
 		fetcher:          fetcher,
 	}
 }
@@ -47,7 +50,7 @@ func (sr *SourceService) FindOne(id int) (dto.FindOneSourceOutput, error) {
 }
 
 func (sr *SourceService) Create(sourceDto dto.CreateSourceInput) (dto.CreateSourceOutput, error) {
-	_, err := sr.userService.FindById(sourceDto.UserID)
+	user, err := sr.userService.FindById(sourceDto.UserID)
 	if err != nil {
 		return dto.CreateSourceOutput{}, errors.New("User not found: " + err.Error())
 	}
@@ -77,6 +80,18 @@ func (sr *SourceService) Create(sourceDto dto.CreateSourceInput) (dto.CreateSour
 	sourceSaved, err := sr.sourceRepository.Create(source)
 	if err != nil {
 		return dto.CreateSourceOutput{}, errors.New("Failed to save source: " + err.Error())
+	}
+
+	message := email.Message{
+		ToEmail:          user.Email,
+		Subject:          "Smart News Fetcher - New Source",
+		PlainTextContent: "New source has been added: " + sourceDto.Url,
+		HtmlContent:      "<p>New source has been added: <a>" + sourceDto.Url + "</a></p>",
+	}
+
+	err = sr.emailService.Send(message)
+	if err != nil {
+		return dto.CreateSourceOutput{}, errors.New("Failed to send email: " + err.Error())
 	}
 
 	return dto.CreateSourceOutput{

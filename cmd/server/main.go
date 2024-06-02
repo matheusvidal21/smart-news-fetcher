@@ -7,6 +7,7 @@ import (
 	configs "github.com/matheusvidal21/smart-news-fetcher/configs"
 	"github.com/matheusvidal21/smart-news-fetcher/internal/auth"
 	"github.com/matheusvidal21/smart-news-fetcher/internal/di"
+	"github.com/matheusvidal21/smart-news-fetcher/internal/email"
 	"github.com/matheusvidal21/smart-news-fetcher/internal/middleware"
 	"github.com/matheusvidal21/smart-news-fetcher/pkg/logger"
 	"log"
@@ -27,10 +28,12 @@ func main() {
 	defer db.Close()
 
 	jwtExpiration, _ := strconv.Atoi(conf.JWTExpirationMinutes)
+	smtpPort, _ := strconv.Atoi(conf.SMTP_PORT)
 	jwtService := auth.NewJWTService(conf.JWTSecretKey, jwtExpiration)
+	emailService := email.NewEmailService(conf.SMTP_HOST, smtpPort, conf.SMTP_USER, conf.SMTP_PASSWORD, conf.SMTP_FROM_EMAIL)
 
 	articleHandler := di.NewArticleHandler(db)
-	sourceHandler := di.NewSourceHandler(db, jwtService)
+	sourceHandler := di.NewSourceHandler(db, jwtService, emailService)
 	userHandler := di.NewUserHandler(db, jwtService)
 	router := gin.Default()
 
