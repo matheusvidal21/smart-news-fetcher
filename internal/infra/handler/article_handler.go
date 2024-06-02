@@ -1,26 +1,19 @@
-package articles
+package handler
 
 import (
 	"github.com/gin-gonic/gin"
+	"github.com/google/logger"
 	"github.com/matheusvidal21/smart-news-fetcher/internal/dto"
+	"github.com/matheusvidal21/smart-news-fetcher/internal/interfaces"
 	"net/http"
 	"strconv"
 )
 
-type ArticleHandlerInterface interface {
-	FindAll(c *gin.Context)
-	FindOne(c *gin.Context)
-	Create(c *gin.Context)
-	Update(c *gin.Context)
-	Delete(c *gin.Context)
-	FindBySourceID(c *gin.Context)
-}
-
 type ArticleHandler struct {
-	articleService ArticleServiceInterface
+	articleService interfaces.ArticleServiceInterface
 }
 
-func NewArticleHandler(articleService ArticleServiceInterface) *ArticleHandler {
+func NewArticleHandler(articleService interfaces.ArticleServiceInterface) *ArticleHandler {
 	return &ArticleHandler{articleService: articleService}
 }
 
@@ -43,6 +36,7 @@ func (h *ArticleHandler) FindAll(c *gin.Context) {
 		c.JSON(http.StatusInternalServerError, gin.H{"error": err.Error()})
 	}
 
+	logger.Info("Articles found: " + strconv.Itoa(len(articles)))
 	c.JSON(http.StatusOK, articles)
 }
 
@@ -60,6 +54,7 @@ func (h *ArticleHandler) FindOne(c *gin.Context) {
 		return
 	}
 
+	logger.Info("Article found: " + idStr)
 	c.JSON(http.StatusOK, article)
 }
 
@@ -77,6 +72,7 @@ func (h *ArticleHandler) Create(c *gin.Context) {
 		return
 	}
 
+	logger.Info("Article created: " + createdArticle.Title)
 	c.JSON(http.StatusOK, createdArticle)
 }
 
@@ -100,6 +96,7 @@ func (h *ArticleHandler) Update(c *gin.Context) {
 		return
 	}
 
+	logger.Info("Article updated: " + idStr)
 	c.JSON(http.StatusOK, uptdatedArticle)
 }
 
@@ -117,6 +114,7 @@ func (h *ArticleHandler) Delete(c *gin.Context) {
 		return
 	}
 
+	logger.Info("Article deleted: " + idStr)
 	c.JSON(http.StatusOK, gin.H{"message": "Article deleted successfully"})
 }
 
@@ -134,5 +132,6 @@ func (h *ArticleHandler) FindBySourceID(c *gin.Context) {
 		return
 	}
 
+	logger.Info("Articles found: " + strconv.Itoa(len(articles)))
 	c.JSON(http.StatusOK, articles)
 }

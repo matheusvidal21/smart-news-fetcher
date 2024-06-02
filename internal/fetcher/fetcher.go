@@ -2,27 +2,21 @@ package fetcher
 
 import (
 	"github.com/google/logger"
-	"github.com/matheusvidal21/smart-news-fetcher/internal/articles"
 	"github.com/matheusvidal21/smart-news-fetcher/internal/dto"
+	"github.com/matheusvidal21/smart-news-fetcher/internal/interfaces"
+	"github.com/matheusvidal21/smart-news-fetcher/internal/models"
 	"github.com/mmcdole/gofeed"
 	"sync"
 	"time"
 )
 
-type FetcherInterface interface {
-	GetFeedChannel(url string) chan *gofeed.Feed
-	ParseFeed(url string) (*gofeed.Feed, error)
-	FetchFeeds(id int, feed *gofeed.Feed)
-	StartScheduler(interval time.Duration, feed *gofeed.Feed, id int)
-}
-
 type Fetcher struct {
-	articleService articles.ArticleServiceInterface
+	articleService interfaces.ArticleServiceInterface
 	feedChannels   map[string]chan *gofeed.Feed
 	mu             sync.Mutex
 }
 
-func NewFetcher(articleService articles.ArticleServiceInterface) *Fetcher {
+func NewFetcher(articleService interfaces.ArticleServiceInterface) *Fetcher {
 	return &Fetcher{
 		articleService: articleService,
 		feedChannels:   make(map[string]chan *gofeed.Feed),
@@ -79,11 +73,12 @@ func (f *Fetcher) FetchFeeds(id int, feed *gofeed.Feed) {
 	}
 }
 
-func (f *Fetcher) StartScheduler(interval time.Duration, feed *gofeed.Feed, id int) {
+func (f *Fetcher) StartScheduler(source models.Source, feed *gofeed.Feed) {
+	interval := time.Duration(source.UpdateInterval) * time.Minute
 	ticker := time.NewTicker(interval)
 	go func() {
 		for range ticker.C {
-			f.FetchFeeds(id, feed)
+			f.FetchFeeds(source.ID, feed)
 		}
 	}()
 }

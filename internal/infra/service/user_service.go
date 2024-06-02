@@ -1,26 +1,19 @@
-package user
+package service
 
 import (
 	"errors"
 	"github.com/matheusvidal21/smart-news-fetcher/internal/auth"
 	"github.com/matheusvidal21/smart-news-fetcher/internal/dto"
+	"github.com/matheusvidal21/smart-news-fetcher/internal/interfaces"
+	"github.com/matheusvidal21/smart-news-fetcher/internal/models"
 )
 
-type UserServiceInterface interface {
-	FindByEmail(email string) (dto.FindUserByEmailOutput, error)
-	Create(userDto dto.CreateUserInput) (dto.CreateUserOutput, error)
-	Delete(email string) error
-	Login(userDto dto.LoginUserInput) (dto.LoginUserOutput, error)
-	UpdatePassword(userDto dto.UpdateUserPasswordInput) error
-	FindById(id int) (dto.FindUserByIdOutput, error)
-}
-
 type UserService struct {
-	userRepository UserRepositoryInterface
+	userRepository interfaces.UserRepositoryInterface
 	AuthService    auth.JWTServiceInterface
 }
 
-func NewUserService(userRepository UserRepositoryInterface, authService auth.JWTServiceInterface) *UserService {
+func NewUserService(userRepository interfaces.UserRepositoryInterface, authService auth.JWTServiceInterface) *UserService {
 	return &UserService{
 		userRepository: userRepository,
 		AuthService:    authService,
@@ -47,7 +40,7 @@ func (us *UserService) Create(userDto dto.CreateUserInput) (dto.CreateUserOutput
 		return dto.CreateUserOutput{}, errors.New("user already exists")
 	}
 
-	user, err := us.userRepository.Create(User{
+	user, err := us.userRepository.Create(models.User{
 		Username: userDto.Username,
 		Email:    userDto.Email,
 		Password: userDto.Password,

@@ -1,17 +1,10 @@
-package user
+package database
 
 import (
 	"database/sql"
+	"github.com/matheusvidal21/smart-news-fetcher/internal/models"
 	"golang.org/x/crypto/bcrypt"
 )
-
-type UserRepositoryInterface interface {
-	FindByEmail(email string) (*User, error)
-	Create(user User) (*User, error)
-	Delete(email string) error
-	Update(user User) (*User, error)
-	FindById(id int) (*User, error)
-}
 
 type UserRepository struct {
 	db *sql.DB
@@ -23,13 +16,13 @@ func NewUserRepository(db *sql.DB) *UserRepository {
 	}
 }
 
-func (ur *UserRepository) FindByEmail(email string) (*User, error) {
+func (ur *UserRepository) FindByEmail(email string) (*models.User, error) {
 	stmt, err := ur.db.Prepare("SELECT * FROM users WHERE email = ?")
 	if err != nil {
 		return nil, err
 	}
 	defer stmt.Close()
-	var user User
+	var user models.User
 	err = stmt.QueryRow(email).Scan(&user.ID, &user.Username, &user.Email, &user.Password)
 
 	if err != nil {
@@ -38,7 +31,7 @@ func (ur *UserRepository) FindByEmail(email string) (*User, error) {
 	return &user, nil
 }
 
-func (ur *UserRepository) Create(user User) (*User, error) {
+func (ur *UserRepository) Create(user models.User) (*models.User, error) {
 	stmt, err := ur.db.Prepare("INSERT INTO users (email, username, password) VALUES (?, ?, ?)")
 	if err != nil {
 		return nil, err
@@ -57,7 +50,7 @@ func (ur *UserRepository) Create(user User) (*User, error) {
 		return nil, err
 	}
 
-	return &User{
+	return &models.User{
 		ID:       int(id),
 		Email:    user.Email,
 		Username: user.Username,
@@ -77,7 +70,7 @@ func (ur *UserRepository) Delete(email string) error {
 	return nil
 }
 
-func (ur *UserRepository) Update(user User) (*User, error) {
+func (ur *UserRepository) Update(user models.User) (*models.User, error) {
 	stmt, err := ur.db.Prepare("UPDATE users SET username = ?, email = ?, password = ? WHERE id = ?")
 	if err != nil {
 		return nil, err
@@ -95,20 +88,20 @@ func (ur *UserRepository) Update(user User) (*User, error) {
 	}
 
 	id, _ := result.LastInsertId()
-	return &User{
+	return &models.User{
 		ID:       int(id),
 		Email:    user.Email,
 		Username: user.Username,
 	}, nil
 }
 
-func (ur *UserRepository) FindById(id int) (*User, error) {
+func (ur *UserRepository) FindById(id int) (*models.User, error) {
 	stmt, err := ur.db.Prepare("SELECT * FROM users WHERE id = ?")
 	if err != nil {
 		return nil, err
 	}
 	defer stmt.Close()
-	var user User
+	var user models.User
 	err = stmt.QueryRow(id).Scan(&user.ID, &user.Username, &user.Email, &user.Password)
 	if err != nil {
 		return nil, err

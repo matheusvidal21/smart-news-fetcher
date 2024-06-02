@@ -15,7 +15,7 @@ Content-Type: application/json
 ### Criar uma nova fonte
 POST http://localhost:8080/sources
 Content-Type: application/json
-Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6InRlc3RAZXhhbXBsZS5jb20iLCJleHAiOjE3MTcyOTk5ODB9.LrL7d5iyG5fU60_2P7-GPVvIO1Ep9ea52uGkSG3Ln3U
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6InRlc3RAZXhhbXBsZS5jb20iLCJleHAiOjE3MTczNTI3NzZ9.1RhXTYhmRCRu6gzm1v9QjOJMCAvIqotygpv1Hfk4TvA
 
 {
   "name": "Folha de São Paulo Comida",

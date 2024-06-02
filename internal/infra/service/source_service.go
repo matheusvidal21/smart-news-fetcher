@@ -1,30 +1,20 @@
-package sources
+package service
 
 import (
 	"errors"
 	"github.com/matheusvidal21/smart-news-fetcher/internal/dto"
-	"github.com/matheusvidal21/smart-news-fetcher/internal/fetcher"
-	"github.com/matheusvidal21/smart-news-fetcher/internal/user"
+	"github.com/matheusvidal21/smart-news-fetcher/internal/interfaces"
+	"github.com/matheusvidal21/smart-news-fetcher/internal/models"
 	"time"
 )
 
-type SourceServiceInterface interface {
-	FindAll(page, limit int, sort string) ([]Source, error)
-	FindOne(id int) (dto.FindOneSourceOutput, error)
-	Create(sourceDto dto.CreateSourceInput) (dto.CreateSourceOutput, error)
-	Update(id int, sourceDto dto.UpdateSourceInput) (dto.UpdateSourceOutput, error)
-	Delete(id int) error
-	LoadFeed(id int, duration time.Duration) error
-	FindByUserId(userId int) ([]Source, error)
-}
-
 type SourceService struct {
-	sourceRepository SourceRepositoryInterface
-	userService      user.UserServiceInterface
-	fetcher          fetcher.FetcherInterface
+	sourceRepository interfaces.SourceRepositoryInterface
+	userService      interfaces.UserServiceInterface
+	fetcher          interfaces.FetcherInterface
 }
 
-func NewSourceService(sourceRepository SourceRepositoryInterface, userService user.UserServiceInterface, fetcher fetcher.FetcherInterface) *SourceService {
+func NewSourceService(sourceRepository interfaces.SourceRepositoryInterface, userService interfaces.UserServiceInterface, fetcher interfaces.FetcherInterface) *SourceService {
 	return &SourceService{
 		sourceRepository: sourceRepository,
 		userService:      userService,
@@ -32,10 +22,10 @@ func NewSourceService(sourceRepository SourceRepositoryInterface, userService us
 	}
 }
 
-func (sr *SourceService) FindAll(page, limit int, sort string) ([]Source, error) {
+func (sr *SourceService) FindAll(page, limit int, sort string) ([]models.Source, error) {
 	sources, err := sr.sourceRepository.FindAll(page, limit, sort)
 	if err != nil {
-		return []Source{}, errors.New("Failed to find sources: " + err.Error())
+		return []models.Source{}, errors.New("Failed to find sources: " + err.Error())
 	}
 	return sources, nil
 }
@@ -47,11 +37,12 @@ func (sr *SourceService) FindOne(id int) (dto.FindOneSourceOutput, error) {
 		return dto.FindOneSourceOutput{}, errors.New("Failed to find source: " + err.Error())
 	}
 	return dto.FindOneSourceOutput{
-		ID:      source.ID,
-		Name:    source.Name,
-		Url:     source.Url,
-		UserID:  source.UserID,
-		SavedAt: source.SavedAt,
+		ID:             source.ID,
+		Name:           source.Name,
+		Url:            source.Url,
+		UpdateInterval: source.UpdateInterval,
+		UserID:         source.UserID,
+		SavedAt:        source.SavedAt,
 	}, nil
 }
 
@@ -76,7 +67,7 @@ func (sr *SourceService) Create(sourceDto dto.CreateSourceInput) (dto.CreateSour
 	feedCh := sr.fetcher.GetFeedChannel(sourceDto.Url)
 	feedCh <- feed
 
-	source := Source{
+	source := models.Source{
 		Name:    sourceDto.Name,
 		Url:     sourceDto.Url,
 		UserID:  sourceDto.UserID,
@@ -89,11 +80,12 @@ func (sr *SourceService) Create(sourceDto dto.CreateSourceInput) (dto.CreateSour
 	}
 
 	return dto.CreateSourceOutput{
-		ID:      sourceSaved.ID,
-		Name:    sourceSaved.Name,
-		Url:     sourceSaved.Url,
-		UserID:  sourceSaved.UserID,
-		SavedAt: sourceSaved.SavedAt,
+		ID:             sourceSaved.ID,
+		Name:           sourceSaved.Name,
+		Url:            sourceSaved.Url,
+		UpdateInterval: sourceSaved.UpdateInterval,
+		UserID:         sourceSaved.UserID,
+		SavedAt:        sourceSaved.SavedAt,
 	}, nil
 }
 
@@ -106,9 +98,10 @@ func (sr *SourceService) Update(id int, sourceDto dto.UpdateSourceInput) (dto.Up
 	feedCh := sr.fetcher.GetFeedChannel(sourceDto.Url)
 	feedCh <- feed
 
-	source := Source{
-		Name: sourceDto.Name,
-		Url:  sourceDto.Url,
+	source := models.Source{
+		Name:           sourceDto.Name,
+		Url:            sourceDto.Url,
+		UpdateInterval: sourceDto.UpdateInterval,
 	}
 	sourceUpdated, err := sr.sourceRepository.Update(id, source)
 	if err != nil {
@@ -118,6 +111,7 @@ func (sr *SourceService) Update(id int, sourceDto dto.UpdateSourceInput) (dto.Up
 		ID:      sourceUpdated.ID,
 		Name:    sourceUpdated.Name,
 		Url:     sourceUpdated.Url,
+		UserID:  sourceUpdated.UserID,
 		SavedAt: sourceUpdated.SavedAt,
 	}, err
 }
@@ -130,7 +124,7 @@ func (sr *SourceService) Delete(id int) error {
 	return nil
 }
 
-func (sr *SourceService) LoadFeed(id int, duration time.Duration) error {
+func (sr *SourceService) LoadFeed(id int) error {
 	source, err := sr.sourceRepository.FindOne(id)
 	if err != nil {
 		return errors.New("Failed to find source: " + err.Error())
@@ -138,14 +132,14 @@ func (sr *SourceService) LoadFeed(id int, duration time.Duration) error {
 
 	feedCh := sr.fetcher.GetFeedChannel(source.Url)
 	feed := <-feedCh
-	sr.fetcher.StartScheduler(duration, feed, id)
+	sr.fetcher.StartScheduler(source, feed)
 	return nil
 }
 
-func (sr *SourceService) FindByUserId(userId int) ([]Source, error) {
+func (sr *SourceService) FindByUserId(userId int) ([]models.Source, error) {
 	sources, err := sr.sourceRepository.FindByUserId(userId)
 	if err != nil {
-		return []Source{}, errors.New("Failed to find sources: " + err.Error())
+		return []models.Source{}, errors.New("Failed to find sources: " + err.Error())
 	}
 	return sources, nil
 }

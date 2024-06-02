@@ -1,28 +1,19 @@
-package sources
+package handler
 
 import (
 	"github.com/gin-gonic/gin"
+	"github.com/google/logger"
 	"github.com/matheusvidal21/smart-news-fetcher/internal/dto"
+	"github.com/matheusvidal21/smart-news-fetcher/internal/interfaces"
 	"net/http"
 	"strconv"
-	"time"
 )
 
-type SourceHandlerInterface interface {
-	FindAll(c *gin.Context)
-	FindOne(c *gin.Context)
-	Create(c *gin.Context)
-	Update(c *gin.Context)
-	Delete(c *gin.Context)
-	LoadFeed(c *gin.Context)
-	FindByUserId(c *gin.Context)
-}
-
 type SourceHandler struct {
-	sourceService SourceServiceInterface
+	sourceService interfaces.SourceServiceInterface
 }
 
-func NewSourceHandler(sourceService SourceServiceInterface) *SourceHandler {
+func NewSourceHandler(sourceService interfaces.SourceServiceInterface) *SourceHandler {
 	return &SourceHandler{sourceService: sourceService}
 }
 
@@ -49,6 +40,7 @@ func (sh *SourceHandler) FindAll(c *gin.Context) {
 		return
 	}
 
+	logger.Info("Sources found: " + strconv.Itoa(len(sources)))
 	c.JSON(http.StatusOK, sources)
 }
 
@@ -66,6 +58,8 @@ func (sh *SourceHandler) FindOne(c *gin.Context) {
 		c.JSON(http.StatusInternalServerError, gin.H{"error": err.Error()})
 		return
 	}
+
+	logger.Info("Source found: " + idStr)
 	c.JSON(http.StatusOK, source)
 }
 
@@ -81,6 +75,8 @@ func (sh *SourceHandler) Create(c *gin.Context) {
 		c.JSON(http.StatusInternalServerError, gin.H{"error": err.Error()})
 		return
 	}
+
+	logger.Info("Source created: " + createdSource.Name)
 	c.JSON(http.StatusOK, createdSource)
 }
 
@@ -105,6 +101,7 @@ func (sh *SourceHandler) Update(c *gin.Context) {
 		return
 	}
 
+	logger.Info("Source updated: " + idStr)
 	c.JSON(http.StatusOK, uptadedSource)
 }
 
@@ -123,6 +120,7 @@ func (sh *SourceHandler) Delete(c *gin.Context) {
 		return
 	}
 
+	logger.Info("Source deleted: " + idStr)
 	c.JSON(http.StatusOK, gin.H{"message": "Source deleted successfully"})
 }
 
@@ -134,17 +132,13 @@ func (sh *SourceHandler) LoadFeed(c *gin.Context) {
 		return
 	}
 
-	duration, err := time.ParseDuration(c.DefaultQuery("time", "10s"))
-	if err != nil {
-		c.JSON(http.StatusBadRequest, gin.H{"error": "Invalid duration"})
-	}
-
-	err = sh.sourceService.LoadFeed(id, duration)
+	err = sh.sourceService.LoadFeed(id)
 	if err != nil {
 		c.JSON(http.StatusInternalServerError, gin.H{"error": err.Error()})
 		return
 	}
 
+	logger.Info("Feed loaded: " + idStr)
 	c.JSON(http.StatusOK, gin.H{"message": "Feed loaded successfully"})
 }
 
@@ -162,5 +156,7 @@ func (sh *SourceHandler) FindByUserId(c *gin.Context) {
 		c.JSON(http.StatusInternalServerError, gin.H{"error": err.Error()})
 		return
 	}
+
+	logger.Info("Sources found: " + strconv.Itoa(len(sources)))
 	c.JSON(http.StatusOK, sources)
 }

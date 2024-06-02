@@ -1,0 +1,1 @@
+ALTER TABLE sources ADD COLUMN update_interval INT DEFAULT 60;

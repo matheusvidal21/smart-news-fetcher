@@ -9,59 +9,60 @@ package di
 import (
 	"database/sql"
 	"github.com/google/wire"
-	"github.com/matheusvidal21/smart-news-fetcher/internal/articles"
 	"github.com/matheusvidal21/smart-news-fetcher/internal/auth"
 	"github.com/matheusvidal21/smart-news-fetcher/internal/fetcher"
-	"github.com/matheusvidal21/smart-news-fetcher/internal/sources"
-	"github.com/matheusvidal21/smart-news-fetcher/internal/user"
+	"github.com/matheusvidal21/smart-news-fetcher/internal/infra/database"
+	"github.com/matheusvidal21/smart-news-fetcher/internal/infra/handler"
+	"github.com/matheusvidal21/smart-news-fetcher/internal/infra/service"
+	"github.com/matheusvidal21/smart-news-fetcher/internal/interfaces"
 )
 
 // Injectors from wire.go:
 
-func NewArticleHandler(db *sql.DB) *articles.ArticleHandler {
-	articleRepository := articles.NewArticleRepository(db)
-	articleService := articles.NewArticleService(articleRepository)
-	articleHandler := articles.NewArticleHandler(articleService)
+func NewArticleHandler(db *sql.DB) *handler.ArticleHandler {
+	articleRepository := database.NewArticleRepository(db)
+	articleService := service.NewArticleService(articleRepository)
+	articleHandler := handler.NewArticleHandler(articleService)
 	return articleHandler
 }
 
-func NewSourceHandler(db *sql.DB, jwtService auth.JWTServiceInterface) *sources.SourceHandler {
-	sourceRepository := sources.NewSourceRepository(db)
-	userRepository := user.NewUserRepository(db)
-	userService := user.NewUserService(userRepository, jwtService)
-	articleRepository := articles.NewArticleRepository(db)
-	articleService := articles.NewArticleService(articleRepository)
+func NewSourceHandler(db *sql.DB, jwtService auth.JWTServiceInterface) *handler.SourceHandler {
+	sourceRepository := database.NewSourceRepository(db)
+	userRepository := database.NewUserRepository(db)
+	userService := service.NewUserService(userRepository, jwtService)
+	articleRepository := database.NewArticleRepository(db)
+	articleService := service.NewArticleService(articleRepository)
 	fetcherFetcher := fetcher.NewFetcher(articleService)
-	sourceService := sources.NewSourceService(sourceRepository, userService, fetcherFetcher)
-	sourceHandler := sources.NewSourceHandler(sourceService)
+	sourceService := service.NewSourceService(sourceRepository, userService, fetcherFetcher)
+	sourceHandler := handler.NewSourceHandler(sourceService)
 	return sourceHandler
 }
 
-func NewUserHandler(db *sql.DB, jwtService auth.JWTServiceInterface) *user.UserHandler {
-	userRepository := user.NewUserRepository(db)
-	userService := user.NewUserService(userRepository, jwtService)
-	userHandler := user.NewUserHandler(userService)
+func NewUserHandler(db *sql.DB, jwtService auth.JWTServiceInterface) *handler.UserHandler {
+	userRepository := database.NewUserRepository(db)
+	userService := service.NewUserService(userRepository, jwtService)
+	userHandler := handler.NewUserHandler(userService)
 	return userHandler
 }
 
 // wire.go:
 
-var setFetcherDependecy = wire.NewSet(fetcher.NewFetcher, wire.Bind(new(fetcher.FetcherInterface), new(*fetcher.Fetcher)))
+var setFetcherDependecy = wire.NewSet(fetcher.NewFetcher, wire.Bind(new(interfaces.FetcherInterface), new(*fetcher.Fetcher)))
 
-var setSourceHandlerDependecy = wire.NewSet(sources.NewSourceHandler, wire.Bind(new(sources.SourceHandlerInterface), new(*sources.SourceHandler)))
+var setSourceHandlerDependecy = wire.NewSet(handler.NewSourceHandler, wire.Bind(new(interfaces.SourceHandlerInterface), new(*handler.SourceHandler)))
 
-var setSourceServiceDependecy = wire.NewSet(sources.NewSourceService, wire.Bind(new(sources.SourceServiceInterface), new(*sources.SourceService)))
+var setSourceServiceDependecy = wire.NewSet(service.NewSourceService, wire.Bind(new(interfaces.SourceServiceInterface), new(*service.SourceService)))
 
-var setSourceRepositoryDependecy = wire.NewSet(sources.NewSourceRepository, wire.Bind(new(sources.SourceRepositoryInterface), new(*sources.SourceRepository)))
+var setSourceRepositoryDependecy = wire.NewSet(database.NewSourceRepository, wire.Bind(new(interfaces.SourceRepositoryInterface), new(*database.SourceRepository)))
 
-var setArticleHandlerDependecy = wire.NewSet(articles.NewArticleHandler, wire.Bind(new(articles.ArticleHandlerInterface), new(*articles.ArticleHandler)))
+var setArticleHandlerDependecy = wire.NewSet(handler.NewArticleHandler, wire.Bind(new(interfaces.ArticleHandlerInterface), new(*handler.ArticleHandler)))
 
-var setArticleServiceDependecy = wire.NewSet(articles.NewArticleService, wire.Bind(new(articles.ArticleServiceInterface), new(*articles.ArticleService)))
+var setArticleServiceDependecy = wire.NewSet(service.NewArticleService, wire.Bind(new(interfaces.ArticleServiceInterface), new(*service.ArticleService)))
 
-var setArticleRepositoryDependecy = wire.NewSet(articles.NewArticleRepository, wire.Bind(new(articles.ArticleRepositoryInterface), new(*articles.ArticleRepository)))
+var setArticleRepositoryDependecy = wire.NewSet(database.NewArticleRepository, wire.Bind(new(interfaces.ArticleRepositoryInterface), new(*database.ArticleRepository)))
 
-var setUserRepositoryDependecy = wire.NewSet(user.NewUserRepository, wire.Bind(new(user.UserRepositoryInterface), new(*user.UserRepository)))
+var setUserRepositoryDependecy = wire.NewSet(database.NewUserRepository, wire.Bind(new(interfaces.UserRepositoryInterface), new(*database.UserRepository)))
 
-var setUserServiceDependecy = wire.NewSet(user.NewUserService, wire.Bind(new(user.UserServiceInterface), new(*user.UserService)))
+var setUserServiceDependecy = wire.NewSet(service.NewUserService, wire.Bind(new(interfaces.UserServiceInterface), new(*service.UserService)))
 
-var setUserHandlerDependecy = wire.NewSet(user.NewUserHandler, wire.Bind(new(user.UserHandlerInterface), new(*user.UserHandler)))
+var setUserHandlerDependecy = wire.NewSet(handler.NewUserHandler, wire.Bind(new(interfaces.UserHandlerInterface), new(*handler.UserHandler)))

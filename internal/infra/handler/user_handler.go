@@ -1,26 +1,18 @@
-package user
+package handler
 
 import (
 	"github.com/gin-gonic/gin"
 	"github.com/matheusvidal21/smart-news-fetcher/internal/dto"
+	"github.com/matheusvidal21/smart-news-fetcher/internal/interfaces"
 	"net/http"
 	"strconv"
 )
 
-type UserHandlerInterface interface {
-	CreateUser(c *gin.Context)
-	FindByEmail(c *gin.Context)
-	DeleteUser(c *gin.Context)
-	Login(c *gin.Context)
-	UpdatePassword(c *gin.Context)
-	FindById(c *gin.Context)
-}
-
 type UserHandler struct {
-	userService UserServiceInterface
+	userService interfaces.UserServiceInterface
 }
 
-func NewUserHandler(userService UserServiceInterface) *UserHandler {
+func NewUserHandler(userService interfaces.UserServiceInterface) *UserHandler {
 	return &UserHandler{
 		userService: userService,
 	}

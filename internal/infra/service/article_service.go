@@ -1,28 +1,21 @@
-package articles
+package service
 
 import (
 	"errors"
 	"github.com/matheusvidal21/smart-news-fetcher/internal/dto"
+	"github.com/matheusvidal21/smart-news-fetcher/internal/interfaces"
+	"github.com/matheusvidal21/smart-news-fetcher/internal/models"
 )
 
-type ArticleServiceInterface interface {
-	FindAll(page, limit int, sort string) ([]Article, error)
-	FindOne(id int) (dto.FindOneArticleOutput, error)
-	Create(articleDto dto.CreateArticleInput) (dto.CreateArticleOutput, error)
-	Update(id int, articleDto dto.UpdateArticleInput) (dto.UpdateArticleOutput, error)
-	Delete(id int) error
-	FindAllBySourceId(sourceID int) ([]Article, error)
-}
-
 type ArticleService struct {
-	articleRepository ArticleRepositoryInterface
+	articleRepository interfaces.ArticleRepositoryInterface
 }
 
-func NewArticleService(articleRepository ArticleRepositoryInterface) *ArticleService {
+func NewArticleService(articleRepository interfaces.ArticleRepositoryInterface) *ArticleService {
 	return &ArticleService{articleRepository: articleRepository}
 }
 
-func (as *ArticleService) FindAll(page, limit int, sort string) ([]Article, error) {
+func (as *ArticleService) FindAll(page, limit int, sort string) ([]models.Article, error) {
 	articles, err := as.articleRepository.FindAll(page, limit, sort)
 	if err != nil {
 		return nil, errors.New("Articles not found: " + err.Error())
@@ -50,7 +43,7 @@ func (as *ArticleService) FindOne(id int) (dto.FindOneArticleOutput, error) {
 }
 
 func (as *ArticleService) Create(articleDto dto.CreateArticleInput) (dto.CreateArticleOutput, error) {
-	article := Article{
+	article := models.Article{
 		Title:       articleDto.Title,
 		Description: articleDto.Description,
 		Content:     articleDto.Content,
@@ -79,7 +72,7 @@ func (as *ArticleService) Create(articleDto dto.CreateArticleInput) (dto.CreateA
 }
 
 func (as *ArticleService) Update(id int, articleDto dto.UpdateArticleInput) (dto.UpdateArticleOutput, error) {
-	article := Article{
+	article := models.Article{
 		Title:       articleDto.Title,
 		Description: articleDto.Description,
 		Content:     articleDto.Content,
@@ -114,7 +107,7 @@ func (as *ArticleService) Delete(id int) error {
 	return nil
 }
 
-func (as *ArticleService) FindAllBySourceId(sourceID int) ([]Article, error) {
+func (as *ArticleService) FindAllBySourceId(sourceID int) ([]models.Article, error) {
 	articles, err := as.articleRepository.FindAllBySourceId(sourceID)
 
 	if err != nil {

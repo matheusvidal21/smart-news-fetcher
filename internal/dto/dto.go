@@ -59,38 +59,43 @@ type FindOneArticleOutput struct {
 }
 
 type CreateSourceInput struct {
-	Name   string `json:"name"`
-	Url    string `json:"url"`
-	UserID int    `json:"user_id"`
+	Name           string `json:"name"`
+	Url            string `json:"url"`
+	UserID         int    `json:"user_id"`
+	UpdateInterval int    `json:"update_interval"`
 }
 
 type CreateSourceOutput struct {
-	ID      int       `json:"id"`
-	Name    string    `json:"name"`
-	Url     string    `json:"url"`
-	UserID  int       `json:"user_id"`
-	SavedAt time.Time `json:"saved_at"`
+	ID             int       `json:"id"`
+	Name           string    `json:"name"`
+	Url            string    `json:"url"`
+	UpdateInterval int       `json:"update_interval"`
+	UserID         int       `json:"user_id"`
+	SavedAt        time.Time `json:"saved_at"`
 }
 
 type UpdateSourceInput struct {
-	Name string `json:"name"`
-	Url  string `json:"url"`
+	Name           string `json:"name"`
+	Url            string `json:"url"`
+	UpdateInterval int    `json:"update_interval"`
 }
 
 type UpdateSourceOutput struct {
-	ID      int       `json:"id"`
-	Name    string    `json:"name"`
-	Url     string    `json:"url"`
-	UserID  int       `json:"user_id"`
-	SavedAt time.Time `json:"saved_at"`
+	ID             int       `json:"id"`
+	Name           string    `json:"name"`
+	Url            string    `json:"url"`
+	UpdateInterval int       `json:"update_interval"`
+	UserID         int       `json:"user_id"`
+	SavedAt        time.Time `json:"saved_at"`
 }
 
 type FindOneSourceOutput struct {
-	ID      int       `json:"id"`
-	Name    string    `json:"name"`
-	Url     string    `json:"url"`
-	UserID  int       `json:"user_id"`
-	SavedAt time.Time `json:"saved_at"`
+	ID             int       `json:"id"`
+	Name           string    `json:"name"`
+	Url            string    `json:"url"`
+	UpdateInterval int       `json:"update_interval"`
+	UserID         int       `json:"user_id"`
+	SavedAt        time.Time `json:"saved_at"`
 }
 
 type CreateUserInput struct {

@@ -1,8 +1,9 @@
-package user
+package models
+
+import "golang.org/x/crypto/bcrypt"
 
 import (
 	"errors"
-	"golang.org/x/crypto/bcrypt"
 )
 
 type User struct {
