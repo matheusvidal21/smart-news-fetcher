@@ -601,3 +601,9 @@ INFO : 2024/06/01 15:03:58.769937 fetcher.go:78: Article created: The Little Cof
 INFO : 2024/06/01 22:45:00.436719 fetcher.go:51: Feed parsed: https://feeds.folha.uol.com.br/comida/rss091.xml
 INFO : 2024/06/01 22:57:41.962737 fetcher.go:51: Feed parsed: https://feeds.folha.uol.com.br/comida/rss091.xml
 ERROR: 2024/06/01 22:58:26.785836 fetcher.go:48: Failed to parse feed: Get "https://minhafonteatualizada.com": dial tcp: lookup minhafonteatualizada.com on 172.26.160.1:53: no such host
+INFO : 2024/06/02 00:24:10.562083 fetcher.go:51: Feed parsed: https://feeds.folha.uol.com.br/comida/rss091.xml
+INFO : 2024/06/02 00:24:59.574007 fetcher.go:51: Feed parsed: https://feeds.folha.uol.com.br/comida/rss091.xml
+INFO : 2024/06/02 00:25:11.502939 fetcher.go:51: Feed parsed: https://feeds.folha.uol.com.br/comida/rss091.xml
+INFO : 2024/06/02 00:26:13.899521 fetcher.go:51: Feed parsed: https://feeds.folha.uol.com.br/comida/rss091.xml
+INFO : 2024/06/02 00:31:08.704349 fetcher.go:51: Feed parsed: https://feeds.folha.uol.com.br/comida/rss091.xml
+INFO : 2024/06/02 00:35:23.419133 fetcher.go:51: Feed parsed: https://feeds.folha.uol.com.br/comida/rss091.xml

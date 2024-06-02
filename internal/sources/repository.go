@@ -11,6 +11,8 @@ type SourceRepositoryInterface interface {
 	Create(source Source) (Source, error)
 	Update(id int, source Source) (Source, error)
 	Delete(id int) error
+	FindByUrl(url string) (Source, error)
+	FindByUserId(userId int) ([]Source, error)
 }
 
 type SourceRepository struct {
@@ -22,7 +24,7 @@ func NewSourceRepository(db *sql.DB) *SourceRepository {
 }
 
 func (sr *SourceRepository) FindAll(page, limit int, sort string) ([]Source, error) {
-	sql := "SELECT id, name, url, saved_at FROM sources"
+	sql := "SELECT id, name, url, saved_at, user_id FROM sources"
 	offset := (page - 1) * limit
 
 	if sort != "" && sort != "asc" && sort != "desc" {
@@ -44,7 +46,7 @@ func (sr *SourceRepository) FindAll(page, limit int, sort string) ([]Source, err
 	for rows.Next() {
 		var source Source
 		var savedAt []byte
-		err = rows.Scan(&source.ID, &source.Name, &source.Url, &savedAt)
+		err = rows.Scan(&source.ID, &source.Name, &source.Url, &savedAt, &source.UserID)
 		if err != nil {
 			return nil, err
 		}
@@ -59,7 +61,7 @@ func (sr *SourceRepository) FindAll(page, limit int, sort string) ([]Source, err
 }
 
 func (sr *SourceRepository) FindOne(id int) (Source, error) {
-	stmt, err := sr.db.Prepare("SELECT id, name, url, saved_at FROM sources WHERE id = ?")
+	stmt, err := sr.db.Prepare("SELECT id, name, url, saved_at, user_id FROM sources WHERE id = ?")
 	if err != nil {
 		return Source{}, err
 	}
@@ -67,7 +69,7 @@ func (sr *SourceRepository) FindOne(id int) (Source, error) {
 
 	var source Source
 	var savedAt []byte
-	err = stmt.QueryRow(id).Scan(&source.ID, &source.Name, &source.Url, &savedAt)
+	err = stmt.QueryRow(id).Scan(&source.ID, &source.Name, &source.Url, &savedAt, &source.UserID)
 	if err != nil {
 		return Source{}, err
 	}
@@ -80,13 +82,13 @@ func (sr *SourceRepository) FindOne(id int) (Source, error) {
 }
 
 func (sr *SourceRepository) Create(source Source) (Source, error) {
-	stmt, err := sr.db.Prepare("INSERT INTO sources (name, url, saved_at) VALUES (?, ?, ?)")
+	stmt, err := sr.db.Prepare("INSERT INTO sources (name, url, saved_at, user_id) VALUES (?, ?, ?, ?)")
 	if err != nil {
 		return Source{}, err
 	}
 	defer stmt.Close()
 
-	result, err := stmt.Exec(source.Name, source.Url, source.SavedAt)
+	result, err := stmt.Exec(source.Name, source.Url, source.SavedAt, source.UserID)
 	if err != nil {
 		return Source{}, err
 	}
@@ -102,6 +104,7 @@ func (sr *SourceRepository) Create(source Source) (Source, error) {
 		Name:    source.Name,
 		Url:     source.Url,
 		SavedAt: source.SavedAt,
+		UserID:  source.UserID,
 	}, nil
 }
 
@@ -136,4 +139,47 @@ func (sr *SourceRepository) Delete(id int) error {
 		return err
 	}
 	return nil
+}
+
+func (sr *SourceRepository) FindByUrl(url string) (Source, error) {
+	stmt, err := sr.db.Prepare("SELECT id, name, url, saved_at, user_id FROM sources WHERE url = ?")
+	if err != nil {
+		return Source{}, err
+	}
+	defer stmt.Close()
+
+	var source Source
+	var savedAt []byte
+	err = stmt.QueryRow(url).Scan(&source.ID, &source.Name, &source.Url, &savedAt, &source.UserID)
+	if err != nil {
+		return Source{}, err
+	}
+	source.SavedAt, err = utils.ParseTime(savedAt)
+	if err != nil {
+		return Source{}, err
+	}
+	return source, nil
+}
+
+func (sr *SourceRepository) FindByUserId(userId int) ([]Source, error) {
+	rows, err := sr.db.Query("SELECT id, name, url, saved_at FROM sources WHERE user_id = ?", userId)
+	if err != nil {
+		return nil, err
+	}
+	defer rows.Close()
+
+	var sources []Source
+	for rows.Next() {
+		var source Source
+		var savedAt []byte
+		err = rows.Scan(&source.ID, &source.Name, &source.Url, &savedAt)
+		if err != nil {
+			return nil, err
+		}
+		source.SavedAt, err = utils.ParseTime(savedAt)
+		if err != nil {
+			return nil, err
+		}
+	}
+	return sources, nil
 }

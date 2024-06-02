@@ -59,14 +59,16 @@ type FindOneArticleOutput struct {
 }
 
 type CreateSourceInput struct {
-	Name string `json:"name"`
-	Url  string `json:"url"`
+	Name   string `json:"name"`
+	Url    string `json:"url"`
+	UserID int    `json:"user_id"`
 }
 
 type CreateSourceOutput struct {
 	ID      int       `json:"id"`
 	Name    string    `json:"name"`
 	Url     string    `json:"url"`
+	UserID  int       `json:"user_id"`
 	SavedAt time.Time `json:"saved_at"`
 }
 
@@ -79,6 +81,7 @@ type UpdateSourceOutput struct {
 	ID      int       `json:"id"`
 	Name    string    `json:"name"`
 	Url     string    `json:"url"`
+	UserID  int       `json:"user_id"`
 	SavedAt time.Time `json:"saved_at"`
 }
 
@@ -86,6 +89,7 @@ type FindOneSourceOutput struct {
 	ID      int       `json:"id"`
 	Name    string    `json:"name"`
 	Url     string    `json:"url"`
+	UserID  int       `json:"user_id"`
 	SavedAt time.Time `json:"saved_at"`
 }
 
@@ -114,4 +118,16 @@ type LoginUserInput struct {
 
 type LoginUserOutput struct {
 	Token string `json:"token"`
+}
+
+type UpdateUserPasswordInput struct {
+	Email       string `json:"email"`
+	OldPassword string `json:"old_password"`
+	NewPassword string `json:"new_password"`
+}
+
+type FindUserByIdOutput struct {
+	ID       int    `json:"id"`
+	Username string `json:"username"`
+	Email    string `json:"email"`
 }

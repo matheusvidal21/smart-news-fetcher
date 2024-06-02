@@ -9,4 +9,5 @@ type Source struct {
 	Name    string    `json:"name"`
 	Url     string    `json:"url"`
 	SavedAt time.Time `json:"saved_at"`
+	UserID  int       `json:"user_id"`
 }

@@ -15,6 +15,7 @@ type SourceHandlerInterface interface {
 	Update(c *gin.Context)
 	Delete(c *gin.Context)
 	LoadFeed(c *gin.Context)
+	FindByUserId(c *gin.Context)
 }
 
 type SourceHandler struct {
@@ -145,4 +146,21 @@ func (sh *SourceHandler) LoadFeed(c *gin.Context) {
 	}
 
 	c.JSON(http.StatusOK, gin.H{"message": "Feed loaded successfully"})
+}
+
+func (sh *SourceHandler) FindByUserId(c *gin.Context) {
+	idStr := c.Param("id")
+	id, err := strconv.Atoi(idStr)
+
+	if err != nil {
+		c.JSON(http.StatusBadRequest, gin.H{"error": "Invalid user ID"})
+		return
+	}
+
+	sources, err := sh.sourceService.FindByUserId(id)
+	if err != nil {
+		c.JSON(http.StatusInternalServerError, gin.H{"error": err.Error()})
+		return
+	}
+	c.JSON(http.StatusOK, sources)
 }

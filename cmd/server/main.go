@@ -26,10 +26,11 @@ func main() {
 	}
 	defer db.Close()
 
-	articleHandler := di.NewArticleHandler(db)
-	sourceHandler := di.NewSourceHandler(db)
 	jwtExpiration, _ := strconv.Atoi(conf.JWTExpirationMinutes)
 	jwtService := auth.NewJWTService(conf.JWTSecretKey, jwtExpiration)
+
+	articleHandler := di.NewArticleHandler(db)
+	sourceHandler := di.NewSourceHandler(db, jwtService)
 	userHandler := di.NewUserHandler(db, jwtService)
 	router := gin.Default()
 
@@ -52,15 +53,18 @@ func main() {
 		sources.POST("/", sourceHandler.Create)
 		sources.PUT("/:id", sourceHandler.Update)
 		sources.DELETE("/:id", sourceHandler.Delete)
-		sources.GET("/loadFeed/:id", sourceHandler.LoadFeed)
+		sources.GET("/load_feed/:id", sourceHandler.LoadFeed)
+		sources.GET("/find_by_user/:id", sourceHandler.FindByUserId)
 	}
 
 	users := router.Group("/users")
 	{
 		users.POST("/", userHandler.CreateUser)
-		users.GET("/:email", userHandler.FindByEmail)
+		users.GET("/find_by_email/:email", userHandler.FindByEmail)
+		users.GET("/:id", userHandler.FindById)
 		users.DELETE("/:email", userHandler.DeleteUser)
 		users.POST("/login", userHandler.Login)
+		users.POST("/update_password", userHandler.UpdatePassword)
 	}
 
 	router.Run(conf.WebServerPort)

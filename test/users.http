@@ -17,7 +17,7 @@ Content-Type: application/json
 ###
 
 ### Deletar um usuário
-DELETE http://localhost:8080/users/test@example.com
+DELETE http://localhost:8080/users/find_by_email/test@example.com
 Content-Type: application/json
 
 ###
@@ -31,3 +31,20 @@ Content-Type: application/json
   "password": "password"
 }
 
+###
+
+### Atualizar senha
+POST http://localhost:8080/users/update_password
+Content-Type: application/json
+
+{
+  "email": "test@example.com",
+  "old_password": "password",
+  "new_password": ""
+}
+
+###
+
+### Encontrar usuário por id
+GET http://localhost:8080/users/1
+Content-Type: application/json

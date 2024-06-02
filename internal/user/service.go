@@ -11,6 +11,8 @@ type UserServiceInterface interface {
 	Create(userDto dto.CreateUserInput) (dto.CreateUserOutput, error)
 	Delete(email string) error
 	Login(userDto dto.LoginUserInput) (dto.LoginUserOutput, error)
+	UpdatePassword(userDto dto.UpdateUserPasswordInput) error
+	FindById(id int) (dto.FindUserByIdOutput, error)
 }
 
 type UserService struct {
@@ -52,7 +54,7 @@ func (us *UserService) Create(userDto dto.CreateUserInput) (dto.CreateUserOutput
 	})
 
 	if err != nil {
-		return dto.CreateUserOutput{}, errors.New("failed to create user")
+		return dto.CreateUserOutput{}, errors.New("failed to create user: " + err.Error())
 	}
 
 	return dto.CreateUserOutput{
@@ -70,7 +72,7 @@ func (us *UserService) Delete(email string) error {
 
 	err = us.userRepository.Delete(email)
 	if err != nil {
-		return errors.New("failed to delete user")
+		return errors.New("failed to delete user: " + err.Error())
 	}
 	return nil
 }
@@ -86,10 +88,42 @@ func (us *UserService) Login(userDto dto.LoginUserInput) (dto.LoginUserOutput, e
 	}
 	token, err := us.AuthService.GenerateToken(user.Email)
 	if err != nil {
-		return dto.LoginUserOutput{}, errors.New("failed to generate token")
+		return dto.LoginUserOutput{}, errors.New("failed to generate token: " + err.Error())
 	}
 
 	return dto.LoginUserOutput{
 		Token: token,
+	}, nil
+}
+
+func (us *UserService) UpdatePassword(userDto dto.UpdateUserPasswordInput) error {
+	user, err := us.userRepository.FindByEmail(userDto.Email)
+	if err != nil {
+		return errors.New("failed to find user")
+	}
+
+	ok := user.ValidatePassword(userDto.OldPassword)
+	if !ok {
+		return errors.New("invalid password")
+	}
+
+	user.Password = userDto.NewPassword
+	_, err = us.userRepository.Update(*user)
+
+	if err != nil {
+		return errors.New("failed to update password: " + err.Error())
+	}
+	return nil
+}
+
+func (us *UserService) FindById(id int) (dto.FindUserByIdOutput, error) {
+	user, err := us.userRepository.FindById(id)
+	if err != nil {
+		return dto.FindUserByIdOutput{}, errors.New("failed to find user")
+	}
+	return dto.FindUserByIdOutput{
+		ID:       user.ID,
+		Username: user.Username,
+		Email:    user.Email,
 	}, nil
 }

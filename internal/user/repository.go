@@ -9,6 +9,8 @@ type UserRepositoryInterface interface {
 	FindByEmail(email string) (*User, error)
 	Create(user User) (*User, error)
 	Delete(email string) error
+	Update(user User) (*User, error)
+	FindById(id int) (*User, error)
 }
 
 type UserRepository struct {
@@ -28,7 +30,7 @@ func (ur *UserRepository) FindByEmail(email string) (*User, error) {
 	}
 	defer stmt.Close()
 	var user User
-	err = stmt.QueryRow(email).Scan(&user.ID, &user.Email, &user.Username, &user.Password)
+	err = stmt.QueryRow(email).Scan(&user.ID, &user.Username, &user.Email, &user.Password)
 
 	if err != nil {
 		return nil, err
@@ -73,4 +75,43 @@ func (ur *UserRepository) Delete(email string) error {
 		return err
 	}
 	return nil
+}
+
+func (ur *UserRepository) Update(user User) (*User, error) {
+	stmt, err := ur.db.Prepare("UPDATE users SET username = ?, email = ?, password = ? WHERE id = ?")
+	if err != nil {
+		return nil, err
+	}
+	defer stmt.Close()
+
+	passwordHash, err := bcrypt.GenerateFromPassword([]byte(user.Password), bcrypt.DefaultCost)
+	if err != nil {
+		return nil, err
+	}
+
+	result, err := stmt.Exec(user.Username, user.Email, passwordHash, user.ID)
+	if err != nil {
+		return nil, err
+	}
+
+	id, _ := result.LastInsertId()
+	return &User{
+		ID:       int(id),
+		Email:    user.Email,
+		Username: user.Username,
+	}, nil
+}
+
+func (ur *UserRepository) FindById(id int) (*User, error) {
+	stmt, err := ur.db.Prepare("SELECT * FROM users WHERE id = ?")
+	if err != nil {
+		return nil, err
+	}
+	defer stmt.Close()
+	var user User
+	err = stmt.QueryRow(id).Scan(&user.ID, &user.Username, &user.Email, &user.Password)
+	if err != nil {
+		return nil, err
+	}
+	return &user, nil
 }

@@ -4,6 +4,7 @@ import (
 	"errors"
 	"github.com/matheusvidal21/smart-news-fetcher/internal/dto"
 	"github.com/matheusvidal21/smart-news-fetcher/internal/fetcher"
+	"github.com/matheusvidal21/smart-news-fetcher/internal/user"
 	"time"
 )
 
@@ -14,15 +15,21 @@ type SourceServiceInterface interface {
 	Update(id int, sourceDto dto.UpdateSourceInput) (dto.UpdateSourceOutput, error)
 	Delete(id int) error
 	LoadFeed(id int, duration time.Duration) error
+	FindByUserId(userId int) ([]Source, error)
 }
 
 type SourceService struct {
 	sourceRepository SourceRepositoryInterface
+	userService      user.UserServiceInterface
 	fetcher          fetcher.FetcherInterface
 }
 
-func NewSourceService(sourceRepository SourceRepositoryInterface, fetcher fetcher.FetcherInterface) *SourceService {
-	return &SourceService{sourceRepository: sourceRepository, fetcher: fetcher}
+func NewSourceService(sourceRepository SourceRepositoryInterface, userService user.UserServiceInterface, fetcher fetcher.FetcherInterface) *SourceService {
+	return &SourceService{
+		sourceRepository: sourceRepository,
+		userService:      userService,
+		fetcher:          fetcher,
+	}
 }
 
 func (sr *SourceService) FindAll(page, limit int, sort string) ([]Source, error) {
@@ -43,11 +50,24 @@ func (sr *SourceService) FindOne(id int) (dto.FindOneSourceOutput, error) {
 		ID:      source.ID,
 		Name:    source.Name,
 		Url:     source.Url,
+		UserID:  source.UserID,
 		SavedAt: source.SavedAt,
 	}, nil
 }
 
 func (sr *SourceService) Create(sourceDto dto.CreateSourceInput) (dto.CreateSourceOutput, error) {
+	_, err := sr.userService.FindById(sourceDto.UserID)
+	if err != nil {
+		return dto.CreateSourceOutput{}, errors.New("User not found: " + err.Error())
+	}
+
+	sources, _ := sr.sourceRepository.FindByUserId(sourceDto.UserID)
+	for _, source := range sources {
+		if source.Url == sourceDto.Url {
+			return dto.CreateSourceOutput{}, errors.New("Source already exists: " + sourceDto.Url)
+		}
+	}
+
 	feed, err := sr.fetcher.ParseFeed(sourceDto.Url)
 	if err != nil {
 		return dto.CreateSourceOutput{}, errors.New("Failed to parse source feed: " + err.Error())
@@ -59,6 +79,7 @@ func (sr *SourceService) Create(sourceDto dto.CreateSourceInput) (dto.CreateSour
 	source := Source{
 		Name:    sourceDto.Name,
 		Url:     sourceDto.Url,
+		UserID:  sourceDto.UserID,
 		SavedAt: time.Now(),
 	}
 
@@ -71,6 +92,7 @@ func (sr *SourceService) Create(sourceDto dto.CreateSourceInput) (dto.CreateSour
 		ID:      sourceSaved.ID,
 		Name:    sourceSaved.Name,
 		Url:     sourceSaved.Url,
+		UserID:  sourceSaved.UserID,
 		SavedAt: sourceSaved.SavedAt,
 	}, nil
 }
@@ -118,4 +140,12 @@ func (sr *SourceService) LoadFeed(id int, duration time.Duration) error {
 	feed := <-feedCh
 	sr.fetcher.StartScheduler(duration, feed, id)
 	return nil
+}
+
+func (sr *SourceService) FindByUserId(userId int) ([]Source, error) {
+	sources, err := sr.sourceRepository.FindByUserId(userId)
+	if err != nil {
+		return []Source{}, errors.New("Failed to find sources: " + err.Error())
+	}
+	return sources, nil
 }
