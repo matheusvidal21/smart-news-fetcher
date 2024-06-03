@@ -1,4 +1,16 @@
-INFO : 2024/06/02 17:09:18.233013 fetcher.go:45: Feed parsed: https://feeds.folha.uol.com.br/comida/rss091.xml
-INFO : 2024/06/02 17:09:22.843738 source_handler.go:79: Source created: Folha de São Paulo Comida
-INFO : 2024/06/02 17:10:35.570449 fetcher.go:45: Feed parsed: https://feeds.folha.uol.com.br/comida/rss091.xml
-INFO : 2024/06/02 17:16:35.981174 fetcher.go:45: Feed parsed: https://feeds.folha.uol.com.br/comida/rss091.xml
+ERROR: 2024/06/02 20:32:51.345836 fetcher.go:53: Failed to parse feed: XML syntax error on line 5: invalid UTF-8
+INFO : 2024/06/02 20:34:41.405341 fetcher.go:58: Feed parsed and cached: https://feeds.folha.uol.com.br/opiniao/rss091.xml
+INFO : 2024/06/02 20:34:47.491397 fetcher.go:41: Feed stored in cache: feed_9
+INFO : 2024/06/02 20:34:47.492015 source_handler.go:79: Source created: Folha de São Paulo Comida
+INFO : 2024/06/02 20:35:05.929356 fetcher.go:31: Feed found in cache: feed_9
+INFO : 2024/06/02 20:35:05.929629 source_handler.go:141: Feed loaded: 9
+INFO : 2024/06/02 20:35:05.938578 fetcher.go:91: Article created: Penalizar não é panaceia
+INFO : 2024/06/02 20:35:05.951014 fetcher.go:91: Article created: Representatividade é tudo
+INFO : 2024/06/02 20:35:05.961510 fetcher.go:91: Article created: O palhaço venceu
+INFO : 2024/06/02 20:35:05.970279 fetcher.go:91: Article created: Blusinhas são o novo aço
+INFO : 2024/06/02 20:35:05.982517 fetcher.go:91: Article created: Populismo macroeconômico: há um padrão recorrente nos conflitos no interior do governo em Lula 3
+INFO : 2024/06/02 20:35:05.992042 fetcher.go:91: Article created: Minha visão do futuro da IA
+INFO : 2024/06/02 20:35:06.001135 fetcher.go:91: Article created: Inteligência artificial e a Lira das Massas
+INFO : 2024/06/02 20:35:06.017129 fetcher.go:91: Article created: Asdfg çlkjh!
+INFO : 2024/06/02 20:35:06.024584 fetcher.go:91: Article created: A importância do cuidado paliativo
+INFO : 2024/06/02 20:35:06.034241 fetcher.go:91: Article created: Escritoras gaúchas descrevem o indescritível

@@ -67,14 +67,12 @@ func (sr *SourceService) Create(sourceDto dto.CreateSourceInput) (dto.CreateSour
 		return dto.CreateSourceOutput{}, errors.New("Failed to parse source feed: " + err.Error())
 	}
 
-	feedCh := sr.fetcher.GetFeedChannel(sourceDto.Url)
-	feedCh <- feed
-
 	source := models.Source{
-		Name:    sourceDto.Name,
-		Url:     sourceDto.Url,
-		UserID:  sourceDto.UserID,
-		SavedAt: time.Now(),
+		Name:           sourceDto.Name,
+		Url:            sourceDto.Url,
+		UserID:         sourceDto.UserID,
+		UpdateInterval: sourceDto.UpdateInterval,
+		SavedAt:        time.Now(),
 	}
 
 	sourceSaved, err := sr.sourceRepository.Create(source)
@@ -94,6 +92,8 @@ func (sr *SourceService) Create(sourceDto dto.CreateSourceInput) (dto.CreateSour
 		return dto.CreateSourceOutput{}, errors.New("Failed to send email: " + err.Error())
 	}
 
+	sr.fetcher.StoreFeed(sourceSaved.ID, feed)
+
 	return dto.CreateSourceOutput{
 		ID:             sourceSaved.ID,
 		Name:           sourceSaved.Name,
@@ -105,29 +105,36 @@ func (sr *SourceService) Create(sourceDto dto.CreateSourceInput) (dto.CreateSour
 }
 
 func (sr *SourceService) Update(id int, sourceDto dto.UpdateSourceInput) (dto.UpdateSourceOutput, error) {
-	feed, err := sr.fetcher.ParseFeed(sourceDto.Url)
+	currentSource, err := sr.sourceRepository.FindOne(id)
 	if err != nil {
-		return dto.UpdateSourceOutput{}, errors.New("Failed to parse source feed: " + err.Error())
+		return dto.UpdateSourceOutput{}, errors.New("Failed to find source: " + err.Error())
 	}
 
-	feedCh := sr.fetcher.GetFeedChannel(sourceDto.Url)
-	feedCh <- feed
+	if !(currentSource.Url == sourceDto.Url) {
+		feed, err := sr.fetcher.ParseFeed(sourceDto.Url)
+		if err != nil {
+			return dto.UpdateSourceOutput{}, errors.New("Failed to parse source feed: " + err.Error())
+		}
+		sr.fetcher.StoreFeed(id, feed)
+	}
 
 	source := models.Source{
 		Name:           sourceDto.Name,
-		Url:            sourceDto.Url,
 		UpdateInterval: sourceDto.UpdateInterval,
+		Url:            sourceDto.Url,
 	}
+
 	sourceUpdated, err := sr.sourceRepository.Update(id, source)
 	if err != nil {
 		return dto.UpdateSourceOutput{}, errors.New("Failed to update source: " + err.Error())
 	}
 	return dto.UpdateSourceOutput{
-		ID:      sourceUpdated.ID,
-		Name:    sourceUpdated.Name,
-		Url:     sourceUpdated.Url,
-		UserID:  sourceUpdated.UserID,
-		SavedAt: sourceUpdated.SavedAt,
+		ID:             sourceUpdated.ID,
+		Name:           sourceUpdated.Name,
+		Url:            sourceUpdated.Url,
+		UserID:         sourceUpdated.UserID,
+		UpdateInterval: sourceUpdated.UpdateInterval,
+		SavedAt:        sourceUpdated.SavedAt,
 	}, err
 }
 
@@ -142,11 +149,21 @@ func (sr *SourceService) Delete(id int) error {
 func (sr *SourceService) LoadFeed(id int) error {
 	source, err := sr.sourceRepository.FindOne(id)
 	if err != nil {
-		return errors.New("Failed to find source: " + err.Error())
+		return errors.New("Source not found: " + err.Error())
 	}
 
-	feedCh := sr.fetcher.GetFeedChannel(source.Url)
-	feed := <-feedCh
+	feed, err := sr.fetcher.LoadFeed(source.ID)
+	if err != nil {
+		feed, err = sr.fetcher.ParseFeed(source.Url)
+		if err != nil {
+			return errors.New("Failed to load feed: " + err.Error())
+		}
+
+		sr.fetcher.StoreFeed(source.ID, feed)
+	}
+
+	go sr.fetcher.FetchFeeds(source.ID, 10, feed)
+
 	sr.fetcher.StartScheduler(source, feed)
 	return nil
 }

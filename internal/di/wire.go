@@ -88,7 +88,7 @@ func NewSourceHandler(db *sql.DB, jwtService auth.JWTServiceInterface, emailServ
 	return &handler.SourceHandler{}
 }
 
-func NewUserHandler(db *sql.DB, jwtService auth.JWTServiceInterface) *handler.UserHandler {
+func NewUserHandler(db *sql.DB, jwtService auth.JWTServiceInterface, emailService interfaces.EmailService) *handler.UserHandler {
 	wire.Build(
 		setUserRepositoryDependecy,
 		setUserServiceDependecy,

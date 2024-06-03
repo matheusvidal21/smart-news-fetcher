@@ -3,6 +3,7 @@ package dto
 import "time"
 
 type CreateArticleInput struct {
+	ID          int       `json:"id"`
 	Title       string    `json:"title"`
 	Description string    `json:"description"`
 	Content     string    `json:"content"`

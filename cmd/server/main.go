@@ -21,6 +21,7 @@ func main() {
 	defer logger.CloseLogger()
 
 	conf := configs.LoadConfigs(".")
+
 	db, err := sql.Open(conf.DBDriver, conf.DBSource)
 	if err != nil {
 		panic(err)
@@ -34,7 +35,7 @@ func main() {
 
 	articleHandler := di.NewArticleHandler(db)
 	sourceHandler := di.NewSourceHandler(db, jwtService, emailService)
-	userHandler := di.NewUserHandler(db, jwtService)
+	userHandler := di.NewUserHandler(db, jwtService, emailService)
 	router := gin.Default()
 
 	articles := router.Group("/articles")

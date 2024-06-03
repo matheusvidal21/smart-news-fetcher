@@ -1,51 +1,53 @@
 ### Obter todas as fontes com paginação e ordenação
 GET http://localhost:8080/sources
 Content-Type: application/json
-Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6InRlc3RAZXhhbXBsZS5jb20iLCJleHAiOjE3MTcyOTk5ODB9.LrL7d5iyG5fU60_2P7-GPVvIO1Ep9ea52uGkSG3Ln3U
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6ImdvbWVzaXNhYmVsYTEzQGdtYWlsLmNvbSIsImV4cCI6MTcxNzM2NzM4Mn0.vAA3PbMq0J-hF16UJJcAOykFOOg-JHj1Q_wcCQRTlO8
 
 
 ###
 
 ### Obter uma fonte específica por ID
-GET http://localhost:8080/sources/1
+GET http://localhost:8080/sources/4
 Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6ImdvbWVzaXNhYmVsYTEzQGdtYWlsLmNvbSIsImV4cCI6MTcxNzM2NzM4Mn0.vAA3PbMq0J-hF16UJJcAOykFOOg-JHj1Q_wcCQRTlO8
 
 ###
 
 ### Criar uma nova fonte
 POST http://localhost:8080/sources
 Content-Type: application/json
-Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6ImdvbWVzaXNhYmVsYTEzQGdtYWlsLmNvbSIsImV4cCI6MTcxNzM2MDcxMX0.ASPyMZp8p4D38Re_L_U-xw45O1kjKcKyBXStgGvJa5k
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6ImdvbWVzaXNhYmVzbGExM0BnbWFpbC5jb20iLCJleHAiOjE3MTczNzI1MjR9.bsvbENUhe7exf-IUXbNMmaqO8Se3qFrmOxAsaUALTF0
 
 {
   "name": "Folha de São Paulo Comida",
-  "url": "https://feeds.folha.uol.com.br/comida/rss091.xml",
-  "user_id": 2
-}
-
-###
-
-### Atualizar uma fonte existente
-PUT http://localhost:8080/sources/4
-Content-Type: application/json
-Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6ImdvbWVzaXNhYmVsYTEzQGdtYWlsLmNvbSIsImV4cCI6MTcxNzM2MDcxMX0.ASPyMZp8p4D38Re_L_U-xw45O1kjKcKyBXStgGvJa5k
-
-{
-  "name": "Minha Fonte Atualizada",
-  "url": "https://feeds.folha.uol.com.br/comida/rss091.xml",
+  "url": "https://feeds.folha.uol.com.br/opiniao/rss091.xml",
+  "user_id": 4,
   "update_interval": 1
 }
 
 ###
 
-### Deletar uma fonte
-DELETE http://localhost:8080/sources/1
+### Atualizar uma fonte existente
+PUT http://localhost:8080/sources/7
 Content-Type: application/json
-Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6InRlc3RAZXhhbXBsZS5jb20iLCJleHAiOjE3MTcyOTk5ODB9.LrL7d5iyG5fU60_2P7-GPVvIO1Ep9ea52uGkSG3Ln3U
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6ImdvbWVzaXNhYmVsYTEzQGdtYWlsLmNvbSIsImV4cCI6MTcxNzM2OTI3MH0.eYHTBXGQqTycfjqdXCHxM_FJpZV6LjqyVnIYsjioC8Y
+
+{
+  "name": "Minha Fonte Atualizada2",
+  "url": "https://feeds.folha.uol.com.br/comida/rss091.xml",
+  "update_interval": 2
+}
+
+###
+
+### Deletar uma fonte
+DELETE http://localhost:8080/sources/5
+Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6ImdvbWVzaXNhYmVsYTEzQGdtYWlsLmNvbSIsImV4cCI6MTcxNzM2OTI3MH0.eYHTBXGQqTycfjqdXCHxM_FJpZV6LjqyVnIYsjioC8Y
 
 ###
 
 ### Carregar feed de uma fonte
-GET http://localhost:8080/sources/load_feed/3
+GET http://localhost:8080/sources/load_feed/9
 Content-Type: application/json
-Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6InRlc3RAZXhhbXBsZS5jb20iLCJleHAiOjE3MTcyOTk5ODB9.LrL7d5iyG5fU60_2P7-GPVvIO1Ep9ea52uGkSG3Ln3U
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6ImdvbWVzaXNhYmVzbGExM0BnbWFpbC5jb20iLCJleHAiOjE3MTczNzI1MjR9.bsvbENUhe7exf-IUXbNMmaqO8Se3qFrmOxAsaUALTF0

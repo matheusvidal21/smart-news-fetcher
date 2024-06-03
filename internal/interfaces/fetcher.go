@@ -6,8 +6,9 @@ import (
 )
 
 type FetcherInterface interface {
-	GetFeedChannel(url string) chan *gofeed.Feed
+	LoadFeed(id int) (*gofeed.Feed, error)
+	StoreFeed(id int, feed *gofeed.Feed)
 	ParseFeed(url string) (*gofeed.Feed, error)
-	FetchFeeds(id int, feed *gofeed.Feed)
+	FetchFeeds(id, limit int, feed *gofeed.Feed)
 	StartScheduler(source models.Source, feed *gofeed.Feed)
 }

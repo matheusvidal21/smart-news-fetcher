@@ -4,18 +4,21 @@ import (
 	"errors"
 	"github.com/matheusvidal21/smart-news-fetcher/internal/auth"
 	"github.com/matheusvidal21/smart-news-fetcher/internal/dto"
+	"github.com/matheusvidal21/smart-news-fetcher/internal/email"
 	"github.com/matheusvidal21/smart-news-fetcher/internal/interfaces"
 	"github.com/matheusvidal21/smart-news-fetcher/internal/models"
 )
 
 type UserService struct {
 	userRepository interfaces.UserRepositoryInterface
+	EmailService   interfaces.EmailService
 	AuthService    auth.JWTServiceInterface
 }
 
-func NewUserService(userRepository interfaces.UserRepositoryInterface, authService auth.JWTServiceInterface) *UserService {
+func NewUserService(userRepository interfaces.UserRepositoryInterface, emailService interfaces.EmailService, authService auth.JWTServiceInterface) *UserService {
 	return &UserService{
 		userRepository: userRepository,
+		EmailService:   emailService,
 		AuthService:    authService,
 	}
 }
@@ -48,6 +51,19 @@ func (us *UserService) Create(userDto dto.CreateUserInput) (dto.CreateUserOutput
 
 	if err != nil {
 		return dto.CreateUserOutput{}, errors.New("failed to create user: " + err.Error())
+	}
+
+	message := email.Message{
+		ToEmail:          userDto.Email,
+		Subject:          "Welcome to Smart News Fetcher",
+		PlainTextContent: "Welcome to Smart News Fetcher, " + userDto.Username + "!",
+		HtmlContent:      "<p> Welcome to Smart News Fetcher, <b>" + userDto.Username + "! </b> </p>",
+	}
+
+	err = us.EmailService.Send(message)
+
+	if err != nil {
+		return dto.CreateUserOutput{}, errors.New("failed to send email: " + err.Error())
 	}
 
 	return dto.CreateUserOutput{
