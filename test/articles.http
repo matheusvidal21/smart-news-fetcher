@@ -1,7 +1,7 @@
 ### Obter todos os artigos com paginação e ordenação
-GET http://localhost:8080/articles
+GET http://localhost:8080/articles?page=2&limit=1&sort=desc
 Content-Type: application/json
-Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6InRlc3R1c2VyIiwiZXhwIjoxNzE3Mjk1MjQ5fQ.h0fnlpIvp-LA4YA2-s2H4hrRmG4oCPTKEY_Fxgu1w7Y
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6ImdvbWVzaXNhYmVsYTEzQGdtYWlsLmNvbSIsImV4cCI6MTcxNzUzOTA4M30.Jh-jAuUof5y-YzCOUKivHHRGaqLtJPwcPZoHnHVNtYQ
 
 ###
 

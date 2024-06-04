@@ -162,15 +162,6 @@ func (sr *SourceService) LoadFeed(id int) error {
 			return errors.New("Failed to load feed: " + err.Error())
 		}
 
-		if feed.UpdatedParsed != nil {
-			timeSinceUpdate := time.Since(*feed.UpdatedParsed)
-			interval := time.Duration(source.UpdateInterval) * time.Minute
-			if timeSinceUpdate < interval {
-				logger.Info("Feed not updated since last check, skipping fetch")
-				return errors.New("Feed not updated since last check, skipping fetch")
-			}
-		}
-
 		sr.fetcher.StoreFeed(source.ID, feed)
 	}
 

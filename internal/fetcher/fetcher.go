@@ -96,10 +96,11 @@ func (f *Fetcher) FetchFeeds(id int, feed *gofeed.Feed) {
 }
 
 func (f *Fetcher) StartScheduler(source models.Source, feed *gofeed.Feed) {
-	interval := time.Duration(source.UpdateInterval) * time.Minute
+	interval := time.Duration(source.UpdateInterval) * time.Hour
 	ticker := time.NewTicker(interval)
 
 	go func() {
+		f.FetchFeeds(source.ID, feed)
 		for range ticker.C {
 			if feed.UpdatedParsed != nil {
 				timeSinceUptade := time.Since(*feed.UpdatedParsed)

@@ -48,9 +48,9 @@ Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6ImdvbWVza
 ###
 
 ### Carregar feed de uma fonte
-GET http://localhost:8080/sources/load_feed/2
+GET http://localhost:8080/sources/load_feed/1
 Content-Type: application/json
-Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6ImdvbWVzaXNhYmVsYTEzQGdtYWlsLmNvbSIsImV4cCI6MTcxNzQ2NDc0NX0.7Q75McblyD0bzJtKHJ7KtUn4dijpni1j_2-HKSkC93M
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6ImdvbWVzaXNhYmVsYTEzQGdtYWlsLmNvbSIsImV4cCI6MTcxNzUzOTA4M30.Jh-jAuUof5y-YzCOUKivHHRGaqLtJPwcPZoHnHVNtYQ
 
 ###
 
@@ -58,6 +58,7 @@ Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6ImdvbWVza
 GET http://localhost:8080/sources/subscribe/1
 Content-Type: application/json
 Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6ImdvbWVzaXNhYmVsYTEzQGdtYWlsLmNvbSIsImV4cCI6MTcxNzUzOTA4M30.Jh-jAuUof5y-YzCOUKivHHRGaqLtJPwcPZoHnHVNtYQ
+
 ###
 
 ### Se desinscreve no newsletter
