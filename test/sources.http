@@ -16,11 +16,11 @@ Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6ImdvbWVza
 ### Criar uma nova fonte
 POST http://localhost:8080/sources
 Content-Type: application/json
-Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6ImdvbWVzaXNhYmVsYTEzQGdtYWlsLmNvbSIsImV4cCI6MTcxNzQ2MjI5M30.3rSlQe_T2rslbBUZ75FypVhvIKUZyoIYhrL2EkQCRZs
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6ImdvbWVzaXNhYmVsYTEzQGdtYWlsLmNvbSIsImV4cCI6MTcxNzQ3MjM5OX0.pH6DBU8o7GvvOpjDes1qKqKtgZfyohksL1wQWjFbFiI
 
 {
   "name": "Folha de São Paulo Comida",
-  "url": "https://feeds.folha.uol.com.br/comida/rss091.xml",
+  "url": "https://feeds.folha.uol.com.br/esporte/rss091.xml",
   "user_id": 1,
   "update_interval": 1
 }
@@ -51,3 +51,16 @@ Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6ImdvbWVza
 GET http://localhost:8080/sources/load_feed/2
 Content-Type: application/json
 Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6ImdvbWVzaXNhYmVsYTEzQGdtYWlsLmNvbSIsImV4cCI6MTcxNzQ2NDc0NX0.7Q75McblyD0bzJtKHJ7KtUn4dijpni1j_2-HKSkC93M
+
+###
+
+### Se inscreve no newsletter
+GET http://localhost:8080/sources/subscribe/1
+Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6ImdvbWVzaXNhYmVsYTEzQGdtYWlsLmNvbSIsImV4cCI6MTcxNzUzOTA4M30.Jh-jAuUof5y-YzCOUKivHHRGaqLtJPwcPZoHnHVNtYQ
+###
+
+### Se desinscreve no newsletter
+GET http://localhost:8080/sources/unsubscribe/1
+Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6ImdvbWVzaXNhYmVsYTEzQGdtYWlsLmNvbSIsImV4cCI6MTcxNzUzOTA4M30.Jh-jAuUof5y-YzCOUKivHHRGaqLtJPwcPZoHnHVNtYQ

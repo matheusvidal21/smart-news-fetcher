@@ -15,7 +15,7 @@ func NewSourceRepository(db *sql.DB) *SourceRepository {
 }
 
 func (sr *SourceRepository) FindAll(page, limit int, sort string) ([]models.Source, error) {
-	sql := "SELECT id, name, url, saved_at, user_id, update_interval FROM sources"
+	sql := "SELECT id, name, url, saved_at, user_id, update_interval, subscriber FROM sources"
 	offset := (page - 1) * limit
 
 	if sort != "" && sort != "asc" && sort != "desc" {
@@ -37,7 +37,7 @@ func (sr *SourceRepository) FindAll(page, limit int, sort string) ([]models.Sour
 	for rows.Next() {
 		var source models.Source
 		var savedAt []byte
-		err = rows.Scan(&source.ID, &source.Name, &source.Url, &savedAt, &source.UserID, &source.UpdateInterval)
+		err = rows.Scan(&source.ID, &source.Name, &source.Url, &savedAt, &source.UserID, &source.UpdateInterval, &source.Subscriber)
 		if err != nil {
 			return nil, err
 		}
@@ -52,7 +52,7 @@ func (sr *SourceRepository) FindAll(page, limit int, sort string) ([]models.Sour
 }
 
 func (sr *SourceRepository) FindOne(id int) (models.Source, error) {
-	stmt, err := sr.db.Prepare("SELECT id, name, url, saved_at, user_id, update_interval FROM sources WHERE id = ?")
+	stmt, err := sr.db.Prepare("SELECT id, name, url, saved_at, user_id, update_interval, subscriber FROM sources WHERE id = ?")
 	if err != nil {
 		return models.Source{}, err
 	}
@@ -60,7 +60,7 @@ func (sr *SourceRepository) FindOne(id int) (models.Source, error) {
 
 	var source models.Source
 	var savedAt []byte
-	err = stmt.QueryRow(id).Scan(&source.ID, &source.Name, &source.Url, &savedAt, &source.UserID, &source.UpdateInterval)
+	err = stmt.QueryRow(id).Scan(&source.ID, &source.Name, &source.Url, &savedAt, &source.UserID, &source.UpdateInterval, &source.Subscriber)
 	if err != nil {
 		return models.Source{}, err
 	}
@@ -101,13 +101,13 @@ func (sr *SourceRepository) Create(source models.Source) (models.Source, error) 
 }
 
 func (sr *SourceRepository) Update(id int, source models.Source) (models.Source, error) {
-	stmt, err := sr.db.Prepare("UPDATE sources SET name = ?, url = ?, update_interval = ? WHERE id = ?")
+	stmt, err := sr.db.Prepare("UPDATE sources SET name = ?, url = ?, update_interval = ?, subscriber = ? WHERE id = ?")
 	if err != nil {
 		return models.Source{}, err
 	}
 	defer stmt.Close()
 
-	_, err = stmt.Exec(source.Name, source.Url, source.UpdateInterval, id)
+	_, err = stmt.Exec(source.Name, source.Url, source.UpdateInterval, source.Subscriber, id)
 	if err != nil {
 		return models.Source{}, err
 	}
@@ -134,7 +134,7 @@ func (sr *SourceRepository) Delete(id int) error {
 }
 
 func (sr *SourceRepository) FindByUrl(url string) (models.Source, error) {
-	stmt, err := sr.db.Prepare("SELECT id, name, url, saved_at, user_id, update_interval FROM sources WHERE url = ?")
+	stmt, err := sr.db.Prepare("SELECT id, name, url, saved_at, user_id, update_interval, subscriber FROM sources WHERE url = ?")
 	if err != nil {
 		return models.Source{}, err
 	}
@@ -142,7 +142,7 @@ func (sr *SourceRepository) FindByUrl(url string) (models.Source, error) {
 
 	var source models.Source
 	var savedAt []byte
-	err = stmt.QueryRow(url).Scan(&source.ID, &source.Name, &source.Url, &savedAt, &source.UserID, &source.UpdateInterval)
+	err = stmt.QueryRow(url).Scan(&source.ID, &source.Name, &source.Url, &savedAt, &source.UserID, &source.UpdateInterval, &source.Subscriber)
 	if err != nil {
 		return models.Source{}, err
 	}
@@ -154,7 +154,7 @@ func (sr *SourceRepository) FindByUrl(url string) (models.Source, error) {
 }
 
 func (sr *SourceRepository) FindByUserId(userId int) ([]models.Source, error) {
-	rows, err := sr.db.Query("SELECT id, name, url, saved_at, update_interval FROM sources WHERE user_id = ?", userId)
+	rows, err := sr.db.Query("SELECT id, name, url, saved_at, update_interval, subscriber FROM sources WHERE user_id = ?", userId)
 	if err != nil {
 		return nil, err
 	}
@@ -164,10 +164,34 @@ func (sr *SourceRepository) FindByUserId(userId int) ([]models.Source, error) {
 	for rows.Next() {
 		var source models.Source
 		var savedAt []byte
-		err = rows.Scan(&source.ID, &source.Name, &source.Url, &savedAt, &source.UpdateInterval)
+		err = rows.Scan(&source.ID, &source.Name, &source.Url, &savedAt, &source.UpdateInterval, &source.Subscriber)
 		if err != nil {
 			return nil, err
 		}
+		source.SavedAt, err = utils.ParseTime(savedAt)
+		if err != nil {
+			return nil, err
+		}
+		sources = append(sources, source)
+	}
+	return sources, nil
+}
+
+func (sr *SourceRepository) FindAllActive() ([]models.Source, error) {
+	rows, err := sr.db.Query("SELECT id, name, url, saved_at, user_id, update_interval, subscriber FROM sources WHERE subscriber = 1")
+	if err != nil {
+		return nil, err
+	}
+	defer rows.Close()
+	var sources []models.Source
+	for rows.Next() {
+		var source models.Source
+		var savedAt []byte
+		err = rows.Scan(&source.ID, &source.Name, &source.Url, &savedAt, &source.UserID, &source.UpdateInterval, &source.Subscriber)
+		if err != nil {
+			return nil, err
+		}
+
 		source.SavedAt, err = utils.ParseTime(savedAt)
 		if err != nil {
 			return nil, err

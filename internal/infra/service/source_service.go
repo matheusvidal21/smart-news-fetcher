@@ -15,6 +15,7 @@ type SourceService struct {
 	userService      interfaces.UserServiceInterface
 	emailService     interfaces.EmailService
 	fetcher          interfaces.FetcherInterface
+	quitChannels     map[int]chan struct{}
 }
 
 func NewSourceService(sourceRepository interfaces.SourceRepositoryInterface, userService interfaces.UserServiceInterface, emailService interfaces.EmailService, fetcher interfaces.FetcherInterface) *SourceService {
@@ -23,6 +24,7 @@ func NewSourceService(sourceRepository interfaces.SourceRepositoryInterface, use
 		userService:      userService,
 		emailService:     emailService,
 		fetcher:          fetcher,
+		quitChannels:     make(map[int]chan struct{}),
 	}
 }
 
@@ -183,4 +185,114 @@ func (sr *SourceService) FindByUserId(userId int) ([]models.Source, error) {
 		return []models.Source{}, errors.New("Failed to find sources: " + err.Error())
 	}
 	return sources, nil
+}
+
+func (sr *SourceService) SubscribeToNewsletter(id int) error {
+	source, err := sr.sourceRepository.FindOne(id)
+	if err != nil {
+		return errors.New("Source not found: " + err.Error())
+	}
+
+	if source.Subscriber {
+		if _, exists := sr.quitChannels[id]; !exists {
+			sr.StartSubscription(source)
+		}
+		return errors.New("Source already subscribed")
+	}
+
+	source.Subscriber = true
+
+	_, err = sr.sourceRepository.Update(id, source)
+	if err != nil {
+		return errors.New("Failed to update source: " + err.Error())
+	}
+
+	sr.StartSubscription(source)
+	return nil
+}
+
+func (sr *SourceService) UnsubscribeFromNewsletter(id int) error {
+	source, err := sr.sourceRepository.FindOne(id)
+	if err != nil {
+		return errors.New("Source not found: " + err.Error())
+	}
+
+	if source.Subscriber == false {
+		return errors.New("Source already unsubscribed")
+	}
+
+	source.Subscriber = false
+	_, err = sr.sourceRepository.Update(id, source)
+	if err != nil {
+		return errors.New("Failed to update source: " + err.Error())
+	}
+
+	if quit, exists := sr.quitChannels[id]; exists {
+		sr.quitChannels[id] <- struct{}{}
+		close(quit)
+		delete(sr.quitChannels, id)
+	}
+	return nil
+}
+
+func (sr *SourceService) StartSubscription(source models.Source) {
+	ticker := time.NewTicker(24 * time.Hour)
+	sr.quitChannels[source.ID] = make(chan struct{})
+
+	go func() {
+		user, _ := sr.userService.FindById(source.UserID)
+		for {
+			select {
+			case <-ticker.C:
+				feed, err := sr.fetcher.ParseFeed(source.Url)
+				if err != nil {
+					logger.Errorf("Failed to parse source feed: %v", err)
+					continue
+				}
+				sr.fetcher.StoreFeed(source.ID, feed)
+
+				textContent := "Current articles on " + source.Name + ":\n"
+				htmlContent := "<p>Current articles on " + source.Name + ":</p>"
+
+				for _, item := range feed.Items {
+					textContent += "- " + item.Title + "\n"
+					textContent += item.Description + "\n"
+					textContent += item.Link + "\n\n"
+					textContent += "------------------------------------------------------\n\n"
+
+					htmlContent += "<p><b>" + item.Title + "</b><br>"
+					htmlContent += item.Description + "<br>"
+					htmlContent += "<hr>"
+				}
+
+				message := email.Message{
+					ToEmail:          user.Email,
+					Subject:          "Newsletter: " + source.Name + " - " + "Day " + time.Now().Format("2006-01-02") + "!",
+					PlainTextContent: textContent,
+					HtmlContent:      htmlContent,
+				}
+
+				err = sr.emailService.Send(message)
+				if err != nil {
+					logger.Errorf("Failed to send email: %v", err)
+					continue
+				}
+
+			case <-sr.quitChannels[source.ID]:
+				ticker.Stop()
+				return
+			}
+		}
+	}()
+}
+
+func (sr *SourceService) InitializeSubscription() {
+	sources, err := sr.sourceRepository.FindAllActive()
+	if err != nil {
+		logger.Errorf("Failed to initialize subscriptions: %v", err)
+		return
+	}
+	for _, source := range sources {
+		sr.StartSubscription(source)
+	}
 }

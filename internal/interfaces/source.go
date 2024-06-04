@@ -14,6 +14,7 @@ type SourceRepositoryInterface interface {
 	Delete(id int) error
 	FindByUrl(url string) (models.Source, error)
 	FindByUserId(userId int) ([]models.Source, error)
+	FindAllActive() ([]models.Source, error)
 }
 
 type SourceServiceInterface interface {
@@ -24,6 +25,10 @@ type SourceServiceInterface interface {
 	Delete(id int) error
 	LoadFeed(id int) error
 	FindByUserId(userId int) ([]models.Source, error)
+	SubscribeToNewsletter(id int) error
+	UnsubscribeFromNewsletter(id int) error
+	StartSubscription(source models.Source)
+	InitializeSubscription()
 }
 
 type SourceHandlerInterface interface {
@@ -34,4 +39,6 @@ type SourceHandlerInterface interface {
 	Delete(c *gin.Context)
 	LoadFeed(c *gin.Context)
 	FindByUserId(c *gin.Context)
+	SubscribeToNewsletter(c *gin.Context)
+	UnsubscribeFromNewsletter(c *gin.Context)
 }

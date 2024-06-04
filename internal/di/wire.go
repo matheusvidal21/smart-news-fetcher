@@ -73,6 +73,20 @@ func NewArticleHandler(db *sql.DB) *handler.ArticleHandler {
 	return &handler.ArticleHandler{}
 }
 
+func NewSourceService(db *sql.DB, jwtService auth.JWTServiceInterface, emailService interfaces.EmailService) *service.SourceService {
+	wire.Build(
+		setUserRepositoryDependecy,
+		setUserServiceDependecy,
+		setSourceRepositoryDependecy,
+		setArticleRepositoryDependecy,
+		setArticleServiceDependecy,
+		setFetcherDependecy,
+		setSourceServiceDependecy,
+	)
+
+	return &service.SourceService{}
+}
+
 func NewSourceHandler(db *sql.DB, jwtService auth.JWTServiceInterface, emailService interfaces.EmailService) *handler.SourceHandler {
 	wire.Build(
 		setUserRepositoryDependecy,

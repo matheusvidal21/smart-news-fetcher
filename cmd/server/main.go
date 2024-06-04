@@ -32,11 +32,13 @@ func main() {
 	smtpPort, _ := strconv.Atoi(conf.SMTP_PORT)
 	jwtService := auth.NewJWTService(conf.JWTSecretKey, jwtExpiration)
 	emailService := email.NewEmailService(conf.SMTP_HOST, smtpPort, conf.SMTP_USER, conf.SMTP_PASSWORD, conf.SMTP_FROM_EMAIL)
+	sourceService := di.NewSourceService(db, jwtService, emailService)
 
 	articleHandler := di.NewArticleHandler(db)
 	sourceHandler := di.NewSourceHandler(db, jwtService, emailService)
 	userHandler := di.NewUserHandler(db, jwtService, emailService)
 	router := gin.Default()
+	sourceService.InitializeSubscription()
 
 	articles := router.Group("/articles")
 	{
@@ -59,6 +61,8 @@ func main() {
 		sources.DELETE("/:id", sourceHandler.Delete)
 		sources.GET("/load_feed/:id", sourceHandler.LoadFeed)
 		sources.GET("/find_by_user/:id", sourceHandler.FindByUserId)
+		sources.GET("/subscribe/:id", sourceHandler.SubscribeToNewsletter)
+		sources.GET("/unsubscribe/:id", sourceHandler.UnsubscribeFromNewsletter)
 	}
 
 	users := router.Group("/users")

@@ -11,4 +11,5 @@ type Source struct {
 	SavedAt        time.Time `json:"saved_at"`
 	UserID         int       `json:"user_id"`
 	UpdateInterval int       `json:"update_interval"`
+	Subscriber     bool      `json:"subscriber"`
 }

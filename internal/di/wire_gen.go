@@ -26,6 +26,17 @@ func NewArticleHandler(db *sql.DB) *handler.ArticleHandler {
 	return articleHandler
 }
 
+func NewSourceService(db *sql.DB, jwtService auth.JWTServiceInterface, emailService interfaces.EmailService) *service.SourceService {
+	sourceRepository := database.NewSourceRepository(db)
+	userRepository := database.NewUserRepository(db)
+	userService := service.NewUserService(userRepository, emailService, jwtService)
+	articleRepository := database.NewArticleRepository(db)
+	articleService := service.NewArticleService(articleRepository)
+	fetcherFetcher := fetcher.NewFetcher(articleService)
+	sourceService := service.NewSourceService(sourceRepository, userService, emailService, fetcherFetcher)
+	return sourceService
+}
+
 func NewSourceHandler(db *sql.DB, jwtService auth.JWTServiceInterface, emailService interfaces.EmailService) *handler.SourceHandler {
 	sourceRepository := database.NewSourceRepository(db)
 	userRepository := database.NewUserRepository(db)

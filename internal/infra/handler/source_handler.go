@@ -170,3 +170,39 @@ func (sh *SourceHandler) FindByUserId(c *gin.Context) {
 	logger.Info("Sources found: " + strconv.Itoa(len(sources)))
 	c.JSON(http.StatusOK, sources)
 }
+
+func (sh *SourceHandler) SubscribeToNewsletter(c *gin.Context) {
+	idStr := c.Param("id")
+	id, err := strconv.Atoi(idStr)
+	if err != nil {
+		c.JSON(http.StatusBadRequest, gin.H{"error": "Invalid source ID"})
+		return
+	}
+
+	err = sh.sourceService.SubscribeToNewsletter(id)
+	if err != nil {
+		c.JSON(http.StatusInternalServerError, gin.H{"error": err.Error()})
+		return
+	}
+
+	logger.Info("Newsletter subscribed: " + idStr)
+	c.JSON(http.StatusOK, gin.H{"message": "Newsletter subscribed successfully"})
+}
+
+func (sh *SourceHandler) UnsubscribeFromNewsletter(c *gin.Context) {
+	idStr := c.Param("id")
+	id, err := strconv.Atoi(idStr)
+	if err != nil {
+		c.JSON(http.StatusBadRequest, gin.H{"error": "Invalid source ID"})
+		return
+	}
+
+	err = sh.sourceService.UnsubscribeFromNewsletter(id)
+	if err != nil {
+		c.JSON(http.StatusInternalServerError, gin.H{"error": err.Error()})
+		return
+	}
+
+	logger.Info("Newsletter unsubscribed: " + idStr)
+	c.JSON(http.StatusOK, gin.H{"message": "Newsletter unsubscribed successfully"})
+}
