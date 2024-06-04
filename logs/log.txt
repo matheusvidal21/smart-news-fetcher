@@ -122,3 +122,9 @@ INFO : 2024/06/04 18:27:44.931262 fetcher.go:46: Feed loaded from cache: https:/
 INFO : 2024/06/04 18:27:44.931888 fetcher.go:41: Feed stored in cache: feed_1
 INFO : 2024/06/04 18:27:50.937893 fetcher.go:46: Feed loaded from cache: https://feeds.folha.uol.com.br/comida/rss091.xml
 INFO : 2024/06/04 18:27:50.938204 fetcher.go:41: Feed stored in cache: feed_1
+INFO : 2024/06/04 18:28:22.421000 fetcher.go:46: Feed loaded from cache: https://feeds.folha.uol.com.br/comida/rss091.xml
+INFO : 2024/06/04 18:28:22.421286 fetcher.go:41: Feed stored in cache: feed_1
+INFO : 2024/06/04 18:28:28.188595 fetcher.go:46: Feed loaded from cache: https://feeds.folha.uol.com.br/comida/rss091.xml
+INFO : 2024/06/04 18:28:28.189126 fetcher.go:41: Feed stored in cache: feed_1
+INFO : 2024/06/04 18:28:33.147374 fetcher.go:46: Feed loaded from cache: https://feeds.folha.uol.com.br/comida/rss091.xml
+INFO : 2024/06/04 18:28:33.147720 fetcher.go:41: Feed stored in cache: feed_1
