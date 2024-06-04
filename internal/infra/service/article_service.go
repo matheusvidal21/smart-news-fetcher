@@ -1,6 +1,8 @@
 package service
 
 import (
+	"crypto/sha1"
+	"encoding/hex"
 	"errors"
 	"github.com/matheusvidal21/smart-news-fetcher/internal/dto"
 	"github.com/matheusvidal21/smart-news-fetcher/internal/interfaces"
@@ -15,6 +17,12 @@ func NewArticleService(articleRepository interfaces.ArticleRepositoryInterface) 
 	return &ArticleService{articleRepository: articleRepository}
 }
 
+func (as *ArticleService) GenerateArticleID(title, link string) string {
+	h := sha1.New()
+	h.Write([]byte(title + link))
+	return hex.EncodeToString(h.Sum(nil))[:35]
+}
+
 func (as *ArticleService) FindAll(page, limit int, sort string) ([]models.Article, error) {
 	articles, err := as.articleRepository.FindAll(page, limit, sort)
 	if err != nil {
@@ -23,7 +31,7 @@ func (as *ArticleService) FindAll(page, limit int, sort string) ([]models.Articl
 	return articles, nil
 }
 
-func (as *ArticleService) FindOne(id int) (dto.FindOneArticleOutput, error) {
+func (as *ArticleService) FindOne(id string) (dto.FindOneArticleOutput, error) {
 	article, err := as.articleRepository.FindOne(id)
 
 	if err != nil {
@@ -43,7 +51,9 @@ func (as *ArticleService) FindOne(id int) (dto.FindOneArticleOutput, error) {
 }
 
 func (as *ArticleService) Create(articleDto dto.CreateArticleInput) (dto.CreateArticleOutput, error) {
+	id := as.GenerateArticleID(articleDto.Title, articleDto.Link)
 	article := models.Article{
+		ID:          id,
 		Title:       articleDto.Title,
 		Description: articleDto.Description,
 		Content:     articleDto.Content,
@@ -71,7 +81,7 @@ func (as *ArticleService) Create(articleDto dto.CreateArticleInput) (dto.CreateA
 	}, nil
 }
 
-func (as *ArticleService) Update(id int, articleDto dto.UpdateArticleInput) (dto.UpdateArticleOutput, error) {
+func (as *ArticleService) Update(id string, articleDto dto.UpdateArticleInput) (dto.UpdateArticleOutput, error) {
 	article := models.Article{
 		Title:       articleDto.Title,
 		Description: articleDto.Description,
@@ -99,7 +109,7 @@ func (as *ArticleService) Update(id int, articleDto dto.UpdateArticleInput) (dto
 	}, nil
 }
 
-func (as *ArticleService) Delete(id int) error {
+func (as *ArticleService) Delete(id string) error {
 	err := as.articleRepository.Delete(id)
 	if err != nil {
 		return errors.New("Article not deleted: " + err.Error())

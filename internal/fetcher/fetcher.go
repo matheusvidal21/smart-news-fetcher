@@ -59,13 +59,15 @@ func (f *Fetcher) ParseFeed(url string) (*gofeed.Feed, error) {
 	return feed, nil
 }
 
-func (f *Fetcher) FetchFeeds(id, limit int, feed *gofeed.Feed) {
-	count := 0
+func (f *Fetcher) FetchFeeds(id int, feed *gofeed.Feed) {
 	for _, item := range feed.Items {
-		if limit > 0 && count >= limit {
-			break
+		idArticle := f.articleService.GenerateArticleID(item.Title, item.Link)
+
+		existingArticle, err := f.articleService.FindOne(idArticle)
+		if err == nil && existingArticle.ID != "" {
+			logger.Info("Article already exists: " + item.Title)
+			continue
 		}
-		count++
 
 		var authorName string
 		if len(item.Authors) > 0 {
@@ -74,9 +76,8 @@ func (f *Fetcher) FetchFeeds(id, limit int, feed *gofeed.Feed) {
 			authorName = "Unknown"
 		}
 
-		guid, _ := strconv.Atoi(item.GUID)
 		article := dto.CreateArticleInput{
-			ID:          guid,
+			ID:          idArticle,
 			Title:       item.Title,
 			Description: item.Description,
 			Content:     item.Content,
@@ -85,7 +86,7 @@ func (f *Fetcher) FetchFeeds(id, limit int, feed *gofeed.Feed) {
 			Author:      authorName,
 			SourceID:    id,
 		}
-		_, err := f.articleService.Create(article)
+		_, err = f.articleService.Create(article)
 		if err != nil {
 			logger.Errorf("Failed to create article: %v", err)
 			continue
@@ -100,7 +101,14 @@ func (f *Fetcher) StartScheduler(source models.Source, feed *gofeed.Feed) {
 
 	go func() {
 		for range ticker.C {
-			f.FetchFeeds(source.ID, -1, feed)
+			if feed.UpdatedParsed != nil {
+				timeSinceUptade := time.Since(*feed.UpdatedParsed)
+				if timeSinceUptade < interval {
+					logger.Info("Feed not updated since last check, skipping fetch")
+					continue
+				}
+			}
+			f.FetchFeeds(source.ID, feed)
 		}
 	}()
 }

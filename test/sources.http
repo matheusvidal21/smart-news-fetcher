@@ -16,12 +16,12 @@ Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6ImdvbWVza
 ### Criar uma nova fonte
 POST http://localhost:8080/sources
 Content-Type: application/json
-Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6ImdvbWVzaXNhYmVzbGExM0BnbWFpbC5jb20iLCJleHAiOjE3MTczNzI1MjR9.bsvbENUhe7exf-IUXbNMmaqO8Se3qFrmOxAsaUALTF0
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6ImdvbWVzaXNhYmVsYTEzQGdtYWlsLmNvbSIsImV4cCI6MTcxNzQ2MjI5M30.3rSlQe_T2rslbBUZ75FypVhvIKUZyoIYhrL2EkQCRZs
 
 {
   "name": "Folha de São Paulo Comida",
-  "url": "https://feeds.folha.uol.com.br/opiniao/rss091.xml",
-  "user_id": 4,
+  "url": "https://feeds.folha.uol.com.br/comida/rss091.xml",
+  "user_id": 1,
   "update_interval": 1
 }
 
@@ -48,6 +48,6 @@ Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6ImdvbWVza
 ###
 
 ### Carregar feed de uma fonte
-GET http://localhost:8080/sources/load_feed/9
+GET http://localhost:8080/sources/load_feed/2
 Content-Type: application/json
-Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6ImdvbWVzaXNhYmVzbGExM0BnbWFpbC5jb20iLCJleHAiOjE3MTczNzI1MjR9.bsvbENUhe7exf-IUXbNMmaqO8Se3qFrmOxAsaUALTF0
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6ImdvbWVzaXNhYmVsYTEzQGdtYWlsLmNvbSIsImV4cCI6MTcxNzQ2NDc0NX0.7Q75McblyD0bzJtKHJ7KtUn4dijpni1j_2-HKSkC93M

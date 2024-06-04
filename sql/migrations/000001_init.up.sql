@@ -7,16 +7,16 @@ CREATE TABLE users (
 
 
 CREATE TABLE sources (
-                         id INT AUTO_INCREMENT PRIMARY KEY,
-                         name VARCHAR(100) NOT NULL,
-                         url TEXT NOT NULL,
-                         user_id INT NOT NULL,
-                         saved_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
-                         FOREIGN KEY (user_id) REFERENCES users(id)
+                        id INT AUTO_INCREMENT PRIMARY KEY,
+                        name VARCHAR(100) NOT NULL,
+                        url TEXT NOT NULL,
+                        user_id INT NOT NULL,
+                        saved_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
+                        FOREIGN KEY (user_id) REFERENCES users(id)
 );
 
 CREATE TABLE articles (
-                        id INT AUTO_INCREMENT PRIMARY KEY,
+                        id VARCHAR(36) PRIMARY KEY,
                         title TEXT NOT NULL,
                         description TEXT,
                         content TEXT,

@@ -41,20 +41,14 @@ func (h *ArticleHandler) FindAll(c *gin.Context) {
 }
 
 func (h *ArticleHandler) FindOne(c *gin.Context) {
-	idStr := c.Param("id")
-	id, err := strconv.Atoi(idStr)
-	if err != nil {
-		c.JSON(http.StatusBadRequest, gin.H{"error": "Invalid article ID"})
-		return
-	}
-
+	id := c.Param("id")
 	article, err := h.articleService.FindOne(id)
 	if err != nil {
 		c.JSON(http.StatusInternalServerError, gin.H{"error": err.Error()})
 		return
 	}
 
-	logger.Info("Article found: " + idStr)
+	logger.Info("Article found: " + id)
 	c.JSON(http.StatusOK, article)
 }
 
@@ -77,12 +71,7 @@ func (h *ArticleHandler) Create(c *gin.Context) {
 }
 
 func (h *ArticleHandler) Update(c *gin.Context) {
-	idStr := c.Param("id")
-	id, err := strconv.Atoi(idStr)
-	if err != nil {
-		c.JSON(http.StatusBadRequest, gin.H{"error": "Invalid article ID"})
-		return
-	}
+	id := c.Param("id")
 
 	var article dto.UpdateArticleInput
 	if err := c.BindJSON(&article); err != nil {
@@ -96,25 +85,20 @@ func (h *ArticleHandler) Update(c *gin.Context) {
 		return
 	}
 
-	logger.Info("Article updated: " + idStr)
+	logger.Info("Article updated: " + id)
 	c.JSON(http.StatusOK, uptdatedArticle)
 }
 
 func (h *ArticleHandler) Delete(c *gin.Context) {
-	idStr := c.Param("id")
-	id, err := strconv.Atoi(idStr)
-	if err != nil {
-		c.JSON(http.StatusBadRequest, gin.H{"error": "Invalid article ID"})
-		return
-	}
+	id := c.Param("id")
 
-	err = h.articleService.Delete(id)
+	err := h.articleService.Delete(id)
 	if err != nil {
 		c.JSON(http.StatusInternalServerError, gin.H{"error": err.Error()})
 		return
 	}
 
-	logger.Info("Article deleted: " + idStr)
+	logger.Info("Article deleted: " + id)
 	c.JSON(http.StatusOK, gin.H{"message": "Article deleted successfully"})
 }
 
@@ -122,7 +106,7 @@ func (h *ArticleHandler) FindBySourceID(c *gin.Context) {
 	idStr := c.Param("id")
 	id, err := strconv.Atoi(idStr)
 	if err != nil {
-		c.JSON(http.StatusBadRequest, gin.H{"error": "Invalid article ID"})
+		c.JSON(http.StatusBadRequest, gin.H{"error": "Invalid source ID"})
 		return
 	}
 

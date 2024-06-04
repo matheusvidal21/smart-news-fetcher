@@ -3,7 +3,7 @@ package dto
 import "time"
 
 type CreateArticleInput struct {
-	ID          int       `json:"id"`
+	ID          string    `json:"id"`
 	Title       string    `json:"title"`
 	Description string    `json:"description"`
 	Content     string    `json:"content"`
@@ -14,7 +14,7 @@ type CreateArticleInput struct {
 }
 
 type CreateArticleOutput struct {
-	ID          int       `json:"id"`
+	ID          string    `json:"id"`
 	Title       string    `json:"title"`
 	Description string    `json:"description"`
 	Content     string    `json:"content"`
@@ -36,7 +36,7 @@ type UpdateArticleInput struct {
 }
 
 type UpdateArticleOutput struct {
-	ID          int       `json:"id"`
+	ID          string    `json:"id"`
 	Title       string    `json:"title"`
 	Description string    `json:"description"`
 	Content     string    `json:"content"`
@@ -48,7 +48,7 @@ type UpdateArticleOutput struct {
 }
 
 type FindOneArticleOutput struct {
-	ID          int       `json:"id"`
+	ID          string    `json:"id"`
 	Title       string    `json:"title"`
 	Description string    `json:"description"`
 	Content     string    `json:"content"`

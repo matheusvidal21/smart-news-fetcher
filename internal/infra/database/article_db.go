@@ -51,7 +51,7 @@ func (ar *ArticleRepository) FindAll(page, limit int, sort string) ([]models.Art
 	return articles, nil
 }
 
-func (ar *ArticleRepository) FindOne(id int) (models.Article, error) {
+func (ar *ArticleRepository) FindOne(id string) (models.Article, error) {
 	stmt, err := ar.db.Prepare("SELECT id, title, description, content, link, pub_date, author, source_id FROM articles WHERE id = ?")
 	if err != nil {
 		return models.Article{}, err
@@ -76,25 +76,19 @@ func (ar *ArticleRepository) FindOne(id int) (models.Article, error) {
 }
 
 func (ar *ArticleRepository) Create(article models.Article) (models.Article, error) {
-	stmt, err := ar.db.Prepare("INSERT INTO articles (title, description, content, link, pub_date, author, source_id) VALUES (?, ?, ?, ?, ?, ?, ?)")
+	stmt, err := ar.db.Prepare("INSERT INTO articles (id, title, description, content, link, pub_date, author, source_id) VALUES (?, ?, ?, ?, ?, ?, ?, ?)")
 	if err != nil {
 		return models.Article{}, err
 	}
 	defer stmt.Close()
 
-	result, err := stmt.Exec(article.Title, article.Description, article.Content, article.Link, &article.PubDate, article.Author, article.SourceID)
-	if err != nil {
-		return models.Article{}, err
-	}
-
-	id, err := result.LastInsertId()
-
+	_, err = stmt.Exec(article.ID, article.Title, article.Description, article.Content, article.Link, &article.PubDate, article.Author, article.SourceID)
 	if err != nil {
 		return models.Article{}, err
 	}
 
 	return models.Article{
-		ID:          int(id),
+		ID:          article.ID,
 		Title:       article.Title,
 		Description: article.Description,
 		Link:        article.Link,
@@ -104,7 +98,7 @@ func (ar *ArticleRepository) Create(article models.Article) (models.Article, err
 	}, nil
 }
 
-func (ar *ArticleRepository) Update(id int, article models.Article) (models.Article, error) {
+func (ar *ArticleRepository) Update(id string, article models.Article) (models.Article, error) {
 	stmt, err := ar.db.Prepare("UPDATE articles set title = ?, description = ?, content = ?, link = ?, pub_date = ?, author = ?, source_id = ? WHERE id = ?")
 	if err != nil {
 		return models.Article{}, err
@@ -123,7 +117,7 @@ func (ar *ArticleRepository) Update(id int, article models.Article) (models.Arti
 	return uptadedArticle, nil
 }
 
-func (ar *ArticleRepository) Delete(id int) error {
+func (ar *ArticleRepository) Delete(id string) error {
 	stmt, err := ar.db.Prepare("DELETE FROM articles WHERE id = ?")
 	if err != nil {
 		return err
