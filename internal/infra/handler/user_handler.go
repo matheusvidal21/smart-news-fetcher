@@ -25,6 +25,12 @@ func (u *UserHandler) CreateUser(c *gin.Context) {
 		return
 	}
 
+	err := dto.Validate.Struct(user)
+	if err != nil {
+		c.JSON(http.StatusBadRequest, gin.H{"error": err.Error()})
+		return
+	}
+
 	createdUser, err := u.userService.Create(user)
 	if err != nil {
 		c.JSON(http.StatusInternalServerError, gin.H{"error": err.Error()})
@@ -35,6 +41,12 @@ func (u *UserHandler) CreateUser(c *gin.Context) {
 
 func (u *UserHandler) FindByEmail(c *gin.Context) {
 	email := c.Param("email")
+	err := dto.Validate.Var(email, "email")
+	if err != nil {
+		c.JSON(http.StatusBadRequest, gin.H{"error": err.Error()})
+		return
+	}
+
 	user, err := u.userService.FindByEmail(email)
 	if err != nil {
 		c.JSON(http.StatusInternalServerError, gin.H{"error": err.Error()})
@@ -45,7 +57,14 @@ func (u *UserHandler) FindByEmail(c *gin.Context) {
 
 func (u *UserHandler) DeleteUser(c *gin.Context) {
 	email := c.Param("email")
-	err := u.userService.Delete(email)
+
+	err := dto.Validate.Var(email, "email")
+	if err != nil {
+		c.JSON(http.StatusBadRequest, gin.H{"error": err.Error()})
+		return
+	}
+
+	err = u.userService.Delete(email)
 	if err != nil {
 		c.JSON(http.StatusInternalServerError, gin.H{"error": err.Error()})
 		return
@@ -56,6 +75,12 @@ func (u *UserHandler) DeleteUser(c *gin.Context) {
 func (u *UserHandler) Login(c *gin.Context) {
 	var user dto.LoginUserInput
 	if err := c.BindJSON(&user); err != nil {
+		c.JSON(http.StatusBadRequest, gin.H{"error": err.Error()})
+		return
+	}
+
+	err := dto.Validate.Struct(user)
+	if err != nil {
 		c.JSON(http.StatusBadRequest, gin.H{"error": err.Error()})
 		return
 	}
@@ -75,7 +100,13 @@ func (u *UserHandler) UpdatePassword(c *gin.Context) {
 		return
 	}
 
-	err := u.userService.UpdatePassword(user)
+	err := dto.Validate.Struct(user)
+	if err != nil {
+		c.JSON(http.StatusBadRequest, gin.H{"error": err.Error()})
+		return
+	}
+
+	err = u.userService.UpdatePassword(user)
 	if err != nil {
 		c.JSON(http.StatusInternalServerError, gin.H{"error": err.Error()})
 		return

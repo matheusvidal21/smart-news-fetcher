@@ -1,20 +1,25 @@
 package dto
 
-import "time"
+import (
+	"github.com/go-playground/validator/v10"
+	"time"
+)
+
+var Validate = validator.New()
 
 type CreateArticleInput struct {
-	ID          string    `json:"id"`
+	ID          string    `json:"id" validate:"required,max=36"`
 	Title       string    `json:"title"`
 	Description string    `json:"description"`
 	Content     string    `json:"content"`
 	Link        string    `json:"link"`
 	PubDate     time.Time `json:"pub_date"`
 	Author      string    `json:"author"`
-	SourceID    int       `json:"source_id"`
+	SourceID    int       `json:"source_id" validate:"required"`
 }
 
 type CreateArticleOutput struct {
-	ID          string    `json:"id"`
+	ID          string    `json:"id" validate:"required,max=36"`
 	Title       string    `json:"title"`
 	Description string    `json:"description"`
 	Content     string    `json:"content"`
@@ -26,17 +31,18 @@ type CreateArticleOutput struct {
 }
 
 type UpdateArticleInput struct {
+	ID          string    `json:"id" validate:"required,max=36"`
 	Title       string    `json:"title"`
 	Description string    `json:"description"`
 	Content     string    `json:"content"`
 	Link        string    `json:"link"`
 	PubDate     time.Time `json:"pub_date"`
 	Author      string    `json:"author"`
-	SourceID    int       `json:"source_id"`
+	SourceID    int       `json:"source_id" validate:"required"`
 }
 
 type UpdateArticleOutput struct {
-	ID          string    `json:"id"`
+	ID          string    `json:"id" validate:"required,max=36"`
 	Title       string    `json:"title"`
 	Description string    `json:"description"`
 	Content     string    `json:"content"`
@@ -60,10 +66,10 @@ type FindOneArticleOutput struct {
 }
 
 type CreateSourceInput struct {
-	Name           string `json:"name"`
-	Url            string `json:"url"`
-	UserID         int    `json:"user_id"`
-	UpdateInterval int    `json:"update_interval"`
+	Name           string `json:"name" validate:"required"`
+	Url            string `json:"url" validate:"required,url"`
+	UserID         int    `json:"user_id" validate:"required"`
+	UpdateInterval int    `json:"update_interval" validate:"required,gt=0"`
 }
 
 type CreateSourceOutput struct {
@@ -76,9 +82,9 @@ type CreateSourceOutput struct {
 }
 
 type UpdateSourceInput struct {
-	Name           string `json:"name"`
-	Url            string `json:"url"`
-	UpdateInterval int    `json:"update_interval"`
+	Name           string `json:"name" validate:"required"`
+	Url            string `json:"url" validate:"required,url"`
+	UpdateInterval int    `json:"update_interval" validate:"required,gt=0"`
 }
 
 type UpdateSourceOutput struct {
@@ -100,9 +106,9 @@ type FindOneSourceOutput struct {
 }
 
 type CreateUserInput struct {
-	Username string `json:"username"`
-	Email    string `json:"email"`
-	Password string `json:"password"`
+	Username string `json:"username" validate:"required,max=30"`
+	Email    string `json:"email" validate:"required,email"`
+	Password string `json:"password" validate:"required,min=8"`
 }
 
 type CreateUserOutput struct {
@@ -118,8 +124,8 @@ type FindUserByEmailOutput struct {
 }
 
 type LoginUserInput struct {
-	Email    string `json:"email"`
-	Password string `json:"password"`
+	Email    string `json:"email" validate:"required,email"`
+	Password string `json:"password" validate:"required,min=8"`
 }
 
 type LoginUserOutput struct {
@@ -127,9 +133,9 @@ type LoginUserOutput struct {
 }
 
 type UpdateUserPasswordInput struct {
-	Email       string `json:"email"`
-	OldPassword string `json:"old_password"`
-	NewPassword string `json:"new_password"`
+	Email       string `json:"email" validate:"required,email"`
+	OldPassword string `json:"old_password" validate:"required,min=8"`
+	NewPassword string `json:"new_password" validate:"required,min=8"`
 }
 
 type FindUserByIdOutput struct {

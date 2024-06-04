@@ -60,6 +60,11 @@ func (h *ArticleHandler) Create(c *gin.Context) {
 		return
 	}
 
+	if err := dto.Validate.Struct(article); err != nil {
+		c.JSON(http.StatusBadRequest, gin.H{"error": err.Error()})
+		return
+	}
+
 	createdArticle, err := h.articleService.Create(article)
 	if err != nil {
 		c.JSON(http.StatusInternalServerError, gin.H{"error": err.Error()})
@@ -75,6 +80,11 @@ func (h *ArticleHandler) Update(c *gin.Context) {
 
 	var article dto.UpdateArticleInput
 	if err := c.BindJSON(&article); err != nil {
+		c.JSON(http.StatusBadRequest, gin.H{"error": err.Error()})
+		return
+	}
+
+	if err := dto.Validate.Struct(article); err != nil {
 		c.JSON(http.StatusBadRequest, gin.H{"error": err.Error()})
 		return
 	}

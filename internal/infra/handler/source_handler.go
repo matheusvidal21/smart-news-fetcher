@@ -70,6 +70,11 @@ func (sh *SourceHandler) Create(c *gin.Context) {
 		return
 	}
 
+	if err := dto.Validate.Struct(source); err != nil {
+		c.JSON(http.StatusBadRequest, gin.H{"error": err.Error()})
+		return
+	}
+
 	createdSource, err := sh.sourceService.Create(source)
 	if err != nil {
 		c.JSON(http.StatusInternalServerError, gin.H{"error": err.Error()})
@@ -91,6 +96,11 @@ func (sh *SourceHandler) Update(c *gin.Context) {
 
 	var source dto.UpdateSourceInput
 	if err = c.BindJSON(&source); err != nil {
+		c.JSON(http.StatusBadRequest, gin.H{"error": err.Error()})
+		return
+	}
+
+	if err := dto.Validate.Struct(source); err != nil {
 		c.JSON(http.StatusBadRequest, gin.H{"error": err.Error()})
 		return
 	}
