@@ -1,5 +1,5 @@
 ### Obter usuário específico por email
-GET http://localhost:8080/users/test@example.com
+GET http://localhost:8080/users/test@gmail.com
 Content-Type: application/json
 
 ###
@@ -9,15 +9,15 @@ POST http://localhost:8080/users
 Content-Type: application/json
 
 {
-  "username": "Isabela Mendes",
-  "email": "gomesisabela13@gmail.com",
+  "username": "John Doe",
+  "email": "test@gmail.com",
   "password": "password"
 }
 
 ###
 
 ### Deletar um usuário
-DELETE http://localhost:8080/users/find_by_email/test@example.com
+DELETE http://localhost:8080/users/find_by_email/test@gmail.com
 Content-Type: application/json
 
 ###
@@ -27,7 +27,7 @@ POST http://localhost:8080/users/login
 Content-Type: application/json
 
 {
-  "email": "gomesisabela13@gmail.com",
+  "email": "test@gmail.com",
   "password": "password"
 }
 
@@ -38,7 +38,7 @@ POST http://localhost:8080/users/update_password
 Content-Type: application/json
 
 {
-  "email": "test@example.com",
+  "email": "test@egmail.com",
   "old_password": "password",
   "new_password": ""
 }

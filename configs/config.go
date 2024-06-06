@@ -4,9 +4,9 @@ import (
 	"github.com/spf13/viper"
 )
 
-var cfg *conf
+var cfg *Conf
 
-type conf struct {
+type Conf struct {
 	DBDriver             string `mapstructure:"DB_DRIVER"`
 	DBHost               string `mapstructure:"DB_HOST"`
 	DBPort               string `mapstructure:"DB_PORT"`
@@ -24,7 +24,7 @@ type conf struct {
 	SMTP_FROM_EMAIL      string `mapstructure:"SMTP_FROM_EMAIL"`
 }
 
-func LoadConfigs(path string) *conf {
+func LoadConfigs(path string) *Conf {
 	viper.SetConfigName("app_config")
 	viper.SetConfigType("env")
 	viper.AddConfigPath(path)

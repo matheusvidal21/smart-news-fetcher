@@ -1,8 +1,7 @@
 ### Obter todas as fontes com paginação e ordenação
 GET http://localhost:8080/sources
 Content-Type: application/json
-Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6ImdvbWVzaXNhYmVsYTEzQGdtYWlsLmNvbSIsImV4cCI6MTcxNzM2NzM4Mn0.vAA3PbMq0J-hF16UJJcAOykFOOg-JHj1Q_wcCQRTlO8
-
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6ImdvbWVzaXNhYmVsYTEzQGdtYWlsLmNvbSIsImV4cCI6MTcxNzU0MzQ2Nn0.aDcPPV3rqI4KGA8OfcBpUSpZXDqnG_7CqwVUJcxeKJ8
 
 ###
 

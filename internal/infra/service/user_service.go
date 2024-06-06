@@ -63,7 +63,7 @@ func (us *UserService) Create(userDto dto.CreateUserInput) (dto.CreateUserOutput
 	err = us.EmailService.Send(message)
 
 	if err != nil {
-		return dto.CreateUserOutput{}, errors.New("failed to send email: " + err.Error())
+		return dto.CreateUserOutput{}, errors.New("User created but failed to send email: " + err.Error())
 	}
 
 	return dto.CreateUserOutput{

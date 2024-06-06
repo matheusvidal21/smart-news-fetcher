@@ -1,10 +1,10 @@
 createmigration:
-	migrate create -ext=sql -dir=sql/migrations -seq init
+	docker-compose run --rm app migrate create -ext=sql -dir=sql/migrations -seq init
 
 migrate:
-	migrate -path=sql/migrations -database "mysql://root:root@tcp(localhost:3309)/news_aggregator" -verbose up
+	docker-compose run --rm app migrate -path=sql/migrations -database "mysql://root:root@tcp(db:3306)/news_aggregator" -verbose up
 
 migratedown:
-	migrate -path=sql/migrations -database "mysql://root:root@tcp(localhost:3309)/news_aggregator" -verbose down
+	docker-compose run --rm app migrate -path=sql/migrations -database "mysql://root:root@tcp(db:3306)/news_aggregator" -verbose down
 
 .PHONY: migrate migratedown createmigration

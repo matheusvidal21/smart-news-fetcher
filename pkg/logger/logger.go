@@ -5,7 +5,7 @@ import (
 	"os"
 )
 
-const logPath = "../../logs/log.txt"
+const logPath = "/root/logs/log.txt"
 
 var logFile *os.File
 
