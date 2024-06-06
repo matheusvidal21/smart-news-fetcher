@@ -16,11 +16,11 @@
 O Smart News Fetcher é um agregador de notícias que coleta e organiza artigos de várias fontes. Ele permite aos usuários adicionar fontes de notícias, buscar artigos, se inscrever em newsletters e gerenciar seu conteúdo de forma eficiente.
 
 ## Índice
-- 📖 [Introdução](#-introducao)
+- 📖 [Introdução](#-introdução)
 - 📁 [Estrutura de pacotes](#-estrutura-de-pacotes)
 - 💻 [Tecnologias utilizadas](#-tecnologias-utilizadas)
 - 🚀 [Uso](#-uso)
-- 🔧 [Instalação](#-instalacao)
+- 🔧 [Instalação](#-instalação)
 - 👤 [Autor](#-autor)
 
 # 📖 Introdução
